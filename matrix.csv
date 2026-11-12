@@ -1,0 +1,19 @@
+section,category,templates,routes,Home (scroll-driven WebGL portfolio),Project article,Not found (404)
+shell.header-nav,SHELL,3,8,x,x,x
+shell.status-row,SHELL,3,8,x,x,x
+shell.scroll-progress,SHELL,3,8,x,x,x
+shell.transition-mask,SHELL,3,8,x,x,x
+article.header,ARTICLE,1,6,,x,
+article.body,ARTICLE,1,6,,x,
+article.intro,ARTICLE,1,6,,x,
+article.toc,ARTICLE,1,6,,x,
+article.meta-footer,ARTICLE,1,6,,x,
+shell.grid-overlay,SHELL,1,1,x,,
+backdrop.webgl-scene,BACKDROP,1,1,x,,
+hero.banner,HERO,1,1,x,,
+intro.about,INTRO,1,1,x,,
+work.selected-grid,WORK,1,1,x,,
+statement.hyper-space,STATEMENT,1,1,x,,
+contact.footer-cta,CONTACT,1,1,x,,
+error.not-found,ERROR,1,1,,,x
+ROUTE COUNT,,,8,1,6,1

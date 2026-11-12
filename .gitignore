@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.playwright-mcp/
+# saved copy of the original site (reference only, never tracked)
+_reference/
+# build artefact
+design-repo.zip

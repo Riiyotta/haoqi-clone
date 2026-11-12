@@ -1,0 +1,29 @@
+@import "./styles/original.css";
+@font-face { font-family: "tiktok"; src: url("/fonts/TikTokSans.ttf") format("truetype"); font-weight: 100 900; font-display: block; }
+@font-face { font-family: "mono"; src: url("/fonts/GeistMono[wght].ttf") format("truetype"); font-weight: 100 900; font-display: block; }
+@font-face { font-family: "tronica-mono"; src: url("/fonts/DepartureMono-Regular.otf") format("opentype"); font-weight: 400; font-display: block; }
+
+        .svg-sign__path {
+          opacity: 0;
+          fill: none;
+          stroke-linecap: butt;
+        }
+        .svg-sign.is-drawing .svg-sign__path {
+          animation:
+            svg-sign-show 0s linear var(--path-delay) forwards,
+            svg-sign-draw var(--path-dur) cubic-bezier(0.65, 0, 0.35, 1) var(--path-delay) forwards;
+        }
+        @keyframes svg-sign-draw {
+          to { stroke-dashoffset: 0; }
+        }
+        @keyframes svg-sign-show {
+          to { opacity: 1; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .svg-sign.is-drawing .svg-sign__path {
+            animation: none;
+            stroke-dashoffset: 0;
+            opacity: 1;
+          }
+        }
+      

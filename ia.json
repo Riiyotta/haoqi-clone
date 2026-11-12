@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "source": "Local clone of https://haoqi.design/ (this repo). Home measured from the built clone + CLONE_SPEC.md; article and not-found templates from CLONE_SPEC_PAGES.md (live recon of all 6 subpages + a 404).",
+    "status": "measured-from-clone — all 8 routes built; home QA'd against live, article/not-found pages verified against live recon",
+    "$comment": "Out of scope / excluded: /2026 and /unlock/* (passcode-protected on the original). The not-found template stands for every unknown path (counted once). External card links (Figma plugins, Friends of Figma events) and mailto/social links are outbound, not routes.",
+    "totalRoutes": 8,
+    "totalTemplates": 3
+  },
+  "categories": {
+    "SHELL": "Fixed site chrome layered over every page: header HUD, status row, overlays, page-transition mask.",
+    "BACKDROP": "Full-viewport WebGL canvas behind the scrolling content.",
+    "HERO": "Page-opening composition of the home page.",
+    "INTRO": "Personal introduction block following the hero.",
+    "WORK": "Index of projects linking to article pages or external sites.",
+    "STATEMENT": "Scroll-pinned manifesto/typographic sequence.",
+    "CONTACT": "Closing call-to-action with contact and social links.",
+    "ARTICLE": "Building blocks of a long-form project write-up page.",
+    "ERROR": "Fallback content for unknown paths."
+  },
+  "sections": {
+    "shell.header-nav": {
+      "category": "SHELL",
+      "description": "Fixed top row: HAOQI.DESIGN wordmark (home link) plus WORK / CONTACT scroll links and the THEME[L|D|A] and SOUND[x] toggles; collapses to a hamburger + full-screen menu below 1024px. Text turns white over the dark warp scene.",
+      "scope": "All 8 routes.",
+      "implementedBy": "Header.jsx, Toggles.jsx"
+    },
+    "shell.status-row": {
+      "category": "SHELL",
+      "description": "Fixed bottom row: GMT+8 clock + temperature line (replaced by HAOQI (C) YEAR near the end of the home page only), pointer coordinate readout (click scrolls to top) and the rotating wireframe globe icon.",
+      "scope": "All 8 routes.",
+      "implementedBy": "Header.jsx, RotatingGlobe.jsx"
+    },
+    "shell.grid-overlay": {
+      "category": "SHELL",
+      "description": "Fixed difference-blended SVG grid: 3–4 vertical column lines and 2 horizontal lines with '+' crosshairs, sized from the viewport.",
+      "scope": "Home only (not rendered on article or not-found routes).",
+      "implementedBy": "GridOverlay.jsx"
+    },
+    "shell.scroll-progress": {
+      "category": "SHELL",
+      "description": "Right-edge vertical scroll thumb on desktop (visible on mount and for 2s after each scroll); circular scroll-to-top ring on mobile once scrolled. Tracks Lenis on home and the native scroll container elsewhere.",
+      "scope": "All 8 routes.",
+      "implementedBy": "ScrollProgress.jsx"
+    },
+    "shell.transition-mask": {
+      "category": "SHELL",
+      "description": "Separate overlay canvas drawing a halftone dot-iris that covers/reveals the page on first load, route changes and mobile menu open, with the loader progress bar on entry.",
+      "scope": "All 8 routes (entry and every route change).",
+      "implementedBy": "webgl/TransitionCanvas.jsx"
+    },
+    "backdrop.webgl-scene": {
+      "category": "BACKDROP",
+      "description": "three.js scene behind the scroll content: blue bokeh light-streak background, glass 'hello' / cursor / 'CRAFT & TASTE' models, falling stickers, cream dot overlay, DOM-synced project image layers, giant warp-speed cursor, lens flare + fluid post with lime pointer trail.",
+      "scope": "Home only.",
+      "implementedBy": "webgl/Scene.jsx (+ Bokeh, Glass, Stickers, DotOverlay, HyperCursor, ImageLayers, PostEffects)"
+    },
+    "hero.banner": {
+      "category": "HERO",
+      "description": "One-viewport opener: 'Design & Engineering' label, 'Thinking in systems' line, bio paragraph with masked employer slot, and the 3-line 'I BRING CRAFT & TASTE TO DIGITAL WORK' headline, over the glass 'hello' model.",
+      "scope": "Home only.",
+      "implementedBy": "Hero.jsx"
+    },
+    "intro.about": {
+      "category": "INTRO",
+      "description": "Portrait photo (WebGL negative-to-positive reveal) with lime handwritten signature that draws on view, plus two large statement paragraphs with inline links to reunimos™, aDrive and Teambition.",
+      "scope": "Home only.",
+      "implementedBy": "About.jsx"
+    },
+    "work.selected-grid": {
+      "category": "WORK",
+      "description": "#selected-work asymmetric 12-column grid of 10 project cards (image drawn by WebGL with dot-wipe hover swap, optional CODING PROJECT tag, name/year/type row); 6 link to article routes, 4 to external sites.",
+      "scope": "Home only.",
+      "implementedBy": "SelectedWork.jsx (data: lib/workItems.js)"
+    },
+    "statement.hyper-space": {
+      "category": "STATEMENT",
+      "description": "8-viewport-tall sticky sequence inside the warp tunnel: 'Innovate with purpose' → 'Innovate with a human touch' → four floating sentences with a lime ellipse ring → 'FUTURE-FIRST ALWAYS', each with staggered per-character fades.",
+      "scope": "Home only.",
+      "implementedBy": "Innovate.jsx"
+    },
+    "contact.footer-cta": {
+      "category": "CONTACT",
+      "description": "#contact full-viewport closer: 'LET'S CREATE SOMETHING EXTRAORDINARY' scrambled headline over the glass 'CRAFT & TASTE' model, email link bottom-left, Twitter/X · Figma · GitHub bottom-right.",
+      "scope": "Home only.",
+      "implementedBy": "Footer.jsx"
+    },
+    "article.header": {
+      "category": "ARTICLE",
+      "description": "Article opener: large wide-bold title, last-updated date, hairline divider, then the project's year range (year row omitted when a project has none).",
+      "scope": "All 6 article routes.",
+      "implementedBy": "pages/ArticlePage.jsx (content: pages/content/<slug>.json)"
+    },
+    "article.body": {
+      "category": "ARTICLE",
+      "description": "Long-form prose (Chinese/English mixed) with h1–h3 headings, inline links and monospace code chips, lists, rules, zoomable rounded image figures (lightbox with dominant-colour backdrop), code blocks with line numbers + COPY, and page-specific embeds (live site iframe, slide image grid, download button).",
+      "scope": "All 6 article routes.",
+      "implementedBy": "pages/ArticlePage.jsx > renderNode + components/mdx/MdxBasics.jsx (MdxHeading, MdxA, MdxPre), MdxImg.jsx"
+    },
+    "article.intro": {
+      "category": "ARTICLE",
+      "description": "Muted (secondary-label) lead paragraphs directly under the article header, before the body proper.",
+      "scope": "All 6 article routes.",
+      "implementedBy": "pages/ArticlePage.jsx (content: pages/content/<slug>.json)"
+    },
+    "article.toc": {
+      "category": "ARTICLE",
+      "description": "Fixed left-hand table of contents of the article's h1–h3 headings with active-heading tracking; only shown at very wide viewports (2xl and up).",
+      "scope": "Article routes whose body has headings (wasm_design_utils, adrive, shore_icon); other articles render no TOC.",
+      "implementedBy": "components/mdx/ArticleChrome.jsx > MdxTableOfContents"
+    },
+    "article.meta-footer": {
+      "category": "ARTICLE",
+      "description": "Tinted rounded 'Metadata' box closing the article: Last Updated, live viewport Dimensions and body Characters count (scrambled in), plus a 'Links' group: Home, Work, Contact (back to home sections) and Twitter/X, GitHub, Figma.",
+      "scope": "All 6 article routes.",
+      "implementedBy": "components/mdx/ArticleChrome.jsx > ArticleFooter"
+    },
+    "error.not-found": {
+      "category": "ERROR",
+      "description": "Plain '404 | This page could not be found.' message inside the article column, with no title block, metadata box or TOC.",
+      "scope": "Any unknown path.",
+      "implementedBy": "pages/NotFoundPage.jsx"
+    }
+  },
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Home (scroll-driven WebGL portfolio)",
+      "routeCount": 1,
+      "routes": [
+        "/"
+      ],
+      "routePattern": null,
+      "chrome": "hud+webgl",
+      "sections": [
+        "shell.header-nav",
+        "shell.status-row",
+        "shell.grid-overlay",
+        "shell.scroll-progress",
+        "shell.transition-mask",
+        "backdrop.webgl-scene",
+        "hero.banner",
+        "intro.about",
+        "work.selected-grid",
+        "statement.hyper-space",
+        "contact.footer-cta"
+      ]
+    },
+    {
+      "id": "template.article",
+      "name": "Project article",
+      "routeCount": 6,
+      "routes": [
+        "/reunimos",
+        "/inspire_mono",
+        "/wasm_design_utils",
+        "/adrive",
+        "/shore_icon",
+        "/teambition"
+      ],
+      "routePattern": null,
+      "chrome": "hud",
+      "sections": [
+        "shell.header-nav",
+        "shell.status-row",
+        "shell.scroll-progress",
+        "shell.transition-mask",
+        "article.toc",
+        "article.header",
+        "article.intro",
+        "article.body",
+        "article.meta-footer"
+      ]
+    },
+    {
+      "id": "template.not-found",
+      "name": "Not found (404)",
+      "routeCount": 1,
+      "routes": [
+        "/<any unknown path>"
+      ],
+      "routePattern": null,
+      "chrome": "hud",
+      "sections": [
+        "shell.header-nav",
+        "shell.status-row",
+        "shell.scroll-progress",
+        "shell.transition-mask",
+        "error.not-found"
+      ]
+    }
+  ]
+}
