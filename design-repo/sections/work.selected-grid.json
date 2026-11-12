@@ -1,0 +1,210 @@
+{
+ "id": "work.selected-grid",
+ "version": "1.0.0",
+ "title": "Selected work grid",
+ "category": "INDEX",
+ "layer": "in-flow",
+ "description": "Asymmetric 12-column index of project cards (image drawn by WebGL with dot-wipe hover swap; optional lime 'CODING PROJECT' tag; uppercase name / year / type↗ row). Internal cards open article pages, external ones open in a new tab.",
+ "source": {
+  "id": "selected-work",
+  "file": "src/components/SelectedWork.jsx",
+  "tag": "<section id={SELECTED_WORK_SECTION_ID}",
+  "lines": "45-87"
+ },
+ "semantic": {
+  "id": "work.selected-grid",
+  "category": "INDEX"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.home"
+ ],
+ "routes": "home",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "items": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "additionalProperties": false,
+     "properties": {
+      "title": {
+       "type": "string",
+       "minLength": 1,
+       "maxWords": 4,
+       "observedWords": 4
+      },
+      "years": {
+       "type": "string",
+       "pattern": "^[12][0-9]{3}(-[12][0-9]{3})?$"
+      },
+      "kind": {
+       "type": "string",
+       "enum": [
+        "post",
+        "tools",
+        "event"
+       ]
+      },
+      "href": {
+       "type": "string",
+       "minLength": 1,
+       "pattern": "^(/|#|https://|mailto:)"
+      },
+      "codingProject": {
+       "type": "boolean"
+      },
+      "layoutSlot": {
+       "type": "string",
+       "enum": [
+        "lg8-start5",
+        "lg6-start1-xl5",
+        "lg6-start7-xl5-start7",
+        "lg4-start5-xl3-start6",
+        "lg4-start9-xl3-start10",
+        "lg4-start1-xl3-start1",
+        "lg4-start5-xl3-start5",
+        "lg4-start9-xl3-start9"
+       ]
+      }
+     },
+     "required": [
+      "title",
+      "years",
+      "kind",
+      "href",
+      "layoutSlot"
+     ]
+    },
+    "minItems": 1,
+    "maxItems": 12
+   }
+  },
+  "required": [
+   "items"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [
+   "project-thumbnail",
+   "project-hover-thumbnail"
+  ],
+  "generatedAssetRoles": [
+   "generated-project-visual"
+  ],
+  "slots": [
+   "items[i].image",
+   "items[i].hoverImage"
+  ]
+ },
+ "styleOverrides": [],
+ "motion": {
+  "allowedPatterns": [
+   "polarity-reveal",
+   "dot-wipe-hover"
+  ],
+  "reducedMotionFallback": {
+   "polarity-reveal": "show-positive-image",
+   "dot-wipe-hover": "no-hover-swap"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "anchorId": "selected-work"
+ },
+ "responsive": {
+  "lt1024": {
+   "cards": "full width or 6/12 pairs",
+   "typeLabel": "hidden"
+  },
+  "gte1024": {
+   "cards": "per layoutSlot",
+   "rowGap": "grid width / 12"
+  }
+ },
+ "evidence": [
+  {
+   "file": "src/lib/workItems.js",
+   "lines": "2-106",
+   "needle": "export const WORK_ITEMS = ["
+  },
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "52-58",
+   "needle": "Work cards at 1440"
+  }
+ ],
+ "observedWordCounts": {
+  "title": 4,
+  "items": 10
+ },
+ "layoutSlots": {
+  "lg8-start5": {
+   "grid": "col-span-12 lg:col-span-8 lg:col-start-5",
+   "evidence": {
+    "file": "src/lib/workItems.js",
+    "lines": "10-11",
+    "needle": "col-span-12 lg:col-span-8 lg:col-start-5"
+   }
+  },
+  "lg6-start1-xl5": {
+   "grid": "col-span-12 lg:col-start-1 lg:col-span-6 xl:col-span-5",
+   "evidence": {
+    "file": "src/lib/workItems.js",
+    "lines": "19-20",
+    "needle": "lg:col-start-1 lg:col-span-6 xl:col-span-5"
+   }
+  },
+  "lg6-start7-xl5-start7": {
+   "grid": "col-span-12 lg:col-span-6 xl:col-span-5 lg:col-start-7 xl:col-start-7",
+   "evidence": {
+    "file": "src/lib/workItems.js",
+    "lines": "30-31",
+    "needle": "lg:col-span-6 xl:col-span-5 lg:col-start-7 xl:col-start-7"
+   }
+  },
+  "lg4-start5-xl3-start6": {
+   "grid": "col-span-6 lg:col-start-5 lg:col-span-4 xl:col-start-6 xl:col-span-3",
+   "evidence": {
+    "file": "src/lib/workItems.js",
+    "lines": "41-42",
+    "needle": "lg:col-start-5 lg:col-span-4 xl:col-start-6 xl:col-span-3"
+   }
+  },
+  "lg4-start9-xl3-start10": {
+   "grid": "col-span-6 lg:col-start-9 lg:col-span-4 xl:col-start-10 xl:col-span-3",
+   "evidence": {
+    "file": "src/lib/workItems.js",
+    "lines": "52-53",
+    "needle": "lg:col-start-9 lg:col-span-4 xl:col-start-10 xl:col-span-3"
+   }
+  },
+  "lg4-start1-xl3-start1": {
+   "grid": "col-span-12 lg:col-start-1 lg:col-span-4 xl:col-start-1 xl:col-span-3",
+   "evidence": {
+    "file": "src/lib/workItems.js",
+    "lines": "63-64",
+    "needle": "lg:col-start-1 lg:col-span-4 xl:col-start-1 xl:col-span-3"
+   }
+  },
+  "lg4-start5-xl3-start5": {
+   "grid": "col-span-6 lg:col-start-5 lg:col-span-4 xl:col-start-5 xl:col-span-3",
+   "evidence": {
+    "file": "src/lib/workItems.js",
+    "lines": "73-74",
+    "needle": "lg:col-start-5 lg:col-span-4 xl:col-start-5 xl:col-span-3"
+   }
+  },
+  "lg4-start9-xl3-start9": {
+   "grid": "col-span-6 lg:col-start-9 lg:col-span-4 xl:col-start-9 xl:col-span-3",
+   "evidence": {
+    "file": "src/lib/workItems.js",
+    "lines": "82-83",
+    "needle": "lg:col-start-9 lg:col-span-4 xl:col-start-9 xl:col-span-3"
+   }
+  }
+ }
+}

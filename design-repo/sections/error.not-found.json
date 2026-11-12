@@ -1,0 +1,72 @@
+{
+ "id": "error.not-found",
+ "version": "1.0.0",
+ "title": "Not-found message",
+ "category": "ERROR",
+ "layer": "in-flow",
+ "description": "Plain centred '404 | message' line filling one viewport inside the article column; no title block, metadata box or TOC.",
+ "source": {
+  "id": "not-found",
+  "file": "src/pages/NotFoundPage.jsx",
+  "tag": "export default function NotFoundPage()",
+  "lines": "6-10"
+ },
+ "semantic": {
+  "id": "error.not-found",
+  "category": "ERROR"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.not-found"
+ ],
+ "routes": "any unknown path",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "code": {
+    "type": "string",
+    "const": "404"
+   },
+   "message": {
+    "type": "string",
+    "minLength": 1,
+    "maxWords": 8,
+    "observedWords": 6
+   }
+  },
+  "required": [
+   "code",
+   "message"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [],
+ "motion": {
+  "allowedPatterns": [
+   "none"
+  ],
+  "reducedMotionFallback": {
+   "none": "none"
+  }
+ },
+ "constraints": {
+  "onePerPage": true
+ },
+ "responsive": {},
+ "evidence": [
+  {
+   "file": "CLONE_SPEC_PAGES.md",
+   "lines": "1000-1008",
+   "needle": "## 5. 404 / not-found"
+  }
+ ],
+ "observedWordCounts": {
+  "message": 6
+ }
+}

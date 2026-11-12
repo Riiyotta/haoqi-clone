@@ -1,0 +1,45 @@
+{
+ "$description": "Icon boxes measured in the source.",
+ "tokens": {
+  "icon.globe": {
+   "value": "48x24",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "183-183",
+     "needle": "a 48×24 SVG"
+    }
+   ]
+  },
+  "icon.hamburger": {
+   "value": "24x24",
+   "source": [
+    {
+     "file": "src/components/Header.jsx",
+     "lines": "167-167",
+     "needle": "className=\"relative w-6 h-6\""
+    }
+   ]
+  },
+  "icon.to-top-ring": {
+   "value": "24x24",
+   "source": [
+    {
+     "file": "src/components/ScrollProgress.jsx",
+     "lines": "146-146",
+     "needle": "width=\"24px\" height=\"24px\""
+    }
+   ]
+  },
+  "icon.scroll-thumb": {
+   "value": "32x200",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "189-189",
+     "needle": "containing a 32×200 SVG"
+    }
+   ]
+  }
+ }
+}

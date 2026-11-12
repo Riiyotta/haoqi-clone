@@ -1,0 +1,13 @@
+{
+ "id": "tag-chip",
+ "kind": "primitive",
+ "description": "Lime selection-colour tag with black mono-display uppercase text (CODING PROJECT).",
+ "props": [
+  "label"
+ ],
+ "source": {
+  "file": "src/components/SelectedWork.jsx",
+  "lines": "61-61",
+  "needle": "Coding Project"
+ }
+}

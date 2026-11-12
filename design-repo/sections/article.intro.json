@@ -1,0 +1,109 @@
+{
+ "id": "article.intro",
+ "version": "1.0.0",
+ "title": "Article intro",
+ "category": "ARTICLE",
+ "layer": "in-flow",
+ "description": "Lead paragraphs in the secondary label colour directly under the header (12 px between paragraphs), optionally followed by an inline link.",
+ "source": {
+  "id": "article.intro",
+  "file": "src/pages/content/teambition.json",
+  "tag": "[\"div\",{\"className\":\"[&_p+p]:mt-3 [&_p]:mb-0 text-l2",
+  "lines": "1-1"
+ },
+ "semantic": {
+  "id": "article.intro",
+  "category": "ARTICLE"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.article"
+ ],
+ "routes": "all article routes",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "paragraphs": {
+    "type": "array",
+    "items": {
+     "type": "string",
+     "minLength": 1,
+     "maxWords": 158,
+     "observedWords": 143
+    },
+    "minItems": 1,
+    "maxItems": 6
+   },
+   "links": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "additionalProperties": false,
+     "properties": {
+      "label": {
+       "type": "string",
+       "minLength": 1,
+       "maxWords": 2,
+       "observedWords": 2
+      },
+      "href": {
+       "type": "string",
+       "minLength": 1,
+       "pattern": "^(/|#|https://|mailto:)"
+      }
+     },
+     "required": [
+      "label",
+      "href"
+     ]
+    },
+    "minItems": 0,
+    "maxItems": 2
+   }
+  },
+  "required": [
+   "paragraphs"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [
+  "text"
+ ],
+ "motion": {
+  "allowedPatterns": [
+   "none"
+  ],
+  "reducedMotionFallback": {
+   "none": "none"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "mustFollow": "article.header"
+ },
+ "responsive": {
+  "lt1024": {
+   "type": "14/22.75"
+  },
+  "gte1024": {
+   "type": "16/26"
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC_PAGES.md",
+   "lines": "127-127",
+   "needle": "| Intro `p` (first `div` after header)"
+  }
+ ],
+ "observedWordCounts": {
+  "paragraph": 143,
+  "paragraphs": 6
+ }
+}

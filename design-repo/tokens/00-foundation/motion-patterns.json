@@ -1,0 +1,274 @@
+{
+ "$description": "Closed vocabulary of motion patterns a PageSpec node may use. Each pattern has exactly one reducedMotionFallback (const-locked in the PageSpec schema). sourceHasFallback=false means the original site has no reduced-motion branch; the fallback is the design-repo's requirement for generated pages.",
+ "version": "1.0.0",
+ "patterns": {
+  "scramble-in": {
+   "description": "Per-character random-glyph scramble that settles left-to-right (or reversed) once the element enters the viewport (threshold 0.1, once).",
+   "params": {
+    "startDelayMs": [
+     0,
+     100,
+     200,
+     300,
+     360,
+     400,
+     420,
+     500,
+     700
+    ],
+    "letterDelayMs": [
+     10,
+     40,
+     80
+    ]
+   },
+   "reducedMotionFallback": "show-final-text",
+   "sourceHasFallback": false,
+   "evidence": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "106-134",
+     "needle": "### 4.1 ScrambleText"
+    }
+   ]
+  },
+  "stagger-fade": {
+   "description": "Deterministic per-character opacity fade (0.23 s, spread 290 ms, line groups +100 ms).",
+   "params": {
+    "durationSec": [
+     0.23
+    ],
+    "staggerSpreadMs": [
+     290
+    ],
+    "groupDelayMs": [
+     0,
+     100,
+     200
+    ]
+   },
+   "reducedMotionFallback": "show-final-text",
+   "sourceHasFallback": false,
+   "evidence": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "135-153",
+     "needle": "### 4.2 Hyper-space stagger text"
+    }
+   ]
+  },
+  "sticky-stage-sequence": {
+   "description": "Section is one of 4 contiguous scroll stages inside one sticky container 8 viewports tall (2 viewports per stage).",
+   "params": {
+    "viewportsPerStage": [
+     2
+    ]
+   },
+   "reducedMotionFallback": "stack-stages-statically",
+   "sourceHasFallback": false,
+   "evidence": [
+    {
+     "file": "src/components/Innovate.jsx",
+     "lines": "122-127",
+     "needle": "const STAGES = ["
+    }
+   ]
+  },
+  "ring-cycle": {
+   "description": "7 lime ellipses enter, cycle and exit with stage scroll progress.",
+   "params": {
+    "ellipses": [
+     7
+    ]
+   },
+   "reducedMotionFallback": "static-ring",
+   "sourceHasFallback": false,
+   "evidence": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "154-163",
+     "needle": "### 4.3 Ring SVG in seg1"
+    }
+   ]
+  },
+  "signature-draw": {
+   "description": "Stroke-dash draw of the signature paths (len/720 s each, start 0.5 s) when 15% visible; resets on exit.",
+   "params": {
+    "pxPerSecond": [
+     720
+    ]
+   },
+   "reducedMotionFallback": "static-drawn",
+   "sourceHasFallback": true,
+   "evidence": [
+    {
+     "file": "src/index.css",
+     "lines": "22-28",
+     "needle": "@media (prefers-reduced-motion: reduce)"
+    }
+   ]
+  },
+  "polarity-reveal": {
+   "description": "WebGL image layer fades from colour-negative to positive over 0.8 s when in view.",
+   "params": {
+    "durationSec": [
+     0.8
+    ]
+   },
+   "reducedMotionFallback": "show-positive-image",
+   "sourceHasFallback": true,
+   "evidence": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "287-287",
+     "needle": "**Polarity reveal:**"
+    }
+   ]
+  },
+  "dot-wipe-hover": {
+   "description": "Hover swaps the card image to its hover image with an 18 px square-dot wipe over 0.42 s.",
+   "params": {
+    "durationSec": [
+     0.42
+    ]
+   },
+   "reducedMotionFallback": "no-hover-swap",
+   "sourceHasFallback": false,
+   "evidence": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "288-288",
+     "needle": "**Hover:** pointerenter on the card's parent"
+    }
+   ]
+  },
+  "glass-scroll-rotate": {
+   "description": "Glass 3D model rotates/drifts with section scroll progress (damped, λ 6).",
+   "params": {},
+   "reducedMotionFallback": "static-model-pose",
+   "sourceHasFallback": false,
+   "evidence": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "256-262",
+     "needle": "   - **Rotation:**"
+    }
+   ]
+  },
+  "backdrop-scene": {
+   "description": "Full-viewport WebGL backdrop (bokeh streaks, falling stickers, dot overlay, warp cursor) driven by scene progress.",
+   "params": {},
+   "reducedMotionFallback": "static-backdrop-frame",
+   "sourceHasFallback": false,
+   "evidence": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "223-225",
+     "needle": "## 5. WebGL scene"
+    }
+   ]
+  },
+  "color-shift-past-threshold": {
+   "description": "Text switches label-1 -> white (300 ms ease-out) while the warp cursor covers the screen.",
+   "params": {},
+   "reducedMotionFallback": "instant-color-change",
+   "sourceHasFallback": false,
+   "evidence": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "75-75",
+     "needle": "**arrowFullscreen progress (0..1)**"
+    }
+   ]
+  },
+  "dot-iris-transition": {
+   "description": "Halftone dot iris covers/reveals the page (0.8 s, cubic-66) on entry, route change and menu toggle.",
+   "params": {
+    "durationSec": [
+     0.8
+    ]
+   },
+   "reducedMotionFallback": "instant-cut",
+   "sourceHasFallback": false,
+   "evidence": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "318-322",
+     "needle": "## 7. Dot-iris transition canvas"
+    }
+   ]
+  },
+  "fade-presence": {
+   "description": "Opacity fade in/out (0.4 s, ease fade-presence) with unmount after exit.",
+   "params": {},
+   "reducedMotionFallback": "instant-show-hide",
+   "sourceHasFallback": false,
+   "evidence": [
+    {
+     "file": "src/components/Header.jsx",
+     "lines": "48-48",
+     "needle": "// framer-motion AnimatePresence fade replacement"
+    }
+   ]
+  },
+  "scroll-thumb": {
+   "description": "Scroll thumb visible 3 s on mount and 2 s after each scroll (opacity 500 ms).",
+   "params": {},
+   "reducedMotionFallback": "always-visible",
+   "sourceHasFallback": false,
+   "evidence": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "189-195",
+     "needle": "- **Scroll progress bar (72443, desktop only):**"
+    }
+   ]
+  },
+  "globe-spin": {
+   "description": "6 meridian arcs flip with staggered SMIL scale loops (2600 ms).",
+   "params": {},
+   "reducedMotionFallback": "static-globe",
+   "sourceHasFallback": true,
+   "evidence": [
+    {
+     "file": "src/components/RotatingGlobe.jsx",
+     "lines": "9-9",
+     "needle": "const reduced = useReducedMotion()"
+    }
+   ]
+  },
+  "pointer-trail": {
+   "description": "16 px lime dot cells trail the pointer in the WebGL post pass (solid mode only).",
+   "params": {},
+   "reducedMotionFallback": "no-trail",
+   "sourceHasFallback": false,
+   "evidence": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "298-302",
+     "needle": "   - **Lime pointer trail**"
+    }
+   ]
+  },
+  "lightbox-flip": {
+   "description": "Zoomed image flies from its inline rect to the viewport (FLIP 450 ms ease layout) over a dominant-colour backdrop.",
+   "params": {},
+   "reducedMotionFallback": "instant-open",
+   "sourceHasFallback": false,
+   "evidence": [
+    {
+     "file": "src/components/mdx/MdxImg.jsx",
+     "lines": "12-12",
+     "needle": "const LAYOUT_EASE"
+    }
+   ]
+  },
+  "none": {
+   "description": "No motion.",
+   "params": {},
+   "reducedMotionFallback": "none",
+   "sourceHasFallback": true,
+   "evidence": []
+  }
+ }
+}

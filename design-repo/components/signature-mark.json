@@ -1,0 +1,11 @@
+{
+ "id": "signature-mark",
+ "kind": "component",
+ "description": "Stroke-drawn signature SVG (lime, 4 paths).",
+ "composes": [],
+ "source": {
+  "file": "src/components/About.jsx",
+  "lines": "12-12",
+  "needle": "function Signature("
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "id": "article.toc",
+ "version": "1.0.0",
+ "title": "Table of contents",
+ "category": "NAVIGATION",
+ "layer": "fixed",
+ "description": "Fixed left column (320 px) listing the article's h1-h3 headings (indent 0/8/16 px) with the active heading highlighted; only at 1536 px and wider, and only when the article has headings.",
+ "source": {
+  "id": "toc",
+  "file": "src/components/mdx/ArticleChrome.jsx",
+  "tag": "export function MdxTableOfContents()",
+  "lines": "29-99"
+ },
+ "semantic": {
+  "id": "article.toc",
+  "category": "NAVIGATION"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.article"
+ ],
+ "routes": "article routes with headings",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "ariaLabel": {
+    "type": "string",
+    "minLength": 1,
+    "maxWords": 2,
+    "observedWords": 2
+   }
+  },
+  "required": []
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [],
+ "motion": {
+  "allowedPatterns": [
+   "none"
+  ],
+  "reducedMotionFallback": {
+   "none": "none"
+  }
+ },
+ "constraints": {
+  "maxPerPage": 1,
+  "requiresHeadings": true,
+  "layerOrder": "shell"
+ },
+ "responsive": {
+  "lt1536": {
+   "display": "none"
+  },
+  "gte1536": {
+   "display": "flex, fixed left, w 320"
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC_PAGES.md",
+   "lines": "276-288",
+   "needle": "### 1.8 Table of contents"
+  }
+ ]
+}

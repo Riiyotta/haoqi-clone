@@ -1,0 +1,14 @@
+{
+ "id": "dotted-button",
+ "kind": "primitive",
+ "description": "Uppercase HUD control with an inset 2 px dotted frame that appears on hover.",
+ "props": [
+  "label",
+  "tone"
+ ],
+ "source": {
+  "file": "src/lib/dotted.js",
+  "lines": "2-2",
+  "needle": "export const DOTTED_BORDER_BASE ="
+ }
+}

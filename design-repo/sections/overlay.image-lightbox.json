@@ -1,0 +1,58 @@
+{
+ "id": "overlay.image-lightbox",
+ "version": "1.0.0",
+ "title": "Image lightbox",
+ "category": "OVERLAY",
+ "layer": "overlay",
+ "description": "Clicking an article figure flies it to a centred zoomed view over a backdrop tinted with the image's dominant colour; click/Escape closes.",
+ "source": {
+  "id": "lightbox",
+  "file": "src/components/mdx/MdxImg.jsx",
+  "tag": "role=\"dialog\"",
+  "lines": "124-149"
+ },
+ "semantic": {
+  "id": "overlay.image-lightbox",
+  "category": "OVERLAY"
+ },
+ "retrievalEligible": false,
+ "retrievalIneligibleReason": "Modal dialog that only exists after a click on a figure: runtime overlay UI, not page content.",
+ "templates": [
+  "template.article"
+ ],
+ "routes": "article routes with figures",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {},
+  "required": []
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [],
+ "motion": {
+  "allowedPatterns": [
+   "lightbox-flip"
+  ],
+  "reducedMotionFallback": {
+   "lightbox-flip": "instant-open"
+  }
+ },
+ "constraints": {
+  "maxPerPage": 1,
+  "layerOrder": "overlay",
+  "requiresFigures": true
+ },
+ "responsive": {},
+ "evidence": [
+  {
+   "file": "CLONE_SPEC_PAGES.md",
+   "lines": "198-218",
+   "needle": "#### 1.7.3 Images"
+  }
+ ]
+}

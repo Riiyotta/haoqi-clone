@@ -1,0 +1,123 @@
+{
+ "$description": "Component-scoped token bundles (each resolves to foundation/semantic tokens).",
+ "tokens": {
+  "hud.dotted-border": {
+   "border": "2px dotted transparent",
+   "hover": "text.primary (text.over-scene past threshold)",
+   "transition": "dur.200",
+   "source": [
+    {
+     "file": "src/lib/dotted.js",
+     "lines": "2-2",
+     "needle": "export const DOTTED_BORDER_BASE ="
+    }
+   ]
+  },
+  "work-card.tag": {
+   "surface": "accent.selection",
+   "text": "text.on-accent",
+   "font": "font.mono-display",
+   "size": "text.xs",
+   "case": "case.upper",
+   "source": [
+    {
+     "file": "src/components/SelectedWork.jsx",
+     "lines": "61-61",
+     "needle": "Coding Project"
+    }
+   ]
+  },
+  "metadata-box": {
+   "surface": "surface.tint-subtle",
+   "radius": "radius.xl",
+   "padding": {
+    "base": "space.4",
+    "lg": "space.6"
+   },
+   "marginTop": "space.16",
+   "source": [
+    {
+     "file": "src/components/mdx/ArticleChrome.jsx",
+     "lines": "152-152",
+     "needle": "data-mdx-footer=\"true\""
+    }
+   ]
+  },
+  "code-block": {
+   "surface": "surface.tint-subtle",
+   "radius": "radius.xl",
+   "headerShadow": "elevation.inset-hairline",
+   "font": "font.mono",
+   "source": [
+    {
+     "file": "src/components/mdx/MdxBasics.jsx",
+     "lines": "102-102",
+     "needle": "group my-6 overflow-hidden rounded-xl"
+    }
+   ]
+  },
+  "figure": {
+   "border": "border.hairline",
+   "surface": "surface.tint-media",
+   "radius": "radius.none",
+   "margin": "space.6",
+   "source": [
+    {
+     "file": "src/components/mdx/MdxImg.jsx",
+     "lines": "164-164",
+     "needle": "border border-line bg-[rgba(var(--label-d),0.05)]"
+    }
+   ]
+  },
+  "download-button": {
+   "surface": "border.hairline",
+   "hover": "text.tertiary",
+   "height": "52px",
+   "radius": "radius.full",
+   "transition": "dur.300 ease.cubic-66",
+   "source": [
+    {
+     "file": "CLONE_SPEC_PAGES.md",
+     "lines": "229-233",
+     "needle": "#### 1.7.5 Download button"
+    }
+   ]
+  },
+  "inline-code": {
+   "surface": "surface.tint-code",
+   "radius": "radius.sm",
+   "padding": "space.0.5 space.1.5",
+   "font": "font.mono",
+   "size": "text.inline-code",
+   "source": [
+    {
+     "file": "src/pages/ArticlePage.jsx",
+     "lines": "12-12",
+     "needle": "[&_:not(pre)>code]:rounded"
+    }
+   ]
+  },
+  "inline-link": {
+   "underlineOffset": "4px (article) / 0.08em (about)",
+   "decoration": "text.tertiary",
+   "hoverDecoration": "text.secondary / text.primary",
+   "source": [
+    {
+     "file": "src/components/mdx/MdxBasics.jsx",
+     "lines": "57-57",
+     "needle": "const MDXA_CLS"
+    }
+   ]
+  },
+  "list-marker": {
+   "color": "accent.selection",
+   "source": [
+    {
+     "file": "src/pages/ArticlePage.jsx",
+     "lines": "12-12",
+     "needle": "[&_li::marker]:text-[var(--selection-bg)]"
+    }
+   ]
+  }
+ }
+}

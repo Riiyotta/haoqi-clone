@@ -1,0 +1,115 @@
+{
+ "id": "hero.banner",
+ "version": "1.0.0",
+ "title": "Hero banner",
+ "category": "HERO",
+ "layer": "in-flow",
+ "description": "One-viewport opener on a 12-column grid: a discipline label, a one-line principle and a short bio (desktop top row), and a 3-line bold uppercase wide headline anchored to the bottom, over the glass opener model of the backdrop.",
+ "source": {
+  "id": "banner",
+  "file": "src/components/Hero.jsx",
+  "tag": "data-section=\"banner\"",
+  "lines": "30-55"
+ },
+ "semantic": {
+  "id": "hero.banner",
+  "category": "HERO"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.home"
+ ],
+ "routes": "home",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "discipline": {
+    "type": "string",
+    "minLength": 1,
+    "maxWords": 3,
+    "observedWords": 2
+   },
+   "principle": {
+    "type": "string",
+    "minLength": 1,
+    "maxWords": 8,
+    "observedWords": 6
+   },
+   "bio": {
+    "type": "string",
+    "minLength": 1,
+    "maxWords": 30,
+    "observedWords": 24
+   },
+   "headlineLines": {
+    "type": "array",
+    "items": {
+     "type": "string",
+     "minLength": 1,
+     "maxWords": 3,
+     "observedWords": 3
+    },
+    "minItems": 3,
+    "maxItems": 3
+   }
+  },
+  "required": [
+   "discipline",
+   "principle",
+   "bio",
+   "headlineLines"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [
+  "text"
+ ],
+ "motion": {
+  "allowedPatterns": [
+   "scramble-in"
+  ],
+  "reducedMotionFallback": {
+   "scramble-in": "show-final-text"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "mustBeFirstInFlow": true,
+  "heightViewports": 1
+ },
+ "responsive": {
+  "lt1024": {
+   "order": "headline first, then bio only (mt-auto)",
+   "hidden": [
+    "discipline",
+    "principle"
+   ]
+  },
+  "gte1024": {
+   "meta": "discipline col 1-3, principle col 4-6 (xl 5-6), bio col 7-12 (xl 9-12)"
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "45-45",
+   "needle": "| 0 | **banner**"
+  },
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "130-134",
+   "needle": "Hero bio text:"
+  }
+ ],
+ "observedWordCounts": {
+  "principle": 6,
+  "bio": 24,
+  "headlineLine": 3
+ }
+}

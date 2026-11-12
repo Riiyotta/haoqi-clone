@@ -1,0 +1,59 @@
+{
+ "id": "effect.pointer-trail",
+ "version": "1.0.0",
+ "title": "Pointer trail",
+ "category": "SHELL",
+ "layer": "overlay",
+ "description": "Lime 16 px dot cells that trail the pointer, drawn in the WebGL post pass while the page is in its solid (cream) state; desktop only.",
+ "source": {
+  "id": "pointer-trail",
+  "file": "src/webgl/b2-passes.js",
+  "tag": "trail = Array.from({ length: 16 }",
+  "lines": "116-150"
+ },
+ "semantic": {
+  "id": "effect.pointer-trail",
+  "category": "SHELL"
+ },
+ "retrievalEligible": false,
+ "retrievalIneligibleReason": "Cursor-follower effect bound to pointer movement: runtime decoration with no content, never a retrievable section.",
+ "templates": [
+  "template.home"
+ ],
+ "routes": "home",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {},
+  "required": []
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [],
+ "motion": {
+  "allowedPatterns": [
+   "pointer-trail"
+  ],
+  "reducedMotionFallback": {
+   "pointer-trail": "no-trail"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "homeOnly": true,
+  "layerOrder": "overlay",
+  "desktopOnly": true
+ },
+ "responsive": {},
+ "evidence": [
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "298-302",
+   "needle": "   - **Lime pointer trail**"
+  }
+ ]
+}

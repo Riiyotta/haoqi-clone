@@ -1,0 +1,88 @@
+{
+ "id": "article.header",
+ "version": "1.0.0",
+ "title": "Article header",
+ "category": "ARTICLE",
+ "layer": "in-flow",
+ "description": "Article opener 10vh below the top: wide bold title (48/60 desktop, 30/37.5 mobile), last-updated date, hairline divider, optional year range.",
+ "source": {
+  "id": "article.header",
+  "file": "src/pages/content/reunimos.json",
+  "tag": "[\"header\",{\"className\":\"pt-[10vh]\"}",
+  "lines": "1-1"
+ },
+ "semantic": {
+  "id": "article.header",
+  "category": "ARTICLE"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.article"
+ ],
+ "routes": "all article routes",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "title": {
+    "type": "string",
+    "minLength": 1,
+    "maxWords": 4,
+    "observedWords": 3
+   },
+   "updated": {
+    "type": "string",
+    "pattern": "^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [0-3][0-9], [12][0-9]{3}$"
+   },
+   "years": {
+    "type": "string",
+    "pattern": "^[12][0-9]{3}(-[12][0-9]{3})?$"
+   }
+  },
+  "required": [
+   "title",
+   "updated"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [
+  "text"
+ ],
+ "motion": {
+  "allowedPatterns": [
+   "none"
+  ],
+  "reducedMotionFallback": {
+   "none": "none"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "mustBeFirstInFlow": true
+ },
+ "responsive": {
+  "lt1024": {
+   "title": "text-3xl",
+   "date": "text-sm"
+  },
+  "gte1024": {
+   "title": "text-5xl",
+   "date": "text-base"
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC_PAGES.md",
+   "lines": "108-123",
+   "needle": "### 1.4 Layout numbers"
+  }
+ ],
+ "observedWordCounts": {
+  "title": 3
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "repositoryId": "haoqi-portfolio-design-repo",
+ "repositoryVersion": "1.0.0",
+ "pageSpecVersion": "1.0.0",
+ "allowlistVersion": "1.0.0",
+ "versionFieldNote": "allowlistVersion and pageSpecVersion are machine-checked by extraction/verify_all.py (VERSION_FIELDS); repositoryVersion is documentation-only and hand-maintained (see CHANGELOG.md).",
+ "status": "design-review-pending",
+ "productionApproved": false,
+ "category": "portfolio",
+ "designPolicy": {
+  "policyId": "n0-design-constraints-common",
+  "policyVersion": "0.1.0",
+  "commonIrVersion": "0.5",
+  "enforcementMode": "hard-and-soft",
+  "domain": "portfolio",
+  "contentHash": "sha256:01c657c28ebca8132cae8d2aadaf9c702e8d43c41881d20db08932404c8d2c9e"
+ },
+ "approval": {
+  "status": "defined-pending-architecture-review",
+  "architectureDecisionRecorded": false,
+  "decidedBy": null,
+  "decidedAt": null,
+  "decision": null
+ },
+ "source": {
+  "kind": "local study clone of a live personal portfolio",
+  "liveUrl": "https://haoqi.design",
+  "note": "Real person + real content: reference mode only; generated mode is leakage-checked. Not for publication."
+ },
+ "sourceStack": "React 19 + Vite 5, three.js r184 via @react-three/fiber 9, postprocessing, Lenis (documentation only; see extraction/measured-values.json -> sourceStack)",
+ "defaultTheme": "system",
+ "schemaValidatedThemes": [
+  "light",
+  "dark",
+  "system"
+ ],
+ "modes": [
+  "reference",
+  "generated"
+ ],
+ "counts": {
+  "sections": 25,
+  "primitives": 10,
+  "components": 8,
+  "templates": 3,
+  "routes": 8,
+  "tokens": 133,
+  "assetRoles": 25,
+  "examplePageSpecs": 6,
+  "motionPatterns": 17,
+  "graphRules": 37,
+  "retrievalIneligibleSections": 7
+ },
+ "entryPoints": {
+  "readme": "README.md",
+  "changelog": "CHANGELOG.md",
+  "pagespecSchema": "schema/pagespec.schema.json",
+  "sectionContractSchema": "schema/section-contract.schema.json",
+  "schemaBuilder": "schema/build_schema.py",
+  "semanticValidator": "schema/semantic_validate.py",
+  "adversarialTests": "schema/tests/adversarial_test.py",
+  "example": "schema/example.pagespec.json",
+  "examples": "schema/examples",
+  "templates": "templates/templates.json",
+  "routes": "templates/routes.json",
+  "sections": "sections",
+  "primitives": "primitives",
+  "components": "components",
+  "compatibilityGraph": "compatibility/graph.json",
+  "assetRoles": "assets/asset-roles.json",
+  "tokenCatalog": "tokens/llm/token-catalog.json",
+  "tokenPolicy": "tokens/llm/token-policy.json",
+  "componentAllowlist": "tokens/llm/component-allowlist.json",
+  "motionPatterns": "tokens/00-foundation/motion-patterns.json",
+  "foundationTokens": "tokens/00-foundation",
+  "semanticTokens": "tokens/10-semantic/semantic.json",
+  "themes": "tokens/themes",
+  "designPolicy": "policy/design-policy.json",
+  "sourceIdentity": "policy/source-identity.json",
+  "measuredValues": "extraction/measured-values.json",
+  "verifyAll": "extraction/verify_all.py",
+  "proveDrift": "extraction/prove_drift.py",
+  "wrapperGate": "extraction/wrapper_gate.py",
+  "wrapperWhitelist": "extraction/wrapper-gate-whitelist.json",
+  "measureSections": "extraction/measure_sections.mjs",
+  "policyHash": "extraction/policy_hash.py",
+  "deriveSourceIdentity": "extraction/derive_source_identity.py",
+  "repointCitations": "extraction/repoint_citations.py",
+  "parityCapture": "extraction/parity/capture.mjs",
+  "parityCompare": "extraction/parity/compare.py",
+  "parityResults": "extraction/parity/parity-results.json"
+ }
+}

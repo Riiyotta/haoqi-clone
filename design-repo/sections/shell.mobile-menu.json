@@ -1,0 +1,76 @@
+{
+ "id": "shell.mobile-menu",
+ "version": "1.0.0",
+ "title": "Mobile menu",
+ "category": "SHELL",
+ "layer": "overlay",
+ "description": "Below 1024 px: full-screen list of HOME / WORK / CONTACT in 10svw mono display type, opened by the hamburger (behind the dot-iris cover).",
+ "source": {
+  "id": "mobile-menu",
+  "file": "src/components/Header.jsx",
+  "tag": "lg:hidden z-40 fixed inset-0",
+  "lines": "220-232"
+ },
+ "semantic": {
+  "id": "shell.mobile-menu",
+  "category": "SHELL"
+ },
+ "retrievalEligible": false,
+ "retrievalIneligibleReason": "Full-screen navigation drawer/overlay that only exists while open; runtime UI, not page content.",
+ "templates": [
+  "template.home",
+  "template.article",
+  "template.not-found"
+ ],
+ "routes": "all",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "items": {
+    "type": "array",
+    "items": {
+     "type": "string",
+     "minLength": 1,
+     "maxWords": 1,
+     "observedWords": 1
+    },
+    "minItems": 3,
+    "maxItems": 3
+   }
+  },
+  "required": [
+   "items"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [],
+ "motion": {
+  "allowedPatterns": [
+   "scramble-in",
+   "dot-iris-transition"
+  ],
+  "reducedMotionFallback": {
+   "scramble-in": "show-final-text",
+   "dot-iris-transition": "instant-cut"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "layerOrder": "overlay",
+  "mobileOnly": true
+ },
+ "responsive": {},
+ "evidence": [
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "201-207",
+   "needle": "- **Mobile hamburger** (below 1024 px):"
+  }
+ ]
+}

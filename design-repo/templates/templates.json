@@ -1,0 +1,278 @@
+{
+ "$description": "One template per distinct page shape. nodes are ordered; required/repeatable are machine-enforced by schema/semantic_validate.py (TEMPLATE_* rules). `variant` pins a node to one variant.",
+ "version": "1.0.0",
+ "templates": {
+  "template.home": {
+   "id": "template.home",
+   "family": "home",
+   "name": "Home (scroll-driven WebGL portfolio)",
+   "routes": [
+    "/"
+   ],
+   "routePattern": "^/$",
+   "nodes": [
+    {
+     "section": "shell.header-nav",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.status-row",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.grid-overlay",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.scroll-progress",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.transition-mask",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.mobile-menu",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.hint-panel",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "backdrop.webgl-scene",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "effect.pointer-trail",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "hero.banner",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "intro.about",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "work.selected-grid",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "statement.stage-headline",
+     "required": true,
+     "repeatable": false,
+     "variant": "primary"
+    },
+    {
+     "section": "statement.stage-headline",
+     "required": true,
+     "repeatable": false,
+     "variant": "secondary"
+    },
+    {
+     "section": "statement.stage-sentences",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "statement.stage-headline",
+     "required": true,
+     "repeatable": false,
+     "variant": "closing"
+    },
+    {
+     "section": "contact.footer-cta",
+     "required": true,
+     "repeatable": false
+    }
+   ],
+   "evidence": [
+    {
+     "file": "src/App.jsx",
+     "lines": "120-132",
+     "needle": "function HomePage()"
+    },
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "41-51",
+     "needle": "## 2. Section layout"
+    }
+   ]
+  },
+  "template.article": {
+   "id": "template.article",
+   "family": "article",
+   "name": "Project article",
+   "routes": [
+    "/reunimos",
+    "/inspire_mono",
+    "/wasm_design_utils",
+    "/adrive",
+    "/shore_icon",
+    "/teambition"
+   ],
+   "routePattern": "^/[a-z0-9_-]+$",
+   "nodes": [
+    {
+     "section": "shell.header-nav",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.status-row",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.scroll-progress",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.transition-mask",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.mobile-menu",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.hint-panel",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "article.toc",
+     "required": false,
+     "repeatable": false
+    },
+    {
+     "section": "overlay.image-lightbox",
+     "required": false,
+     "repeatable": false
+    },
+    {
+     "section": "article.header",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "article.intro",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "article.chapter",
+     "required": false,
+     "repeatable": true
+    },
+    {
+     "section": "article.live-embed",
+     "required": false,
+     "repeatable": false
+    },
+    {
+     "section": "article.download-cta",
+     "required": false,
+     "repeatable": false
+    },
+    {
+     "section": "article.image-grid",
+     "required": false,
+     "repeatable": false
+    },
+    {
+     "section": "article.meta-footer",
+     "required": true,
+     "repeatable": false
+    }
+   ],
+   "evidence": [
+    {
+     "file": "src/pages/ArticlePage.jsx",
+     "lines": "48-58",
+     "needle": "export default function ArticlePage("
+    },
+    {
+     "file": "CLONE_SPEC_PAGES.md",
+     "lines": "82-107",
+     "needle": "### 1.3 DOM structure (exact classes)"
+    }
+   ]
+  },
+  "template.not-found": {
+   "id": "template.not-found",
+   "family": "not-found",
+   "name": "Not found (404)",
+   "routes": [
+    "/*"
+   ],
+   "routePattern": "^/(?!$).+",
+   "nodes": [
+    {
+     "section": "shell.header-nav",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.status-row",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.scroll-progress",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.transition-mask",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.mobile-menu",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "shell.hint-panel",
+     "required": true,
+     "repeatable": false
+    },
+    {
+     "section": "error.not-found",
+     "required": true,
+     "repeatable": false
+    }
+   ],
+   "evidence": [
+    {
+     "file": "src/pages/NotFoundPage.jsx",
+     "lines": "6-10",
+     "needle": "export default function NotFoundPage()"
+    },
+    {
+     "file": "src/App.jsx",
+     "lines": "143-143",
+     "needle": "route.name === 'home' ? <HomePage />"
+    }
+   ]
+  }
+ }
+}

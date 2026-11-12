@@ -1,0 +1,11 @@
+{
+ "id": "stage-line-stack",
+ "kind": "component",
+ "description": "2-3 centred display lines with per-character stagger.",
+ "composes": [],
+ "source": {
+  "file": "src/components/Innovate.jsx",
+  "lines": "224-224",
+  "needle": "const BIG = 'flex flex-col"
+ }
+}

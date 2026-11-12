@@ -1,0 +1,70 @@
+{
+ "id": "shell.grid-overlay",
+ "version": "1.0.0",
+ "title": "Grid overlay",
+ "category": "SHELL",
+ "layer": "fixed",
+ "description": "Fixed difference-blended SVG grid: 3-4 vertical column lines and 2 horizontal lines with '+' crosshairs, derived from the 16/56 px gutter and viewport size.",
+ "source": {
+  "id": "grid-overlay",
+  "file": "src/components/GridOverlay.jsx",
+  "tag": "export default function GridOverlay()",
+  "lines": "7-39"
+ },
+ "semantic": {
+  "id": "shell.grid-overlay",
+  "category": "SHELL"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.home"
+ ],
+ "routes": "home",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {},
+  "required": []
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [],
+ "motion": {
+  "allowedPatterns": [
+   "none"
+  ],
+  "reducedMotionFallback": {
+   "none": "none"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "homeOnly": true,
+  "layerOrder": "shell"
+ },
+ "responsive": {
+  "lt1024": {
+   "gutterPx": 16
+  },
+  "gte1024": {
+   "gutterPx": 56
+  },
+  "lt1280": {
+   "columns": 2
+  },
+  "gte1280": {
+   "columns": 3
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "195-201",
+   "needle": "- **Grid overlay (13717):**"
+  }
+ ]
+}

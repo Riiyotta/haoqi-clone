@@ -1,0 +1,13 @@
+{
+ "id": "loader-bar",
+ "kind": "primitive",
+ "description": "140x6 rounded progress bar (tertiary track, primary fill, width 520 ms).",
+ "props": [
+  "progress"
+ ],
+ "source": {
+  "file": "src/webgl/TransitionCanvas.jsx",
+  "lines": "193-193",
+  "needle": "function LoaderBar("
+ }
+}

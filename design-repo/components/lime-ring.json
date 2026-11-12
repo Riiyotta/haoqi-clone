@@ -1,0 +1,11 @@
+{
+ "id": "lime-ring",
+ "kind": "component",
+ "description": "344x344 SVG of 7 lime ellipses animated by stage progress.",
+ "composes": [],
+ "source": {
+  "file": "src/components/Innovate.jsx",
+  "lines": "51-51",
+  "needle": "const Ring = memo(function Ring"
+ }
+}

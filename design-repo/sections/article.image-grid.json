@@ -1,0 +1,86 @@
+{
+ "id": "article.image-grid",
+ "version": "1.0.0",
+ "title": "Image grid",
+ "category": "ARTICLE",
+ "layer": "in-flow",
+ "description": "Gallery of zoomable figures in a grid: 1 column on mobile, 2 columns from 1024 px (gap 16), figures without margins.",
+ "source": {
+  "id": "article.image-grid",
+  "file": "src/pages/content/inspire_mono.json",
+  "tag": "data-mdx-image-grid\":\"true\"",
+  "lines": "1-1"
+ },
+ "semantic": {
+  "id": "article.image-grid",
+  "category": "ARTICLE"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.article"
+ ],
+ "routes": "/inspire_mono",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "columnsLg": {
+    "type": "integer",
+    "enum": [
+     2
+    ]
+   },
+   "count": {
+    "type": "integer",
+    "minimum": 2,
+    "maximum": 16
+   }
+  },
+  "required": [
+   "columnsLg",
+   "count"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [
+   "article-slide"
+  ],
+  "generatedAssetRoles": [
+   "generated-article-figure"
+  ],
+  "slots": [
+   "slides[i]"
+  ]
+ },
+ "styleOverrides": [],
+ "motion": {
+  "allowedPatterns": [
+   "none"
+  ],
+  "reducedMotionFallback": {
+   "none": "none"
+  }
+ },
+ "constraints": {
+  "maxPerPage": 1
+ },
+ "responsive": {
+  "lt1024": {
+   "columns": 1
+  },
+  "gte1024": {
+   "columns": 2
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC_PAGES.md",
+   "lines": "225-228",
+   "needle": "#### 1.7.4 Image grid"
+  }
+ ],
+ "observedWordCounts": {
+  "figures": 15
+ }
+}

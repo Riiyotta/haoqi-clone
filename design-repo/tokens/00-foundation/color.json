@@ -1,0 +1,385 @@
+{
+ "$description": "Foundation colours. Values resolved from the original stylesheet's custom properties (light = :root, dark = .dark); scene colours are the WebGL palette measured in CLONE_SPEC.md.",
+ "tokens": {
+  "color.label-1": {
+   "light": "rgba(0,0,0,1)",
+   "dark": "rgba(255,255,255,1)",
+   "cssVar": "--label-1",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--label-1"
+    },
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "dark",
+     "var": "--label-1"
+    }
+   ]
+  },
+  "color.label-2": {
+   "light": "rgba(54,54,48,.6)",
+   "dark": "rgba(230,232,232,.6)",
+   "cssVar": "--label-2",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--label-2"
+    },
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "dark",
+     "var": "--label-2"
+    }
+   ]
+  },
+  "color.label-3": {
+   "light": "rgba(54,54,48,.32)",
+   "dark": "rgba(230,232,232,.32)",
+   "cssVar": "--label-3",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--label-3"
+    },
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "dark",
+     "var": "--label-3"
+    }
+   ]
+  },
+  "color.label-4": {
+   "light": "rgba(54,54,48,.18)",
+   "dark": "rgba(230,232,232,.16)",
+   "cssVar": "--label-4",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--label-4"
+    },
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "dark",
+     "var": "--label-4"
+    }
+   ]
+  },
+  "color.line": {
+   "light": "rgba(54,54,48,.1)",
+   "dark": "rgba(230,232,232,.08)",
+   "cssVar": "--line",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--line"
+    },
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "dark",
+     "var": "--line"
+    }
+   ]
+  },
+  "color.background-1": {
+   "light": "rgb(251,250,244)",
+   "dark": "rgb(15,17,17)",
+   "cssVar": "--background-1",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--background-deep"
+    },
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "dark",
+     "var": "--background-deep"
+    }
+   ]
+  },
+  "color.background-elevated": {
+   "light": "#efede7",
+   "dark": "#191b1b",
+   "cssVar": "--background-elevated",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--background-elevated"
+    },
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "dark",
+     "var": "--background-elevated"
+    }
+   ]
+  },
+  "color.selection": {
+   "light": "#c0fe04",
+   "dark": "#c0fe04",
+   "cssVar": "--selection-bg",
+   "note": "single value for both themes (only :root defines it); a lab() override exists for wide-gamut displays",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--selection-bg"
+    }
+   ]
+  },
+  "color.black": {
+   "light": "#000",
+   "dark": "#000",
+   "cssVar": "--color-black",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--color-black"
+    }
+   ]
+  },
+  "color.white": {
+   "light": "#fff",
+   "dark": "#fff",
+   "cssVar": "--color-white",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--color-white"
+    }
+   ]
+  },
+  "color.code-comment": {
+   "light": "rgba(54,54,48,.45)",
+   "dark": "rgba(230,232,232,.5)",
+   "cssVar": "--code-comment",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--code-comment"
+    },
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "dark",
+     "var": "--code-comment"
+    }
+   ]
+  },
+  "color.code-string": {
+   "light": "#00784a",
+   "dark": "#80daac",
+   "cssVar": "--code-string",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--code-string"
+    },
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "dark",
+     "var": "--code-string"
+    }
+   ]
+  },
+  "color.code-number": {
+   "light": "#8a6a00",
+   "dark": "#ebc669",
+   "cssVar": "--code-number",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--code-number"
+    },
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "dark",
+     "var": "--code-number"
+    }
+   ]
+  },
+  "color.code-keyword": {
+   "light": "#5e53e3",
+   "dark": "#afb6ff",
+   "cssVar": "--code-keyword",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--code-keyword"
+    },
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "dark",
+     "var": "--code-keyword"
+    }
+   ]
+  },
+  "color.code-function": {
+   "light": "#0077bc",
+   "dark": "#8dcbff",
+   "cssVar": "--code-function",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--code-function"
+    },
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "dark",
+     "var": "--code-function"
+    }
+   ]
+  },
+  "color.code-tag": {
+   "light": "#c0434c",
+   "dark": "#ffa3a3",
+   "cssVar": "--code-tag",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--code-tag"
+    },
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "dark",
+     "var": "--code-tag"
+    }
+   ]
+  },
+  "color.code-operator": {
+   "light": "rgba(54,54,48,.75)",
+   "dark": "rgba(230,232,232,.85)",
+   "cssVar": "--code-operator",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--code-operator"
+    },
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "dark",
+     "var": "--code-operator"
+    }
+   ]
+  },
+  "color.scene.accent-blue": {
+   "light": "#009dff",
+   "dark": "#64c3ff",
+   "scope": "scene",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "272-277",
+     "needle": "Glass params (leva defaults)",
+     "claim": "glass tint A (light/dark)"
+    }
+   ]
+  },
+  "color.scene.glass-tint-b": {
+   "light": "#ffffff",
+   "dark": "#8e9dc4",
+   "scope": "scene",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "272-277",
+     "needle": "Glass params (leva defaults)",
+     "claim": "glass tint B (light/dark)"
+    }
+   ]
+  },
+  "color.scene.bokeh-background": {
+   "light": "#ffead6",
+   "dark": "#2c4bd5",
+   "scope": "scene",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "241-243",
+     "needle": "light: bg `#ffead6`",
+     "claim": "bokeh background"
+    }
+   ]
+  },
+  "color.scene.bokeh-vignette": {
+   "light": "#6196ff",
+   "dark": "#00000d",
+   "scope": "scene",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "241-243",
+     "needle": "light: bg `#ffead6`",
+     "claim": "bokeh vignette"
+    }
+   ]
+  },
+  "color.scene.bokeh-output": {
+   "light": "#acffb9",
+   "dark": "#00344C",
+   "scope": "scene",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "241-243",
+     "needle": "light: bg `#ffead6`",
+     "claim": "bokeh output tint"
+    }
+   ]
+  },
+  "color.scene.dot-overlay": {
+   "light": "#FBFAF4",
+   "dark": "#0F1111",
+   "scope": "scene",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "213-215",
+     "needle": "dot overlay colour",
+     "claim": "cream dot overlay"
+    }
+   ]
+  },
+  "color.scene.scramble-glyph-2": {
+   "light": "#607F02",
+   "dark": "#DFFF81",
+   "scope": "scene",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "107-109",
+     "needle": "colors { light:",
+     "claim": "second scramble glyph colour"
+    }
+   ]
+  },
+  "color.scene.grid-line": {
+   "light": "rgba(255,255,255,0.1)",
+   "dark": "rgba(255,255,255,0.1)",
+   "scope": "scene",
+   "blend": "difference",
+   "source": [
+    {
+     "file": "src/components/GridOverlay.jsx",
+     "lines": "5-5",
+     "needle": "const LINE = 'rgba(255, 255, 255, 0.1)'",
+     "claim": "grid overlay stroke"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,246 @@
+{
+ "id": "article.chapter",
+ "version": "1.0.0",
+ "title": "Article chapter",
+ "category": "ARTICLE",
+ "layer": "in-flow",
+ "description": "One heading-bounded part of the article body: a heading at the article's top heading level followed by paragraphs, lists (lime markers), square figures with a hairline border (click to zoom), code blocks with line numbers + COPY, and rules. A chapter that would exceed half the page splits at its next heading level.",
+ "source": {
+  "id": "article.chapter",
+  "file": "src/components/mdx/MdxBasics.jsx",
+  "tag": "export function MdxHeading(",
+  "lines": "31-55"
+ },
+ "semantic": {
+  "id": "article.chapter",
+  "category": "ARTICLE"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.article"
+ ],
+ "routes": "/wasm_design_utils, /adrive, /shore_icon",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "heading": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+     "level": {
+      "type": "integer",
+      "enum": [
+       1,
+       2,
+       3
+      ]
+     },
+     "text": {
+      "type": "string",
+      "minLength": 1,
+      "maxWords": 5,
+      "observedWords": 4
+     }
+    },
+    "required": [
+     "level",
+     "text"
+    ]
+   },
+   "blocks": {
+    "type": "array",
+    "items": {
+     "oneOf": [
+      {
+       "type": "object",
+       "additionalProperties": false,
+       "properties": {
+        "kind": {
+         "const": "paragraph"
+        },
+        "text": {
+         "type": "string",
+         "minLength": 1,
+         "maxWords": 72,
+         "observedWords": 65
+        }
+       },
+       "required": [
+        "kind",
+        "text"
+       ]
+      },
+      {
+       "type": "object",
+       "additionalProperties": false,
+       "properties": {
+        "kind": {
+         "const": "list"
+        },
+        "ordered": {
+         "type": "boolean"
+        },
+        "items": {
+         "type": "array",
+         "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 33,
+          "observedWords": 27
+         },
+         "minItems": 1,
+         "maxItems": 8
+        }
+       },
+       "required": [
+        "kind",
+        "ordered",
+        "items"
+       ]
+      },
+      {
+       "type": "object",
+       "additionalProperties": false,
+       "properties": {
+        "kind": {
+         "const": "figure"
+        },
+        "asset": {
+         "$ref": "#/definitions/assetRef"
+        },
+        "caption": {
+         "type": "string",
+         "minLength": 1,
+         "maxWords": 12,
+         "observedWords": 0
+        }
+       },
+       "required": [
+        "kind",
+        "asset"
+       ]
+      },
+      {
+       "type": "object",
+       "additionalProperties": false,
+       "properties": {
+        "kind": {
+         "const": "code"
+        },
+        "label": {
+         "type": "string",
+         "minLength": 1,
+         "maxWords": 4,
+         "observedWords": 2
+        },
+        "language": {
+         "type": "string",
+         "enum": [
+          "js",
+          "ts",
+          "tsx",
+          "jsx",
+          "bash",
+          "json",
+          "css",
+          "html"
+         ]
+        },
+        "lines": {
+         "type": "array",
+         "items": {
+          "type": "string",
+          "maxLength": 160
+         },
+         "minItems": 1,
+         "maxItems": 40
+        }
+       },
+       "required": [
+        "kind",
+        "label",
+        "language",
+        "lines"
+       ]
+      },
+      {
+       "type": "object",
+       "additionalProperties": false,
+       "properties": {
+        "kind": {
+         "const": "rule"
+        }
+       },
+       "required": [
+        "kind"
+       ]
+      }
+     ]
+    },
+    "minItems": 1,
+    "maxItems": 30
+   }
+  },
+  "required": [
+   "heading",
+   "blocks"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [
+   "article-figure"
+  ],
+  "generatedAssetRoles": [
+   "generated-article-figure"
+  ],
+  "slots": [
+   "blocks[i].asset"
+  ]
+ },
+ "styleOverrides": [],
+ "motion": {
+  "allowedPatterns": [
+   "none"
+  ],
+  "reducedMotionFallback": {
+   "none": "none"
+  }
+ },
+ "constraints": {
+  "repeatable": true,
+  "contiguous": true
+ },
+ "responsive": {
+  "lt1024": {
+   "h1": "24/30",
+   "h2": "20/25",
+   "p": "14/22.75"
+  },
+  "gte1024": {
+   "h1": "28/35",
+   "h2": "24/30",
+   "p": "16/26"
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC_PAGES.md",
+   "lines": "124-138",
+   "needle": "### 1.5 Body typography (computed)"
+  },
+  {
+   "file": "src/pages/ArticlePage.jsx",
+   "lines": "12-12",
+   "needle": "export const PROSE_CLS"
+  }
+ ],
+ "observedWordCounts": {
+  "headingText": 4,
+  "para": 65,
+  "listItem": 27,
+  "codeLines": 26,
+  "blocksPerChapter": 20
+ }
+}

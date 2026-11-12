@@ -1,0 +1,73 @@
+{
+ "id": "shell.hint-panel",
+ "version": "1.0.0",
+ "title": "Keyboard hint panel",
+ "category": "SHELL",
+ "layer": "overlay",
+ "description": "Hovering THEME, SOUND or the coordinate readout fades in a small elevated panel with keyboard shortcuts plus browser name and viewport size.",
+ "source": {
+  "id": "hint-panel",
+  "file": "src/components/Header.jsx",
+  "tag": "hidden top-24 right-0 left-0 z-50 fixed",
+  "lines": "202-220"
+ },
+ "semantic": {
+  "id": "shell.hint-panel",
+  "category": "SHELL"
+ },
+ "retrievalEligible": false,
+ "retrievalIneligibleReason": "Hover tooltip / hint overlay that appears on pointer-enter and unmounts after exit: runtime utility UI.",
+ "templates": [
+  "template.home",
+  "template.article",
+  "template.not-found"
+ ],
+ "routes": "all",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "text": {
+    "type": "string",
+    "minLength": 1,
+    "maxWords": 47,
+    "observedWords": 42
+   }
+  },
+  "required": [
+   "text"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [
+  "surface"
+ ],
+ "motion": {
+  "allowedPatterns": [
+   "fade-presence",
+   "scramble-in"
+  ],
+  "reducedMotionFallback": {
+   "fade-presence": "instant-show-hide",
+   "scramble-in": "show-final-text"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "layerOrder": "overlay",
+  "desktopOnly": true
+ },
+ "responsive": {},
+ "evidence": [
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "186-189",
+   "needle": "- **Hint panel:**"
+  }
+ ]
+}

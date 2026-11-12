@@ -1,0 +1,14 @@
+{
+ "id": "toggle-control",
+ "kind": "component",
+ "description": "THEME[L|D|A] / SOUND[x] cycling toggles in dotted-button chrome.",
+ "composes": [
+  "dotted-button",
+  "scramble-text"
+ ],
+ "source": {
+  "file": "src/components/Toggles.jsx",
+  "lines": "9-9",
+  "needle": "export function ThemeToggle("
+ }
+}

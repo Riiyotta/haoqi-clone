@@ -1,0 +1,301 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Section contract (closed)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "id",
+  "version",
+  "title",
+  "category",
+  "layer",
+  "description",
+  "source",
+  "semantic",
+  "retrievalEligible",
+  "templates",
+  "routes",
+  "variants",
+  "contentSchema",
+  "assets",
+  "styleOverrides",
+  "motion",
+  "constraints",
+  "responsive",
+  "evidence"
+ ],
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^[a-z]+\\.[a-z0-9-]+$"
+  },
+  "version": {
+   "type": "string"
+  },
+  "title": {
+   "type": "string"
+  },
+  "category": {
+   "enum": [
+    "SHELL",
+    "BACKDROP",
+    "OVERLAY",
+    "HERO",
+    "INTRO",
+    "INDEX",
+    "STATEMENT",
+    "CTA",
+    "NAVIGATION",
+    "ARTICLE",
+    "ERROR"
+   ]
+  },
+  "layer": {
+   "enum": [
+    "fixed",
+    "overlay",
+    "backdrop",
+    "in-flow"
+   ]
+  },
+  "description": {
+   "type": "string",
+   "minLength": 30
+  },
+  "source": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "id",
+    "file",
+    "tag",
+    "lines"
+   ],
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "file": {
+     "type": "string"
+    },
+    "tag": {
+     "type": "string"
+    },
+    "lines": {
+     "type": "string",
+     "pattern": "^[0-9]+-[0-9]+$"
+    }
+   }
+  },
+  "semantic": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "id",
+    "category"
+   ],
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "category": {
+     "type": "string"
+    }
+   }
+  },
+  "retrievalEligible": {
+   "type": "boolean"
+  },
+  "retrievalIneligibleReason": {
+   "type": "string",
+   "minLength": 30
+  },
+  "templates": {
+   "type": "array",
+   "items": {
+    "enum": [
+     "template.home",
+     "template.article",
+     "template.not-found"
+    ]
+   },
+   "minItems": 1
+  },
+  "routes": {
+   "type": "string"
+  },
+  "variants": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "contentSchema": {
+   "type": "object",
+   "required": [
+    "type",
+    "additionalProperties",
+    "properties"
+   ],
+   "properties": {
+    "type": {
+     "const": "object"
+    },
+    "additionalProperties": {
+     "const": false
+    }
+   }
+  },
+  "assets": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "referenceAssetRoles",
+    "generatedAssetRoles",
+    "slots"
+   ],
+   "properties": {
+    "referenceAssetRoles": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "generatedAssetRoles": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "slots": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "styleOverrides": {
+   "type": "array",
+   "items": {
+    "enum": [
+     "surface",
+     "text",
+     "accent",
+     "font",
+     "paddingY",
+     "radius"
+    ]
+   }
+  },
+  "motion": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "allowedPatterns",
+    "reducedMotionFallback"
+   ],
+   "properties": {
+    "allowedPatterns": {
+     "type": "array",
+     "minItems": 1,
+     "items": {
+      "type": "string"
+     }
+    },
+    "reducedMotionFallback": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "constraints": {
+   "type": "object"
+  },
+  "responsive": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "object"
+   }
+  },
+  "evidence": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "file",
+     "lines",
+     "needle"
+    ],
+    "properties": {
+     "file": {
+      "type": "string"
+     },
+     "lines": {
+      "type": "string",
+      "pattern": "^[0-9]+-[0-9]+$"
+     },
+     "needle": {
+      "type": "string",
+      "minLength": 3
+     },
+     "claim": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "observedWordCounts": {
+   "type": "object"
+  },
+  "layoutSlots": {
+   "type": "object"
+  }
+ },
+ "allOf": [
+  {
+   "if": {
+    "properties": {
+     "retrievalEligible": {
+      "const": false
+     }
+    }
+   },
+   "then": {
+    "required": [
+     "retrievalIneligibleReason"
+    ]
+   }
+  }
+ ],
+ "definitions": {
+  "citation": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "file",
+    "lines",
+    "needle"
+   ],
+   "properties": {
+    "file": {
+     "type": "string"
+    },
+    "lines": {
+     "type": "string",
+     "pattern": "^[0-9]+-[0-9]+$"
+    },
+    "needle": {
+     "type": "string",
+     "minLength": 3
+    },
+    "claim": {
+     "type": "string"
+    }
+   }
+  }
+ }
+}

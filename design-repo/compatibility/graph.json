@@ -1,0 +1,228 @@
+{
+ "$description": "Compatibility / rhythm rules. Each rule id is implemented in schema/semantic_validate.py RULES with the same severity; verify_all.py (GRAPH_VALIDATOR_AGREEMENT) fails on any mismatch.",
+ "version": "1.0.0",
+ "rules": [
+  {
+   "id": "SCHEMA",
+   "severity": "error",
+   "rule": "Draft-07 validation against schema/pagespec.schema.json (closed objects, enums, const-locked motion fallbacks).",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "TEMPLATE_SEQUENCE",
+   "severity": "error",
+   "rule": "nodes must follow the declared template's ordered node list; nothing unknown, repeated (unless repeatable) or out of order.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "TEMPLATE_MISSING_REQUIRED",
+   "severity": "error",
+   "rule": "every required template node (section + variant) must be present.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "ROUTE_TEMPLATE",
+   "severity": "error",
+   "rule": "the route matches the template's routePattern; a real route is served by exactly its mapped template; not-found only for unknown paths; reference routes must be real.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "REFERENCE_COMPOSITION",
+   "severity": "error",
+   "rule": "a reference PageSpec reproduces its route's measured composition (templates/routes.json) exactly.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "ONE_HERO",
+   "severity": "error",
+   "rule": "at most one HERO; article and not-found templates have none (named exception: hero-less templates).",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "HOME_ROUTE_ONLY",
+   "severity": "error",
+   "rule": "hero, statement stages, WebGL backdrop, pointer trail and grid overlay exist only on the home route.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "ONE_PER_PAGE",
+   "severity": "error",
+   "rule": "onePerPage/maxPerPage constraints, keyed by (section, variant) so the three stage-headline variants may coexist.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "FIRST_IN_FLOW",
+   "severity": "error",
+   "rule": "hero.banner / article.header are the first in-flow section.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "LAST_IN_FLOW",
+   "severity": "error",
+   "rule": "contact.footer-cta / article.meta-footer are the last in-flow section.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "LAYER_ORDER",
+   "severity": "error",
+   "rule": "fixed shell, backdrop and overlay nodes precede all in-flow nodes.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "STATEMENT_STAGES_CONTIGUOUS",
+   "severity": "error",
+   "rule": "the 4 statement stages share one sticky 8-viewport container: primary, secondary, sentences, closing, contiguous.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "TOC_REQUIRES_HEADINGS",
+   "severity": "error",
+   "rule": "article.toc only with at least one article.chapter.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "LIGHTBOX_REQUIRES_FIGURES",
+   "severity": "error",
+   "rule": "overlay.image-lightbox present exactly when the article has zoomable figures.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "NO_ADJACENT_SAME_CATEGORY",
+   "severity": "warn",
+   "rule": "two adjacent in-flow sections of the same category are flagged; named exceptions STATEMENT (one sticky stage container), ARTICLE (sequential body parts), SHELL.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "MAX_WORDS",
+   "severity": "error",
+   "rule": "every text field respects its contract maxWords (Latin tokens + CJK chars/2).",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "MOTION_FALLBACK",
+   "severity": "error",
+   "rule": "motion pattern allowed for the section and paired with its single reducedMotionFallback.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "ASSET_ROLE_SECTION",
+   "severity": "error",
+   "rule": "asset roles must be ones the section uses.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "ASSET_AVAILABILITY_PIN",
+   "severity": "error",
+   "rule": "registry availability must equal the in-code PINNED_AVAILABILITY.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "RETRIEVAL_INELIGIBLE_PINNED",
+   "severity": "error",
+   "rule": "runtime/utility sections (RETRIEVAL_INELIGIBLE pin) can never be marked retrievalEligible.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "RETRIEVAL_CONTENT_MARKED_INELIGIBLE",
+   "severity": "error",
+   "rule": "content sections cannot be marked ineligible.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "TOKEN_UNKNOWN",
+   "severity": "error",
+   "rule": "style values must be catalog tokens.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "TOKEN_RAW_COLOR",
+   "severity": "error",
+   "rule": "no raw hex/rgb/hsl/lab colours.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "TOKEN_ARBITRARY_SPACING",
+   "severity": "error",
+   "rule": "no raw px/rem/vh lengths.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "TOKEN_UNSUPPORTED_FONT",
+   "severity": "error",
+   "rule": "fonts only from the catalog fontFamily tokens.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "TOKEN_FIELD_CATEGORY",
+   "severity": "error",
+   "rule": "each style field accepts only its category/prefix.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "TOKEN_THEME_MISMATCH",
+   "severity": "error",
+   "rule": "theme-specific tokens only with their theme (system needs both).",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "TOKEN_SCENE_SCOPE",
+   "severity": "error",
+   "rule": "scene-scope (WebGL) colours only on BACKDROP.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "TOKEN_ON_ACCENT_PAIRING",
+   "severity": "error",
+   "rule": "text.on-accent only on accent.selection surfaces.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "GENERATED_MODE_BRAND",
+   "severity": "error",
+   "rule": "generated pages contain no source brand, project or organisation name (policy/source-identity.json) and use a generation-safe mark.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "GENERATED_MODE_PERSON",
+   "severity": "error",
+   "rule": "no owner name, handle or email.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "GENERATED_MODE_URL",
+   "severity": "error",
+   "rule": "only relative routes or reserved .example/.invalid hosts; no source hosts.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "GENERATED_MODE_STORE",
+   "severity": "error",
+   "rule": "no plugin-store listings, package pages or downloadable archives of the source.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "GENERATED_MODE_COPY",
+   "severity": "error",
+   "rule": "no source copy: named phrases (punctuation-insensitive, also across a node's lines) and 6-word / 8-char shingle fingerprints.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "GENERATED_MODE_CTA",
+   "severity": "error",
+   "rule": "no source call-to-action strings.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "GENERATED_MODE_ASSET",
+   "severity": "error",
+   "rule": "only generation-safe roles listed in the section's generatedAssetRoles, with generated:/user-supplied:/placeholder:/glyph: or reserved-host refs; no source asset paths.",
+   "enforcedBy": "schema/semantic_validate.py"
+  },
+  {
+   "id": "GENERATED_MODE_RATING",
+   "severity": "error",
+   "rule": "no ratings/reviews (the source has none; no section supports them).",
+   "enforcedBy": "schema/semantic_validate.py"
+  }
+ ]
+}

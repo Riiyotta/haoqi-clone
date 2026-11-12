@@ -1,0 +1,131 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "generated",
+ "template": "template.not-found",
+ "route": "/missing-page",
+ "theme": "system",
+ "brand": {
+  "name": "Ellison Works",
+  "markRole": "placeholder-brand-mark"
+ },
+ "meta": {
+  "title": "Not here"
+ },
+ "nodes": [
+  {
+   "section": "shell.header-nav",
+   "content": {
+    "brandLabel": "Ellison Works",
+    "navItems": [
+     {
+      "label": "Projects",
+      "target": "#selected-work"
+     },
+     {
+      "label": "Reach",
+      "target": "#contact"
+     }
+    ],
+    "themeToggle": true,
+    "soundToggle": true
+   },
+   "assets": [
+    {
+     "slot": "wordmark",
+     "role": "placeholder-brand-mark",
+     "ref": "placeholder:ellison-wordmark"
+    },
+    {
+     "slot": "soundtrack",
+     "role": "user-supplied-audio",
+     "ref": "user-supplied:ambient-loop"
+    }
+   ],
+   "style": {
+    "font": "font.sans",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text",
+    "trigger": "on-load"
+   }
+  },
+  {
+   "section": "shell.status-row",
+   "content": {
+    "zoneLabel": "UTC+1 LIS",
+    "showTemperature": false,
+    "showPointerReadout": true
+   },
+   "assets": [
+    {
+     "slot": "globe",
+     "role": "ui-glyph",
+     "ref": "glyph:globe"
+    }
+   ],
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text"
+   }
+  },
+  {
+   "section": "shell.scroll-progress",
+   "content": {},
+   "motion": {
+    "pattern": "scroll-thumb",
+    "reducedMotionFallback": "always-visible"
+   }
+  },
+  {
+   "section": "shell.transition-mask",
+   "content": {
+    "showLoader": false
+   },
+   "motion": {
+    "pattern": "dot-iris-transition",
+    "reducedMotionFallback": "instant-cut"
+   },
+   "retrievalEligible": false
+  },
+  {
+   "section": "shell.mobile-menu",
+   "content": {
+    "items": [
+     "Index",
+     "Projects",
+     "Reach"
+    ]
+   },
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text"
+   }
+  },
+  {
+   "section": "shell.hint-panel",
+   "content": {
+    "text": "Keys: L light, D dark, A automatic theme. S mutes the ambient loop. T jumps to the top and B to the bottom; settings stay in this browser only."
+   },
+   "style": {
+    "surface": "surface.elevated"
+   },
+   "motion": {
+    "pattern": "fade-presence",
+    "reducedMotionFallback": "instant-show-hide"
+   }
+  },
+  {
+   "section": "error.not-found",
+   "content": {
+    "code": "404",
+    "message": "Nothing lives at this address."
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  }
+ ]
+}

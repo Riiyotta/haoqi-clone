@@ -1,0 +1,108 @@
+{
+ "id": "shell.status-row",
+ "version": "1.0.0",
+ "title": "Status row",
+ "category": "SHELL",
+ "layer": "fixed",
+ "description": "Fixed bottom row: zone + clock (+ live temperature) at left, pointer coordinate readout centred (click scrolls to top), rotating wireframe globe at right; near the end of the home page the left text becomes '<brand> (c) <year>'.",
+ "source": {
+  "id": "header.bottom-row",
+  "file": "src/components/Header.jsx",
+  "tag": "<div className=\"flex justify-between px-4 lg:px-14 py-4 lg:py-7\">",
+  "lines": "176-198"
+ },
+ "semantic": {
+  "id": "shell.status-row",
+  "category": "SHELL"
+ },
+ "retrievalEligible": false,
+ "retrievalIneligibleReason": "Live clock, weather and pointer-coordinate readouts are runtime utility tickers, not a retrievable content composition.",
+ "templates": [
+  "template.home",
+  "template.article",
+  "template.not-found"
+ ],
+ "routes": "all",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "zoneLabel": {
+    "type": "string",
+    "minLength": 1,
+    "maxWords": 3,
+    "observedWords": 3
+   },
+   "showTemperature": {
+    "type": "boolean"
+   },
+   "showPointerReadout": {
+    "type": "boolean"
+   },
+   "closingLabel": {
+    "type": "string",
+    "minLength": 1,
+    "maxWords": 3,
+    "observedWords": 3
+   }
+  },
+  "required": [
+   "zoneLabel",
+   "showTemperature",
+   "showPointerReadout"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [
+   "ui-glyph"
+  ],
+  "generatedAssetRoles": [
+   "ui-glyph"
+  ],
+  "slots": [
+   "globe"
+  ]
+ },
+ "styleOverrides": [
+  "text"
+ ],
+ "motion": {
+  "allowedPatterns": [
+   "scramble-in",
+   "globe-spin"
+  ],
+  "reducedMotionFallback": {
+   "scramble-in": "show-final-text",
+   "globe-spin": "static-globe"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "layerOrder": "shell"
+ },
+ "responsive": {
+  "lt1024": {
+   "left": "HH:MM NN°C",
+   "centre": "hidden",
+   "globe": "hidden"
+  },
+  "gte1024": {
+   "left": "zone + HH:MM NN°C",
+   "centre": "0000 X 0000 Y readout"
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "177-187",
+   "needle": "- **Bottom row:**"
+  },
+  {
+   "file": "src/lib/hooks.js",
+   "lines": "68-74",
+   "needle": "export function useWeatherTemp()",
+   "claim": "clone uses keyless Open-Meteo instead of the original's QWeather key (deliberate deviation)"
+  }
+ ]
+}

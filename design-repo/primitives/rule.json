@@ -1,0 +1,11 @@
+{
+ "id": "rule",
+ "kind": "primitive",
+ "description": "1 px hairline divider, 32 px vertical margin.",
+ "props": [],
+ "source": {
+  "file": "src/pages/ArticlePage.jsx",
+  "lines": "12-12",
+  "needle": "[&_hr]:my-8"
+ }
+}

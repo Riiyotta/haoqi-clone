@@ -1,0 +1,62 @@
+{
+ "$description": "Design-policy binding (R15). Category chosen from evidence; the binding and the local extension are DEFINED, pending the owner's architecture review. An agent never ratifies its own classification.",
+ "policyId": "n0-design-constraints-common",
+ "policyVersion": "0.1.0",
+ "commonIrVersion": "0.5",
+ "enforcementMode": "hard-and-soft",
+ "domain": "portfolio",
+ "classification": {
+  "category": "portfolio",
+  "evidence": [
+   "A single person's work index: home = intro, selected-work grid of 10 projects, statement sequence, contact (src/App.jsx HomePage).",
+   "Six project write-up articles + not-found; no pricing, plans, sign-up, log-in, account or dashboard routes (templates/routes.json; ia.json).",
+   "Conversion is limited to an email link, social links and one font download (contact.footer-cta, article.download-cta).",
+   "Audience is visitors/employers of an individual designer, not buyers of a product."
+  ]
+ },
+ "localExtension": {
+  "id": "portfolio-local-extension",
+  "version": "1.0.0",
+  "rules": [
+   "Generated pages must not identify or reproduce the source owner, projects, copy, URLs or media (GENERATED_MODE_* rules; policy/source-identity.json).",
+   "No depiction of real people: portraits are fictional-portrait or user-supplied-portrait only.",
+   "No live third-party embeds or downloads in generated pages (placeholder-embed / placeholder-download on reserved .example hosts).",
+   "Statement stages stay one contiguous 4-stage sticky sequence; motion always carries its reducedMotionFallback.",
+   "Style values only from tokens/llm/token-catalog.json under tokens/llm/token-policy.json."
+  ]
+ },
+ "generationRules": {
+  "hard": [
+   "SCHEMA",
+   "TEMPLATE_SEQUENCE",
+   "TEMPLATE_MISSING_REQUIRED",
+   "ROUTE_TEMPLATE",
+   "GENERATED_MODE_*",
+   "TOKEN_*",
+   "ASSET_*",
+   "RETRIEVAL_*",
+   "MAX_WORDS",
+   "MOTION_FALLBACK"
+  ],
+  "soft": [
+   "NO_ADJACENT_SAME_CATEGORY"
+  ]
+ },
+ "enforcedBy": [
+  "tokens/llm/token-policy.json",
+  "tokens/llm/token-catalog.json",
+  "compatibility/graph.json",
+  "schema/pagespec.schema.json",
+  "schema/semantic_validate.py",
+  "policy/source-identity.json",
+  "assets/asset-roles.json"
+ ],
+ "contentHash": "sha256:01c657c28ebca8132cae8d2aadaf9c702e8d43c41881d20db08932404c8d2c9e",
+ "approval": {
+  "status": "defined-pending-architecture-review",
+  "architectureDecisionRecorded": false,
+  "decidedBy": null,
+  "decidedAt": null,
+  "decision": null
+ }
+}

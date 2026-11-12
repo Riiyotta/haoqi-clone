@@ -1,0 +1,167 @@
+{
+ "$description": "Every route the clone serves, mapped to exactly one template, with the measured composition (in-flow sections from extraction/measure_sections.mjs; fixed/overlay sections from the source). Reference PageSpecs must match their route's composition exactly (REFERENCE_COMPOSITION).",
+ "version": "1.0.0",
+ "routes": [
+  {
+   "route": "/",
+   "template": "template.home",
+   "composition": [
+    "shell.header-nav",
+    "shell.status-row",
+    "shell.grid-overlay",
+    "shell.scroll-progress",
+    "shell.transition-mask",
+    "shell.mobile-menu",
+    "shell.hint-panel",
+    "backdrop.webgl-scene",
+    "effect.pointer-trail",
+    "hero.banner",
+    "intro.about",
+    "work.selected-grid",
+    "statement.stage-headline:primary",
+    "statement.stage-headline:secondary",
+    "statement.stage-sentences",
+    "statement.stage-headline:closing",
+    "contact.footer-cta"
+   ]
+  },
+  {
+   "route": "/reunimos",
+   "template": "template.article",
+   "composition": [
+    "shell.header-nav",
+    "shell.status-row",
+    "shell.scroll-progress",
+    "shell.transition-mask",
+    "shell.mobile-menu",
+    "shell.hint-panel",
+    "article.header",
+    "article.intro",
+    "article.live-embed",
+    "article.meta-footer"
+   ]
+  },
+  {
+   "route": "/inspire_mono",
+   "template": "template.article",
+   "composition": [
+    "shell.header-nav",
+    "shell.status-row",
+    "shell.scroll-progress",
+    "shell.transition-mask",
+    "shell.mobile-menu",
+    "shell.hint-panel",
+    "overlay.image-lightbox",
+    "article.header",
+    "article.intro",
+    "article.download-cta",
+    "article.image-grid",
+    "article.meta-footer"
+   ]
+  },
+  {
+   "route": "/wasm_design_utils",
+   "template": "template.article",
+   "composition": [
+    "shell.header-nav",
+    "shell.status-row",
+    "shell.scroll-progress",
+    "shell.transition-mask",
+    "shell.mobile-menu",
+    "shell.hint-panel",
+    "article.toc",
+    "article.header",
+    "article.intro",
+    "article.chapter",
+    "article.chapter",
+    "article.chapter",
+    "article.chapter",
+    "article.chapter",
+    "article.chapter",
+    "article.chapter",
+    "article.meta-footer"
+   ]
+  },
+  {
+   "route": "/adrive",
+   "template": "template.article",
+   "composition": [
+    "shell.header-nav",
+    "shell.status-row",
+    "shell.scroll-progress",
+    "shell.transition-mask",
+    "shell.mobile-menu",
+    "shell.hint-panel",
+    "article.toc",
+    "overlay.image-lightbox",
+    "article.header",
+    "article.intro",
+    "article.chapter",
+    "article.chapter",
+    "article.chapter",
+    "article.meta-footer"
+   ]
+  },
+  {
+   "route": "/shore_icon",
+   "template": "template.article",
+   "composition": [
+    "shell.header-nav",
+    "shell.status-row",
+    "shell.scroll-progress",
+    "shell.transition-mask",
+    "shell.mobile-menu",
+    "shell.hint-panel",
+    "article.toc",
+    "overlay.image-lightbox",
+    "article.header",
+    "article.intro",
+    "article.chapter",
+    "article.chapter",
+    "article.chapter",
+    "article.chapter",
+    "article.meta-footer"
+   ]
+  },
+  {
+   "route": "/teambition",
+   "template": "template.article",
+   "composition": [
+    "shell.header-nav",
+    "shell.status-row",
+    "shell.scroll-progress",
+    "shell.transition-mask",
+    "shell.mobile-menu",
+    "shell.hint-panel",
+    "article.header",
+    "article.intro",
+    "article.meta-footer"
+   ]
+  },
+  {
+   "route": "/*",
+   "template": "template.not-found",
+   "composition": [
+    "shell.header-nav",
+    "shell.status-row",
+    "shell.scroll-progress",
+    "shell.transition-mask",
+    "shell.mobile-menu",
+    "shell.hint-panel",
+    "error.not-found"
+   ],
+   "note": "every unknown path renders the not-found template (measured with /__not_found_probe__)"
+  }
+ ],
+ "excluded": [
+  {
+   "route": "/2026",
+   "reason": "passcode-protected project page on the original; assets not public; deliberately not cloned"
+  },
+  {
+   "route": "/unlock/*",
+   "reason": "passcode entry flow on the original; deliberately not cloned (the hero's locked slot is a no-op in the clone)"
+  }
+ ],
+ "outbound": "Project cards to Figma Community plugins and Friends of Figma events, mailto and social links are outbound links, not routes."
+}

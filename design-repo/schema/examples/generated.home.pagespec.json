@@ -1,0 +1,389 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "generated",
+ "template": "template.home",
+ "route": "/",
+ "theme": "light",
+ "brand": {
+  "name": "Ellison Works",
+  "markRole": "placeholder-brand-mark"
+ },
+ "meta": {
+  "title": "Ellison Works — type and motion",
+  "description": "Fictional portfolio used as the generation-safe example."
+ },
+ "nodes": [
+  {
+   "section": "shell.header-nav",
+   "content": {
+    "brandLabel": "Ellison Works",
+    "navItems": [
+     {
+      "label": "Projects",
+      "target": "#selected-work"
+     },
+     {
+      "label": "Reach",
+      "target": "#contact"
+     }
+    ],
+    "themeToggle": true,
+    "soundToggle": true
+   },
+   "assets": [
+    {
+     "slot": "wordmark",
+     "role": "placeholder-brand-mark",
+     "ref": "placeholder:ellison-wordmark"
+    },
+    {
+     "slot": "soundtrack",
+     "role": "user-supplied-audio",
+     "ref": "user-supplied:ambient-loop"
+    }
+   ],
+   "style": {
+    "font": "font.sans",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text",
+    "trigger": "on-load"
+   }
+  },
+  {
+   "section": "shell.status-row",
+   "content": {
+    "zoneLabel": "UTC+1 LIS",
+    "showTemperature": false,
+    "showPointerReadout": true,
+    "closingLabel": "Ellison (c) 2026"
+   },
+   "assets": [
+    {
+     "slot": "globe",
+     "role": "ui-glyph",
+     "ref": "glyph:globe"
+    }
+   ],
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text"
+   }
+  },
+  {
+   "section": "shell.grid-overlay",
+   "content": {},
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "shell.scroll-progress",
+   "content": {},
+   "motion": {
+    "pattern": "scroll-thumb",
+    "reducedMotionFallback": "always-visible"
+   }
+  },
+  {
+   "section": "shell.transition-mask",
+   "content": {
+    "showLoader": true
+   },
+   "motion": {
+    "pattern": "dot-iris-transition",
+    "reducedMotionFallback": "instant-cut"
+   },
+   "retrievalEligible": false
+  },
+  {
+   "section": "shell.mobile-menu",
+   "content": {
+    "items": [
+     "Index",
+     "Projects",
+     "Reach"
+    ]
+   },
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text"
+   }
+  },
+  {
+   "section": "shell.hint-panel",
+   "content": {
+    "text": "Keys: L light, D dark, A automatic theme. S mutes the ambient loop. T jumps to the top and B to the bottom; settings stay in this browser only."
+   },
+   "style": {
+    "surface": "surface.elevated"
+   },
+   "motion": {
+    "pattern": "fade-presence",
+    "reducedMotionFallback": "instant-show-hide"
+   }
+  },
+  {
+   "section": "backdrop.webgl-scene",
+   "content": {
+    "palette": "theme"
+   },
+   "assets": [
+    {
+     "slot": "opener-model",
+     "role": "generated-3d-model",
+     "ref": "generated:model-wave"
+    },
+    {
+     "slot": "cursor-model",
+     "role": "generated-3d-model",
+     "ref": "generated:model-arrow"
+    },
+    {
+     "slot": "closer-model",
+     "role": "generated-3d-model",
+     "ref": "generated:model-monogram"
+    },
+    {
+     "slot": "stickers",
+     "role": "generated-sticker",
+     "ref": "generated:sticker-set-a"
+    }
+   ],
+   "style": {
+    "surface": "surface.page",
+    "accent": "accent.selection"
+   },
+   "motion": {
+    "pattern": "backdrop-scene",
+    "reducedMotionFallback": "static-backdrop-frame"
+   }
+  },
+  {
+   "section": "effect.pointer-trail",
+   "content": {},
+   "motion": {
+    "pattern": "pointer-trail",
+    "reducedMotionFallback": "no-trail"
+   }
+  },
+  {
+   "section": "hero.banner",
+   "content": {
+    "discipline": "Type & Motion",
+    "principle": "Quiet tools. Loud ideas.",
+    "bio": "I'm Mara Ellison, an independent interface designer drawing typefaces and motion systems for small studios.",
+    "headlineLines": [
+     "I shape",
+     "calm tools",
+     "for loud ideas"
+    ]
+   },
+   "style": {
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text"
+   }
+  },
+  {
+   "section": "intro.about",
+   "content": {
+    "statements": [
+     "I prototype interfaces in code so the very first draft already moves like the finished product.",
+     "Lately I'm drawing a variable display face and rebuilding two component libraries."
+    ],
+    "links": [
+     {
+      "label": "Notes",
+      "href": "https://notes.ellison.example/"
+     }
+    ]
+   },
+   "assets": [
+    {
+     "slot": "portrait",
+     "role": "fictional-portrait",
+     "ref": "generated:portrait-mara",
+     "alt": "Illustrated portrait of a fictional designer"
+    },
+    {
+     "slot": "signature",
+     "role": "generated-signature-mark",
+     "ref": "generated:scribble"
+    }
+   ],
+   "motion": {
+    "pattern": "signature-draw",
+    "reducedMotionFallback": "static-drawn"
+   }
+  },
+  {
+   "section": "work.selected-grid",
+   "content": {
+    "items": [
+     {
+      "title": "Tidewater Grotesk",
+      "years": "2025",
+      "kind": "post",
+      "href": "/tidewater",
+      "layoutSlot": "lg8-start5",
+      "codingProject": true
+     },
+     {
+      "title": "Signal Board",
+      "years": "2024",
+      "kind": "post",
+      "href": "/signal-board",
+      "layoutSlot": "lg6-start1-xl5"
+     },
+     {
+      "title": "Margin Tool",
+      "years": "2023",
+      "kind": "tools",
+      "href": "https://tools.ellison.example/margin",
+      "layoutSlot": "lg6-start7-xl5-start7",
+      "codingProject": true
+     },
+     {
+      "title": "Studio Week",
+      "years": "2022",
+      "kind": "event",
+      "href": "https://events.example/studio-week",
+      "layoutSlot": "lg4-start1-xl3-start1"
+     }
+    ]
+   },
+   "assets": [
+    {
+     "slot": "items[0].image",
+     "role": "generated-project-visual",
+     "ref": "generated:project-0"
+    },
+    {
+     "slot": "items[1].image",
+     "role": "generated-project-visual",
+     "ref": "generated:project-1"
+    },
+    {
+     "slot": "items[2].image",
+     "role": "generated-project-visual",
+     "ref": "generated:project-2"
+    },
+    {
+     "slot": "items[3].image",
+     "role": "generated-project-visual",
+     "ref": "generated:project-3"
+    }
+   ],
+   "motion": {
+    "pattern": "polarity-reveal",
+    "reducedMotionFallback": "show-positive-image"
+   }
+  },
+  {
+   "section": "statement.stage-headline",
+   "variant": "primary",
+   "content": {
+    "lines": [
+     "Draw",
+     "with",
+     "intent"
+    ]
+   },
+   "motion": {
+    "pattern": "stagger-fade",
+    "reducedMotionFallback": "show-final-text"
+   }
+  },
+  {
+   "section": "statement.stage-headline",
+   "variant": "secondary",
+   "content": {
+    "lines": [
+     "Draw",
+     "with a",
+     "steady hand"
+    ]
+   },
+   "motion": {
+    "pattern": "stagger-fade",
+    "reducedMotionFallback": "show-final-text"
+   }
+  },
+  {
+   "section": "statement.stage-sentences",
+   "content": {
+    "pairs": [
+     {
+      "line1": "Small studios,",
+      "line2": "sturdy systems."
+     },
+     {
+      "line1": "Letters first.",
+      "line2": "Pixels after."
+     },
+     {
+      "line1": "Prototype early.",
+      "line2": "Prune often."
+     },
+     {
+      "line1": "Measure twice.",
+      "line2": "Release once."
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "ring-cycle",
+    "reducedMotionFallback": "static-ring"
+   }
+  },
+  {
+   "section": "statement.stage-headline",
+   "variant": "closing",
+   "content": {
+    "lines": [
+     "MAKE IT",
+     "LAST"
+    ]
+   },
+   "motion": {
+    "pattern": "stagger-fade",
+    "reducedMotionFallback": "show-final-text"
+   }
+  },
+  {
+   "section": "contact.footer-cta",
+   "content": {
+    "headlineWords": [
+     "Start",
+     "A",
+     "Project",
+     "Together"
+    ],
+    "email": "hello@ellison.example",
+    "socials": [
+     {
+      "label": "Journal",
+      "href": "https://journal.example/@mara"
+     },
+     {
+      "label": "Code",
+      "href": "https://code.example/ellison"
+     }
+    ]
+   },
+   "style": {
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text"
+   }
+  }
+ ]
+}

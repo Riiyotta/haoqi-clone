@@ -1,0 +1,70 @@
+{
+ "id": "shell.transition-mask",
+ "version": "1.0.0",
+ "title": "Transition mask + loader",
+ "category": "SHELL",
+ "layer": "overlay",
+ "description": "Separate fixed canvas that covers/reveals the page with a halftone dot iris on first load, route changes and mobile-menu toggles; shows a 140x6 loader bar during entry.",
+ "source": {
+  "id": "transition-canvas",
+  "file": "src/webgl/TransitionCanvas.jsx",
+  "tag": "export default function TransitionCanvas()",
+  "lines": "237-267"
+ },
+ "semantic": {
+  "id": "shell.transition-mask",
+  "category": "SHELL"
+ },
+ "retrievalEligible": false,
+ "retrievalIneligibleReason": "Preloader and page-transition overlay: runtime utility UI that hides content while loading or navigating.",
+ "templates": [
+  "template.home",
+  "template.article",
+  "template.not-found"
+ ],
+ "routes": "all",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "showLoader": {
+    "type": "boolean"
+   }
+  },
+  "required": [
+   "showLoader"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [],
+ "motion": {
+  "allowedPatterns": [
+   "dot-iris-transition"
+  ],
+  "reducedMotionFallback": {
+   "dot-iris-transition": "instant-cut"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "layerOrder": "overlay"
+ },
+ "responsive": {},
+ "evidence": [
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "318-328",
+   "needle": "## 7. Dot-iris transition canvas"
+  },
+  {
+   "file": "src/webgl/TransitionCanvas.jsx",
+   "lines": "193-209",
+   "needle": "function LoaderBar("
+  }
+ ]
+}

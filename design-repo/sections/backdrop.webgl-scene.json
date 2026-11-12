@@ -1,0 +1,94 @@
+{
+ "id": "backdrop.webgl-scene",
+ "version": "1.0.0",
+ "title": "WebGL backdrop scene",
+ "category": "BACKDROP",
+ "layer": "backdrop",
+ "description": "Full-viewport canvas behind the home page: blue bokeh light streaks + falling stickers + glass 3D models in the opener and closer, a cream dot overlay that turns the middle of the page solid, DOM-synced project image layers and a warp-speed cursor tunnel behind the statement stages.",
+ "source": {
+  "id": "scene",
+  "file": "src/webgl/Scene.jsx",
+  "tag": "function SceneContents()",
+  "lines": "163-215"
+ },
+ "semantic": {
+  "id": "backdrop.webgl-scene",
+  "category": "BACKDROP"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.home"
+ ],
+ "routes": "home",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "palette": {
+    "type": "string",
+    "enum": [
+     "theme"
+    ]
+   }
+  },
+  "required": []
+ },
+ "assets": {
+  "referenceAssetRoles": [
+   "glass-3d-model",
+   "sticker-set"
+  ],
+  "generatedAssetRoles": [
+   "generated-3d-model",
+   "generated-sticker"
+  ],
+  "slots": [
+   "opener-model",
+   "cursor-model",
+   "closer-model",
+   "stickers"
+  ]
+ },
+ "styleOverrides": [
+  "surface",
+  "accent"
+ ],
+ "motion": {
+  "allowedPatterns": [
+   "backdrop-scene",
+   "glass-scroll-rotate"
+  ],
+  "reducedMotionFallback": {
+   "backdrop-scene": "static-backdrop-frame",
+   "glass-scroll-rotate": "static-model-pose"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "homeOnly": true,
+  "layerOrder": "backdrop"
+ },
+ "responsive": {
+  "lt1024": {
+   "camera": "hfov 38°",
+   "models": "hello scale 19, no float, no parallax",
+   "effects": "no fluid, no sticker bursts"
+  },
+  "gte1024": {
+   "camera": "hfov 60° + pointer parallax"
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "61-101",
+   "needle": "## 3. Scene timeline"
+  },
+  {
+   "file": "src/components/CanvasHost.jsx",
+   "lines": "6-6",
+   "needle": "top-0 left-0 -z-1 fixed"
+  }
+ ]
+}

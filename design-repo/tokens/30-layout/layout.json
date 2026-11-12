@@ -1,0 +1,159 @@
+{
+ "$description": "Layout tokens measured at 1440x900 / 390x844 (CLONE_SPEC*.md) and read from component classes.",
+ "tokens": {
+  "grid.columns": {
+   "value": 12,
+   "source": [
+    {
+     "file": "src/components/Hero.jsx",
+     "lines": "31-31",
+     "needle": "grid grid-cols-12"
+    }
+   ]
+  },
+  "gutter.page": {
+   "value": {
+    "base": "space.4",
+    "lg": "space.14"
+   },
+   "px": {
+    "base": 16,
+    "lg": 56
+   },
+   "source": [
+    {
+     "file": "src/components/Hero.jsx",
+     "lines": "31-31",
+     "needle": "px-4 lg:px-14"
+    }
+   ]
+  },
+  "section.padding-y": {
+   "value": {
+    "base": "space.18",
+    "lg": "space.24"
+   },
+   "px": {
+    "base": 72,
+    "lg": 96
+   },
+   "source": [
+    {
+     "file": "src/components/Hero.jsx",
+     "lines": "31-31",
+     "needle": "py-18 lg:py-24"
+    }
+   ]
+  },
+  "section.full-viewport": {
+   "value": "100dvh (base) / 100vh (lg)",
+   "source": [
+    {
+     "file": "src/components/Hero.jsx",
+     "lines": "31-31",
+     "needle": "h-dvh lg:h-screen"
+    }
+   ]
+  },
+  "article.max-width": {
+   "value": "880px",
+   "source": [
+    {
+     "file": "src/pages/ArticlePage.jsx",
+     "lines": "42-42",
+     "needle": "max-w-[880px]"
+    }
+   ]
+  },
+  "article.padding": {
+   "value": {
+    "x": "space.6",
+    "y": {
+     "base": "space.18",
+     "lg": "space.24"
+    }
+   },
+   "source": [
+    {
+     "file": "src/pages/ArticlePage.jsx",
+     "lines": "42-42",
+     "needle": "mx-auto px-6 py-18 lg:py-24"
+    }
+   ]
+  },
+  "article.header-offset": {
+   "value": "10vh",
+   "source": [
+    {
+     "file": "CLONE_SPEC_PAGES.md",
+     "lines": "90-90",
+     "needle": "<header class=\"pt-[10vh]\">"
+    }
+   ]
+  },
+  "article.flow-gap": {
+   "value": "space.4",
+   "source": [
+    {
+     "file": "src/pages/ArticlePage.jsx",
+     "lines": "12-12",
+     "needle": "PROSE_CLS = \"space-y-4"
+    }
+   ]
+  },
+  "toc.width": {
+   "value": "320px",
+   "visibleFrom": "bp.2xl",
+   "source": [
+    {
+     "file": "src/components/mdx/ArticleChrome.jsx",
+     "lines": "65-65",
+     "needle": "w-[320px]"
+    }
+   ]
+  },
+  "hud.row-padding": {
+   "value": {
+    "base": "space.4",
+    "lg": "space.7"
+   },
+   "source": [
+    {
+     "file": "src/components/Header.jsx",
+     "lines": "133-133",
+     "needle": "px-4 lg:px-14 py-4 lg:py-7 text-base"
+    }
+   ]
+  },
+  "stage.container-height": {
+   "value": "8 x viewport height",
+   "source": [
+    {
+     "file": "src/components/Innovate.jsx",
+     "lines": "290-290",
+     "needle": "style={{ height: `${8 * vh}px` }}"
+    }
+   ]
+  },
+  "stage.grid": {
+   "value": "12 columns x 6 rows",
+   "source": [
+    {
+     "file": "src/components/Innovate.jsx",
+     "lines": "291-291",
+     "needle": "grid grid-cols-12 grid-rows-6"
+    }
+   ]
+  },
+  "work.row-gap": {
+   "value": "grid width / 12",
+   "source": [
+    {
+     "file": "src/components/SelectedWork.jsx",
+     "lines": "18-18",
+     "needle": "setRowGap(el.clientWidth / 12)"
+    }
+   ]
+  }
+ }
+}

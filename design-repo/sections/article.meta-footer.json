@@ -1,0 +1,99 @@
+{
+ "id": "article.meta-footer",
+ "version": "1.0.0",
+ "title": "Article metadata box",
+ "category": "ARTICLE",
+ "layer": "in-flow",
+ "description": "Tinted rounded box closing every article: 'Metadata' (last updated, live viewport dimensions, body character count, scrambled in) and 'Links' (Home / Work / Contact back to the home page, plus up to three social links).",
+ "source": {
+  "id": "article.footer",
+  "file": "src/components/mdx/ArticleChrome.jsx",
+  "tag": "export function ArticleFooter(",
+  "lines": "137-181"
+ },
+ "semantic": {
+  "id": "article.meta-footer",
+  "category": "ARTICLE"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.article"
+ ],
+ "routes": "all article routes",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "updated": {
+    "type": "string",
+    "pattern": "^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [0-3][0-9], [12][0-9]{3}$"
+   },
+   "socials": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "additionalProperties": false,
+     "properties": {
+      "label": {
+       "type": "string",
+       "minLength": 1,
+       "maxWords": 2,
+       "observedWords": 2
+      },
+      "href": {
+       "type": "string",
+       "minLength": 1,
+       "pattern": "^(/|#|https://|mailto:)"
+      }
+     },
+     "required": [
+      "label",
+      "href"
+     ]
+    },
+    "minItems": 0,
+    "maxItems": 3
+   }
+  },
+  "required": [
+   "updated",
+   "socials"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [
+  "surface"
+ ],
+ "motion": {
+  "allowedPatterns": [
+   "scramble-in"
+  ],
+  "reducedMotionFallback": {
+   "scramble-in": "show-final-text"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "mustBeLastInFlow": true
+ },
+ "responsive": {
+  "lt1024": {
+   "grid": "2 columns, 'Links' label hidden"
+  },
+  "gte1024": {
+   "grid": "3 columns"
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC_PAGES.md",
+   "lines": "292-304",
+   "needle": "### 1.9 \"Metadata\" box"
+  }
+ ]
+}

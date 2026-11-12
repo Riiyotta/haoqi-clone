@@ -1,0 +1,13 @@
+{
+ "id": "sentence-pair",
+ "kind": "component",
+ "description": "Two stagger-faded lines in medium weight.",
+ "composes": [
+  "scramble-text"
+ ],
+ "source": {
+  "file": "src/components/Innovate.jsx",
+  "lines": "239-239",
+  "needle": "const SENT = 'p-2 font-medium"
+ }
+}

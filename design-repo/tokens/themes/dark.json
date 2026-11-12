@@ -1,0 +1,33 @@
+{
+ "$description": "dark theme: every semantic token resolved to its concrete value (html class 'dark'; system follows prefers-color-scheme).",
+ "theme": "dark",
+ "resolved": {
+  "text.primary": "rgba(255,255,255,1)",
+  "text.secondary": "rgba(230,232,232,.6)",
+  "text.tertiary": "rgba(230,232,232,.32)",
+  "text.quaternary": "rgba(230,232,232,.16)",
+  "text.on-accent": "#000",
+  "text.over-scene": "#fff",
+  "border.hairline": "rgba(230,232,232,.08)",
+  "surface.page": "rgb(15,17,17)",
+  "surface.elevated": "#191b1b",
+  "accent.selection": "#c0fe04",
+  "code.comment": "rgba(230,232,232,.5)",
+  "code.string": "#80daac",
+  "code.number": "#ebc669",
+  "code.keyword": "#afb6ff",
+  "code.function": "#8dcbff",
+  "code.tag": "#ffa3a3",
+  "code.operator": "rgba(230,232,232,.85)",
+  "surface.tint-subtle": "rgba(230,232,232,.03)",
+  "surface.tint-media": "rgba(230,232,232,.05)",
+  "surface.tint-code": "rgba(230,232,232,.08)"
+ },
+ "source": [
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "209-212",
+   "needle": "- **Theme (90975):**"
+  }
+ ]
+}

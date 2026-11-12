@@ -1,0 +1,14 @@
+{
+ "id": "work-card",
+ "kind": "component",
+ "description": "Project card: image placeholder (WebGL layer) + optional tag-chip + name/year/type row.",
+ "composes": [
+  "tag-chip",
+  "scramble-text"
+ ],
+ "source": {
+  "file": "src/components/SelectedWork.jsx",
+  "lines": "49-49",
+  "needle": "const cls = 'group block space-y-3 p-2'"
+ }
+}

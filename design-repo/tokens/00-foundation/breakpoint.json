@@ -1,0 +1,40 @@
+{
+ "$description": "Min-width breakpoints present in the stylesheet (@media min-width histogram). `mobile` behaviour switches below lg (useIsMobile = width < 1024).",
+ "tokens": {
+  "bp.sm": {
+   "value": "40rem",
+   "px": 640
+  },
+  "bp.md": {
+   "value": "48rem",
+   "px": 768
+  },
+  "bp.lg": {
+   "value": "64rem",
+   "px": 1024
+  },
+  "bp.xl": {
+   "value": "80rem",
+   "px": 1280
+  },
+  "bp.2xl": {
+   "value": "96rem",
+   "px": 1536
+  }
+ },
+ "behaviour": {
+  "mobileBelowPx": 1024,
+  "source": [
+   {
+    "file": "CLONE_SPEC.md",
+    "lines": "329-329",
+    "needle": "`useIsMobile` = width < 1024"
+   }
+  ]
+ },
+ "measuredViewports": [
+  "1440x900",
+  "390x844",
+  "1920x1080"
+ ]
+}

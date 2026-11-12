@@ -1,0 +1,27 @@
+{
+ "$description": "The source uses no drop shadows; separation is hairlines and tinted surfaces. Only these two inset/ring hairlines exist.",
+ "tokens": {
+  "elevation.ring-hairline": {
+   "value": "0 0 0 1px var(--line)",
+   "usage": "embedded iframe",
+   "source": [
+    {
+     "file": "CLONE_SPEC_PAGES.md",
+     "lines": "36-36",
+     "needle": "iframe{max-width:100%;box-shadow:0 0 0 1px var(--line)"
+    }
+   ]
+  },
+  "elevation.inset-hairline": {
+   "value": "inset 0 -1px 0 0 var(--line)",
+   "usage": "code block header",
+   "source": [
+    {
+     "file": "src/components/mdx/MdxBasics.jsx",
+     "lines": "103-103",
+     "needle": "shadow-[inset_0_-1px_0_0_var(--line)]"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "id": "statement.stage-headline",
+ "version": "1.0.0",
+ "title": "Stage headline",
+ "category": "STATEMENT",
+ "layer": "in-flow",
+ "description": "One scroll stage (2 viewports) of the sticky statement sequence: 2-3 centred bold uppercase wide lines that fade in per character. Variants: primary (first stage), secondary (line 0 kept, lines 1-2 re-stagger), closing (last stage, re-plays each time it is 35% visible).",
+ "source": {
+  "id": "hyper-space.seg0",
+  "file": "src/components/Innovate.jsx",
+  "tag": "function Seg0(",
+  "lines": "227-237"
+ },
+ "semantic": {
+  "id": "statement.stage-headline",
+  "category": "STATEMENT"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.home"
+ ],
+ "routes": "home",
+ "variants": [
+  "primary",
+  "secondary",
+  "closing"
+ ],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "lines": {
+    "type": "array",
+    "items": {
+     "type": "string",
+     "minLength": 1,
+     "maxWords": 2,
+     "observedWords": 2
+    },
+    "minItems": 2,
+    "maxItems": 3
+   }
+  },
+  "required": [
+   "lines"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [
+  "text"
+ ],
+ "motion": {
+  "allowedPatterns": [
+   "stagger-fade",
+   "sticky-stage-sequence",
+   "color-shift-past-threshold"
+  ],
+  "reducedMotionFallback": {
+   "stagger-fade": "show-final-text",
+   "sticky-stage-sequence": "stack-stages-statically",
+   "color-shift-past-threshold": "instant-color-change"
+  }
+ },
+ "constraints": {
+  "maxPerPage": 3,
+  "stageGroup": "statement",
+  "variantOrder": [
+   "primary",
+   "secondary",
+   "closing"
+  ]
+ },
+ "responsive": {
+  "all": {
+   "type": "7.2svw (lg 6.8svw) bold uppercase, wdth 120",
+   "grid": "12 x 6, centred"
+  }
+ },
+ "evidence": [
+  {
+   "file": "src/components/Innovate.jsx",
+   "lines": "122-127",
+   "needle": "const STAGES = ["
+  },
+  {
+   "file": "src/components/Innovate.jsx",
+   "lines": "260-267",
+   "needle": "function End()"
+  },
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "95-101",
+   "needle": "Hyper-space stage formula"
+  }
+ ],
+ "observedWordCounts": {
+  "line": 2
+ }
+}

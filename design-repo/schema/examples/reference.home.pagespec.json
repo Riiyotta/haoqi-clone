@@ -1,0 +1,518 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "reference",
+ "template": "template.home",
+ "route": "/",
+ "theme": "system",
+ "brand": {
+  "name": "HAOQI.DESIGN",
+  "markRole": "source-wordmark"
+ },
+ "meta": {
+  "title": "HAOQI©2026",
+  "description": "Digital Product Designer & Builder © 2026"
+ },
+ "nodes": [
+  {
+   "section": "shell.header-nav",
+   "content": {
+    "brandLabel": "haoqi.design",
+    "navItems": [
+     {
+      "label": "Work",
+      "target": "#selected-work"
+     },
+     {
+      "label": "Contact",
+      "target": "#contact"
+     }
+    ],
+    "themeToggle": true,
+    "soundToggle": true
+   },
+   "assets": [
+    {
+     "slot": "wordmark",
+     "role": "source-wordmark",
+     "ref": "/icon.svg"
+    },
+    {
+     "slot": "soundtrack",
+     "role": "background-music",
+     "ref": "/bgm.mp3"
+    }
+   ],
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text",
+    "trigger": "on-load"
+   }
+  },
+  {
+   "section": "shell.status-row",
+   "content": {
+    "zoneLabel": "GMT+8 CN",
+    "showTemperature": true,
+    "showPointerReadout": true,
+    "closingLabel": "Haoqi (c) 2026"
+   },
+   "assets": [
+    {
+     "slot": "globe",
+     "role": "ui-glyph",
+     "ref": "glyph:globe"
+    }
+   ],
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text"
+   },
+   "retrievalEligible": false
+  },
+  {
+   "section": "shell.grid-overlay",
+   "content": {},
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "shell.scroll-progress",
+   "content": {},
+   "motion": {
+    "pattern": "scroll-thumb",
+    "reducedMotionFallback": "always-visible"
+   }
+  },
+  {
+   "section": "shell.transition-mask",
+   "content": {
+    "showLoader": true
+   },
+   "motion": {
+    "pattern": "dot-iris-transition",
+    "reducedMotionFallback": "instant-cut",
+    "trigger": "on-route"
+   }
+  },
+  {
+   "section": "shell.mobile-menu",
+   "content": {
+    "items": [
+     "Home",
+     "Work",
+     "Contact"
+    ]
+   },
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text"
+   }
+  },
+  {
+   "section": "shell.hint-panel",
+   "content": {
+    "text": "Press [L] for light mode, [D] for dark mode, [A] for auto mode, or click THEME. Press [S] to pause or resume background music, or click SOUND; your choice is saved in this browser. [T] scroll to top, [B] scroll to bottom."
+   },
+   "motion": {
+    "pattern": "fade-presence",
+    "reducedMotionFallback": "instant-show-hide",
+    "trigger": "on-hover"
+   }
+  },
+  {
+   "section": "backdrop.webgl-scene",
+   "content": {
+    "palette": "theme"
+   },
+   "assets": [
+    {
+     "slot": "opener-model",
+     "role": "glass-3d-model",
+     "ref": "/model/hello.gltf"
+    },
+    {
+     "slot": "cursor-model",
+     "role": "glass-3d-model",
+     "ref": "/model/cursor.glb"
+    },
+    {
+     "slot": "closer-model",
+     "role": "glass-3d-model",
+     "ref": "/model/cnt.gltf"
+    },
+    {
+     "slot": "stickers",
+     "role": "sticker-set",
+     "ref": "/sticker_img/s_01.png"
+    }
+   ],
+   "motion": {
+    "pattern": "backdrop-scene",
+    "reducedMotionFallback": "static-backdrop-frame",
+    "trigger": "continuous"
+   }
+  },
+  {
+   "section": "effect.pointer-trail",
+   "content": {},
+   "motion": {
+    "pattern": "pointer-trail",
+    "reducedMotionFallback": "no-trail"
+   }
+  },
+  {
+   "section": "hero.banner",
+   "content": {
+    "discipline": "Design & Engineering",
+    "principle": "Thinking in systems. Designing with care.",
+    "bio": "I'm Haoqi Wen, leading Design Engineering and AI exploration at ■■■■■■, engineering, and AI at scale. Outside work, I build design tools for team efficiency.",
+    "headlineLines": [
+     "I bring",
+     "craft & taste",
+     "to digital work"
+    ]
+   },
+   "style": {
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text",
+    "trigger": "on-enter"
+   }
+  },
+  {
+   "section": "intro.about",
+   "content": {
+    "statements": [
+     "I explore how to shape AI-era workflows with craft and taste, building the next generation of digital products.",
+     "I’m building reunimos™, and previously worked on Alibaba aDrive, Teambition, and 100offer."
+    ],
+    "links": [
+     {
+      "label": "reunimos™",
+      "href": "https://reunimos.cc"
+     },
+     {
+      "label": "aDrive",
+      "href": "https://www.alipan.com/"
+     },
+     {
+      "label": "Teambition",
+      "href": "https://www.teambition.com/"
+     }
+    ]
+   },
+   "assets": [
+    {
+     "slot": "portrait",
+     "role": "owner-portrait",
+     "ref": "/img/m3.png",
+     "alt": "Portrait"
+    },
+    {
+     "slot": "signature",
+     "role": "owner-signature",
+     "ref": "inline:about-signature-svg"
+    }
+   ],
+   "motion": {
+    "pattern": "signature-draw",
+    "reducedMotionFallback": "static-drawn",
+    "trigger": "on-enter"
+   }
+  },
+  {
+   "section": "work.selected-grid",
+   "content": {
+    "items": [
+     {
+      "title": "Reunimos™",
+      "years": "2024-2026",
+      "kind": "post",
+      "href": "/reunimos",
+      "layoutSlot": "lg8-start5",
+      "codingProject": true
+     },
+     {
+      "title": "Inspire Mono",
+      "years": "2025",
+      "kind": "post",
+      "href": "/inspire_mono",
+      "layoutSlot": "lg6-start1-xl5",
+      "codingProject": true
+     },
+     {
+      "title": "Wasm design utils",
+      "years": "2025",
+      "kind": "post",
+      "href": "/wasm_design_utils",
+      "layoutSlot": "lg6-start7-xl5-start7",
+      "codingProject": true
+     },
+     {
+      "title": "VectorSymbols",
+      "years": "2023",
+      "kind": "tools",
+      "href": "https://www.figma.com/community/plugin/1255914175202017737/vectorsymbols",
+      "layoutSlot": "lg4-start5-xl3-start6",
+      "codingProject": true
+     },
+     {
+      "title": "DarkSide",
+      "years": "2021",
+      "kind": "tools",
+      "href": "https://www.figma.com/community/plugin/986289377230504703/darkside",
+      "layoutSlot": "lg4-start9-xl3-start10",
+      "codingProject": true
+     },
+     {
+      "title": "aDrive 阿里云盘",
+      "years": "2020-2022",
+      "kind": "post",
+      "href": "/adrive",
+      "layoutSlot": "lg4-start1-xl3-start1"
+     },
+     {
+      "title": "Shore Icon",
+      "years": "2022",
+      "kind": "post",
+      "href": "/shore_icon",
+      "layoutSlot": "lg4-start5-xl3-start5"
+     },
+     {
+      "title": "Teambition",
+      "years": "2018-2020",
+      "kind": "post",
+      "href": "/teambition",
+      "layoutSlot": "lg4-start9-xl3-start9"
+     },
+     {
+      "title": "FoF: See Hear Touch",
+      "years": "2022",
+      "kind": "event",
+      "href": "https://friends.figma.com/events/details/figma-shanghai-presents-see-hear-touch/",
+      "layoutSlot": "lg4-start5-xl3-start6"
+     },
+     {
+      "title": "FoF: Design System",
+      "years": "2021",
+      "kind": "event",
+      "href": "https://friends.figma.com/events/details/figma-shanghai-presents-design-system/",
+      "layoutSlot": "lg4-start9-xl3-start10"
+     }
+    ]
+   },
+   "assets": [
+    {
+     "slot": "items[0].image",
+     "role": "project-thumbnail",
+     "ref": "/work/reunimos01.png"
+    },
+    {
+     "slot": "items[0].hoverImage",
+     "role": "project-hover-thumbnail",
+     "ref": "/work/reunimos02.png"
+    },
+    {
+     "slot": "items[1].image",
+     "role": "project-thumbnail",
+     "ref": "/work/inspire_mono_01.png"
+    },
+    {
+     "slot": "items[1].hoverImage",
+     "role": "project-hover-thumbnail",
+     "ref": "/work/inspire_mono_02.png"
+    },
+    {
+     "slot": "items[2].image",
+     "role": "project-thumbnail",
+     "ref": "/work/wasm01.png"
+    },
+    {
+     "slot": "items[2].hoverImage",
+     "role": "project-hover-thumbnail",
+     "ref": "/work/wasm02.png"
+    },
+    {
+     "slot": "items[3].image",
+     "role": "project-thumbnail",
+     "ref": "/work/vs01.png"
+    },
+    {
+     "slot": "items[3].hoverImage",
+     "role": "project-hover-thumbnail",
+     "ref": "/work/vs02.png"
+    },
+    {
+     "slot": "items[4].image",
+     "role": "project-thumbnail",
+     "ref": "/work/ds01.png"
+    },
+    {
+     "slot": "items[4].hoverImage",
+     "role": "project-hover-thumbnail",
+     "ref": "/work/ds02.png"
+    },
+    {
+     "slot": "items[5].image",
+     "role": "project-thumbnail",
+     "ref": "/work/ali01.png"
+    },
+    {
+     "slot": "items[5].hoverImage",
+     "role": "project-hover-thumbnail",
+     "ref": "/work/ali02.png"
+    },
+    {
+     "slot": "items[6].image",
+     "role": "project-thumbnail",
+     "ref": "/work/si.png"
+    },
+    {
+     "slot": "items[6].hoverImage",
+     "role": "project-hover-thumbnail",
+     "ref": "/work/si02.png"
+    },
+    {
+     "slot": "items[7].image",
+     "role": "project-thumbnail",
+     "ref": "/work/c4.png"
+    },
+    {
+     "slot": "items[8].image",
+     "role": "project-thumbnail",
+     "ref": "/work/s01.png"
+    },
+    {
+     "slot": "items[8].hoverImage",
+     "role": "project-hover-thumbnail",
+     "ref": "/work/s02.png"
+    },
+    {
+     "slot": "items[9].image",
+     "role": "project-thumbnail",
+     "ref": "/work/sd01.png"
+    },
+    {
+     "slot": "items[9].hoverImage",
+     "role": "project-hover-thumbnail",
+     "ref": "/work/sd02.png"
+    }
+   ],
+   "motion": {
+    "pattern": "polarity-reveal",
+    "reducedMotionFallback": "show-positive-image",
+    "trigger": "on-enter"
+   }
+  },
+  {
+   "section": "statement.stage-headline",
+   "variant": "primary",
+   "content": {
+    "lines": [
+     "Innovate",
+     "with",
+     "purpose"
+    ]
+   },
+   "motion": {
+    "pattern": "stagger-fade",
+    "reducedMotionFallback": "show-final-text",
+    "trigger": "on-scroll"
+   }
+  },
+  {
+   "section": "statement.stage-headline",
+   "variant": "secondary",
+   "content": {
+    "lines": [
+     "Innovate",
+     "with a",
+     "human touch"
+    ]
+   },
+   "motion": {
+    "pattern": "stagger-fade",
+    "reducedMotionFallback": "show-final-text",
+    "trigger": "on-scroll"
+   }
+  },
+  {
+   "section": "statement.stage-sentences",
+   "content": {
+    "pairs": [
+     {
+      "line1": "Building tomorrow's",
+      "line2": "digital products."
+     },
+     {
+      "line1": "Independent by",
+      "line2": "design & engineering."
+     },
+     {
+      "line1": "Clarity first.",
+      "line2": "Delight second."
+     },
+     {
+      "line1": "Ship in small loops.",
+      "line2": "Aim for long arcs."
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "ring-cycle",
+    "reducedMotionFallback": "static-ring",
+    "trigger": "on-scroll"
+   }
+  },
+  {
+   "section": "statement.stage-headline",
+   "variant": "closing",
+   "content": {
+    "lines": [
+     "FUTURE-FIRST",
+     "ALWAYS"
+    ]
+   },
+   "motion": {
+    "pattern": "stagger-fade",
+    "reducedMotionFallback": "show-final-text",
+    "trigger": "on-enter"
+   }
+  },
+  {
+   "section": "contact.footer-cta",
+   "content": {
+    "headlineWords": [
+     "Let's",
+     "Create",
+     "Something",
+     "Extraordinary"
+    ],
+    "email": "curiosity.wen@gmail.com",
+    "socials": [
+     {
+      "label": "Twitter/X",
+      "href": "https://twitter.com/wenhaoqi"
+     },
+     {
+      "label": "Figma",
+      "href": "https://www.figma.com/@wenhaoqi"
+     },
+     {
+      "label": "GitHub",
+      "href": "https://github.com/wenhaoqiasd"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text",
+    "trigger": "on-enter"
+   }
+  }
+ ]
+}

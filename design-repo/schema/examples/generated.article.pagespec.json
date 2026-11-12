@@ -1,0 +1,300 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "generated",
+ "template": "template.article",
+ "route": "/tidewater",
+ "theme": "dark",
+ "brand": {
+  "name": "Ellison Works",
+  "markRole": "placeholder-brand-mark"
+ },
+ "meta": {
+  "title": "Tidewater Grotesk"
+ },
+ "nodes": [
+  {
+   "section": "shell.header-nav",
+   "content": {
+    "brandLabel": "Ellison Works",
+    "navItems": [
+     {
+      "label": "Projects",
+      "target": "#selected-work"
+     },
+     {
+      "label": "Reach",
+      "target": "#contact"
+     }
+    ],
+    "themeToggle": true,
+    "soundToggle": true
+   },
+   "assets": [
+    {
+     "slot": "wordmark",
+     "role": "placeholder-brand-mark",
+     "ref": "placeholder:ellison-wordmark"
+    },
+    {
+     "slot": "soundtrack",
+     "role": "user-supplied-audio",
+     "ref": "user-supplied:ambient-loop"
+    }
+   ],
+   "style": {
+    "font": "font.sans",
+    "text": "text.primary"
+   },
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text",
+    "trigger": "on-load"
+   }
+  },
+  {
+   "section": "shell.status-row",
+   "content": {
+    "zoneLabel": "UTC+1 LIS",
+    "showTemperature": false,
+    "showPointerReadout": true
+   },
+   "assets": [
+    {
+     "slot": "globe",
+     "role": "ui-glyph",
+     "ref": "glyph:globe"
+    }
+   ],
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text"
+   }
+  },
+  {
+   "section": "shell.scroll-progress",
+   "content": {},
+   "motion": {
+    "pattern": "scroll-thumb",
+    "reducedMotionFallback": "always-visible"
+   }
+  },
+  {
+   "section": "shell.transition-mask",
+   "content": {
+    "showLoader": false
+   },
+   "motion": {
+    "pattern": "dot-iris-transition",
+    "reducedMotionFallback": "instant-cut"
+   },
+   "retrievalEligible": false
+  },
+  {
+   "section": "shell.mobile-menu",
+   "content": {
+    "items": [
+     "Index",
+     "Projects",
+     "Reach"
+    ]
+   },
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text"
+   }
+  },
+  {
+   "section": "shell.hint-panel",
+   "content": {
+    "text": "Keys: L light, D dark, A automatic theme. S mutes the ambient loop. T jumps to the top and B to the bottom; settings stay in this browser only."
+   },
+   "style": {
+    "surface": "surface.elevated"
+   },
+   "motion": {
+    "pattern": "fade-presence",
+    "reducedMotionFallback": "instant-show-hide"
+   }
+  },
+  {
+   "section": "article.toc",
+   "content": {
+    "ariaLabel": "Contents"
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "overlay.image-lightbox",
+   "content": {},
+   "motion": {
+    "pattern": "lightbox-flip",
+    "reducedMotionFallback": "instant-open"
+   }
+  },
+  {
+   "section": "article.header",
+   "content": {
+    "title": "Tidewater Grotesk",
+    "updated": "Mar 02, 2026",
+    "years": "2025-2026"
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "article.intro",
+   "content": {
+    "paragraphs": [
+     "A coastal grotesk drawn for wayfinding on harbour signage, later widened into a display family.",
+     "These notes cover the brief, the spacing system and how the variable axes were tested."
+    ]
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "article.chapter",
+   "content": {
+    "heading": {
+     "level": 2,
+     "text": "The brief"
+    },
+    "blocks": [
+     {
+      "kind": "paragraph",
+      "text": "Harbour signs are read from moving boats, so counters had to stay open at small sizes and in heavy rain."
+     },
+     {
+      "kind": "figure",
+      "asset": {
+       "role": "generated-article-figure",
+       "ref": "generated:fig-signage-mock",
+       "alt": "Mock signage panel"
+      },
+      "caption": "Early signage mock"
+     },
+     {
+      "kind": "list",
+      "ordered": false,
+      "items": [
+       "Open apertures for wet glass",
+       "Tabular figures for berth numbers",
+       "A wide width for long names"
+      ]
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "article.chapter",
+   "content": {
+    "heading": {
+     "level": 2,
+     "text": "Testing the axes"
+    },
+    "blocks": [
+     {
+      "kind": "paragraph",
+      "text": "Each master was proofed against a paragraph of berth listings before interpolation was trusted."
+     },
+     {
+      "kind": "code",
+      "label": "proof.js",
+      "language": "js",
+      "lines": [
+       "const widths = [80, 100, 125]",
+       "widths.forEach((w) => proof(`wdth ${w}`))"
+      ]
+     },
+     {
+      "kind": "rule"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "article.download-cta",
+   "content": {
+    "label": "Download specimen"
+   },
+   "assets": [
+    {
+     "slot": "download",
+     "role": "placeholder-download",
+     "ref": "https://files.example/tidewater-specimen.pdf"
+    }
+   ],
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "article.image-grid",
+   "content": {
+    "columnsLg": 2,
+    "count": 4
+   },
+   "assets": [
+    {
+     "slot": "slides[0]",
+     "role": "generated-article-figure",
+     "ref": "generated:specimen-0"
+    },
+    {
+     "slot": "slides[1]",
+     "role": "generated-article-figure",
+     "ref": "generated:specimen-1"
+    },
+    {
+     "slot": "slides[2]",
+     "role": "generated-article-figure",
+     "ref": "generated:specimen-2"
+    },
+    {
+     "slot": "slides[3]",
+     "role": "generated-article-figure",
+     "ref": "generated:specimen-3"
+    }
+   ],
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "article.meta-footer",
+   "content": {
+    "updated": "Mar 02, 2026",
+    "socials": [
+     {
+      "label": "Journal",
+      "href": "https://journal.example/@mara"
+     }
+    ]
+   },
+   "style": {
+    "surface": "surface.tint-subtle"
+   },
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text"
+   }
+  }
+ ]
+}

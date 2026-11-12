@@ -1,0 +1,66 @@
+{
+ "id": "shell.scroll-progress",
+ "version": "1.0.0",
+ "title": "Scroll progress",
+ "category": "SHELL",
+ "layer": "fixed",
+ "description": "Right-edge vertical scroll thumb (desktop) that appears on mount and after scrolling; a circular scroll-to-top ring on mobile.",
+ "source": {
+  "id": "scroll-progress",
+  "file": "src/components/ScrollProgress.jsx",
+  "tag": "export default function ScrollProgress",
+  "lines": "15-153"
+ },
+ "semantic": {
+  "id": "shell.scroll-progress",
+  "category": "SHELL"
+ },
+ "retrievalEligible": false,
+ "retrievalIneligibleReason": "Scroll position indicator / scroll-to-top control is runtime utility UI with no content of its own.",
+ "templates": [
+  "template.home",
+  "template.article",
+  "template.not-found"
+ ],
+ "routes": "all",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {},
+  "required": []
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [],
+ "motion": {
+  "allowedPatterns": [
+   "scroll-thumb"
+  ],
+  "reducedMotionFallback": {
+   "scroll-thumb": "always-visible"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "layerOrder": "shell"
+ },
+ "responsive": {
+  "lt1024": {
+   "control": "24 px to-top ring, scale 50% -> 100% after 36 px scroll"
+  },
+  "gte1024": {
+   "control": "32x200 thumb at right edge"
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "189-195",
+   "needle": "- **Scroll progress bar (72443, desktop only):**"
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "id": "figure-image",
+ "kind": "primitive",
+ "description": "Square-cornered image with hairline border on a .05 tint; optional centred caption.",
+ "props": [
+  "asset",
+  "caption"
+ ],
+ "source": {
+  "file": "src/components/mdx/MdxImg.jsx",
+  "lines": "153-153",
+  "needle": "export default function MdxImg("
+ }
+}

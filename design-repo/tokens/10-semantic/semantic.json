@@ -1,0 +1,114 @@
+{
+ "$description": "Semantic roles -> foundation tokens. Tints are alpha mixes of --label-d used directly in component classes.",
+ "tokens": {
+  "text.primary": {
+   "ref": "color.label-1"
+  },
+  "text.secondary": {
+   "ref": "color.label-2"
+  },
+  "text.tertiary": {
+   "ref": "color.label-3"
+  },
+  "text.quaternary": {
+   "ref": "color.label-4"
+  },
+  "text.on-accent": {
+   "ref": "color.black",
+   "usage": "only on accent.selection surfaces (CODING PROJECT tag: bg-selection text-black)",
+   "source": [
+    {
+     "file": "src/components/SelectedWork.jsx",
+     "lines": "61-61",
+     "needle": "bg-selection px-1 font-mono-2 text-black"
+    }
+   ]
+  },
+  "text.over-scene": {
+   "ref": "color.white",
+   "usage": "HUD + stage text while the warp cursor covers the screen",
+   "source": [
+    {
+     "file": "src/components/Innovate.jsx",
+     "lines": "290-290",
+     "needle": "past ? 'text-white' : 'text-l1'"
+    }
+   ]
+  },
+  "border.hairline": {
+   "ref": "color.line"
+  },
+  "surface.page": {
+   "ref": "color.background-1"
+  },
+  "surface.elevated": {
+   "ref": "color.background-elevated"
+  },
+  "accent.selection": {
+   "ref": "color.selection"
+  },
+  "code.comment": {
+   "ref": "color.code-comment"
+  },
+  "code.string": {
+   "ref": "color.code-string"
+  },
+  "code.number": {
+   "ref": "color.code-number"
+  },
+  "code.keyword": {
+   "ref": "color.code-keyword"
+  },
+  "code.function": {
+   "ref": "color.code-function"
+  },
+  "code.tag": {
+   "ref": "color.code-tag"
+  },
+  "code.operator": {
+   "ref": "color.code-operator"
+  },
+  "surface.tint-subtle": {
+   "mix": {
+    "rgbVar": "--label-d",
+    "alpha": ".03"
+   },
+   "usage": "metadata box + code block",
+   "source": [
+    {
+     "file": "src/components/mdx/ArticleChrome.jsx",
+     "lines": "152-152",
+     "needle": "bg-[rgba(var(--label-d),0.03)]"
+    }
+   ]
+  },
+  "surface.tint-media": {
+   "mix": {
+    "rgbVar": "--label-d",
+    "alpha": ".05"
+   },
+   "usage": "figure / iframe placeholder",
+   "source": [
+    {
+     "file": "src/components/mdx/MdxImg.jsx",
+     "lines": "164-164",
+     "needle": "bg-[rgba(var(--label-d),0.05)]"
+    }
+   ]
+  },
+  "surface.tint-code": {
+   "mix": {
+    "rgbVar": "--label-d",
+    "alpha": ".08"
+   },
+   "usage": "inline code chip",
+   "source": [
+    {
+     "file": "src/pages/ArticlePage.jsx",
+     "lines": "12-12",
+     "needle": "[&_:not(pre)>code]:bg-[rgba(var(--label-d),0.08)]"
+    }
+   ]
+  }
+ }
+}

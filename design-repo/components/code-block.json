@@ -1,0 +1,13 @@
+{
+ "id": "code-block",
+ "kind": "component",
+ "description": "Tinted rounded block: label + COPY header, numbered lines with token colours.",
+ "composes": [
+  "dotted-button"
+ ],
+ "source": {
+  "file": "src/components/mdx/MdxBasics.jsx",
+  "lines": "90-90",
+  "needle": "export function MdxPre("
+ }
+}

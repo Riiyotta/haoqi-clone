@@ -1,0 +1,13 @@
+{
+ "id": "inline-code",
+ "kind": "primitive",
+ "description": "Monospace chip on a .08 tint, radius 4.",
+ "props": [
+  "text"
+ ],
+ "source": {
+  "file": "src/pages/ArticlePage.jsx",
+  "lines": "12-12",
+  "needle": "[&_:not(pre)>code]:rounded"
+ }
+}

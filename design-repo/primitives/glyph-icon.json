@@ -1,0 +1,13 @@
+{
+ "id": "glyph-icon",
+ "kind": "primitive",
+ "description": "Generic code-drawn glyphs: wireframe globe, ↗ arrow, hamburger bars.",
+ "props": [
+  "glyph"
+ ],
+ "source": {
+  "file": "src/components/RotatingGlobe.jsx",
+  "lines": "7-7",
+  "needle": "export default function RotatingGlobe("
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "$description": "Corner radii used by the source (histogram of border-radius in the stylesheet).",
+ "tokens": {
+  "radius.sm": {
+   "value": ".25rem",
+   "px": 4,
+   "usage": "inline code chip (rounded)",
+   "source": [
+    {
+     "file": "src/pages/ArticlePage.jsx",
+     "lines": "12-12",
+     "needle": "[&_:not(pre)>code]:rounded"
+    }
+   ]
+  },
+  "radius.md": {
+   "value": ".375rem",
+   "px": 6,
+   "usage": "TOC item",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--radius-md"
+    }
+   ]
+  },
+  "radius.xl": {
+   "value": ".75rem",
+   "px": 12,
+   "usage": "metadata box, code block, iframe",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--radius-xl"
+    }
+   ]
+  },
+  "radius.full": {
+   "value": "9999px",
+   "usage": "download button, loader bar",
+   "source": [
+    {
+     "file": "src/webgl/TransitionCanvas.jsx",
+     "lines": "201-201",
+     "needle": "rounded-full bg-l3"
+    }
+   ]
+  },
+  "radius.none": {
+   "value": "0",
+   "usage": "image cards and figures are square-cornered",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "311-311",
+     "needle": "**Card markup:**"
+    }
+   ]
+  }
+ }
+}

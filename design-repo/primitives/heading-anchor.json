@@ -1,0 +1,14 @@
+{
+ "id": "heading-anchor",
+ "kind": "primitive",
+ "description": "Article heading with hover '#' anchor that copies the section link.",
+ "props": [
+  "level",
+  "text"
+ ],
+ "source": {
+  "file": "src/components/mdx/MdxBasics.jsx",
+  "lines": "31-31",
+  "needle": "export function MdxHeading("
+ }
+}

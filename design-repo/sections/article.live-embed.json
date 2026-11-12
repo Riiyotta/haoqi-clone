@@ -1,0 +1,77 @@
+{
+ "id": "article.live-embed",
+ "version": "1.0.0",
+ "title": "Live product embed",
+ "category": "ARTICLE",
+ "layer": "in-flow",
+ "description": "Full-width rounded iframe (radius xl, hairline ring, tinted placeholder) showing a live web product inside the article.",
+ "source": {
+  "id": "article.iframe",
+  "file": "src/pages/content/reunimos.json",
+  "tag": "[\"iframe\",{\"width\":\"840\",\"height\":\"600\"",
+  "lines": "1-1"
+ },
+ "semantic": {
+  "id": "article.live-embed",
+  "category": "ARTICLE"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.article"
+ ],
+ "routes": "/reunimos",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "title": {
+    "type": "string",
+    "minLength": 1,
+    "maxWords": 3,
+    "observedWords": 2
+   },
+   "heightPx": {
+    "type": "integer",
+    "enum": [
+     600
+    ]
+   }
+  },
+  "required": [
+   "title",
+   "heightPx"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [
+   "live-site-embed"
+  ],
+  "generatedAssetRoles": [
+   "placeholder-embed"
+  ],
+  "slots": [
+   "embed"
+  ]
+ },
+ "styleOverrides": [],
+ "motion": {
+  "allowedPatterns": [
+   "none"
+  ],
+  "reducedMotionFallback": {
+   "none": "none"
+  }
+ },
+ "constraints": {
+  "maxPerPage": 1
+ },
+ "responsive": {},
+ "evidence": [
+  {
+   "file": "CLONE_SPEC_PAGES.md",
+   "lines": "268-271",
+   "needle": "#### 1.7.7 iframe"
+  }
+ ]
+}

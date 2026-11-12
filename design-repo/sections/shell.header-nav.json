@@ -1,0 +1,129 @@
+{
+ "id": "shell.header-nav",
+ "version": "1.0.0",
+ "title": "Header HUD",
+ "category": "SHELL",
+ "layer": "fixed",
+ "description": "Fixed top row over every page: text wordmark (home link) at left; WORK / CONTACT scroll links plus THEME[L|D|A] and SOUND[x] toggles at right, each with a 2 px dotted hover frame. Below 1024 px the links collapse into a 4-bar hamburger.",
+ "source": {
+  "id": "header.top-row",
+  "file": "src/components/Header.jsx",
+  "tag": "<header className={`z-50 fixed inset-0",
+  "lines": "132-175"
+ },
+ "semantic": {
+  "id": "shell.header-nav",
+  "category": "SHELL"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.home",
+  "template.article",
+  "template.not-found"
+ ],
+ "routes": "all",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "brandLabel": {
+    "type": "string",
+    "minLength": 1,
+    "maxWords": 2,
+    "observedWords": 1
+   },
+   "navItems": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "additionalProperties": false,
+     "properties": {
+      "label": {
+       "type": "string",
+       "minLength": 1,
+       "maxWords": 1,
+       "observedWords": 1
+      },
+      "target": {
+       "type": "string",
+       "pattern": "^#[a-z0-9-]+$"
+      }
+     },
+     "required": [
+      "label",
+      "target"
+     ]
+    },
+    "minItems": 2,
+    "maxItems": 2
+   },
+   "themeToggle": {
+    "type": "boolean"
+   },
+   "soundToggle": {
+    "type": "boolean"
+   }
+  },
+  "required": [
+   "brandLabel",
+   "navItems",
+   "themeToggle",
+   "soundToggle"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [
+   "source-wordmark",
+   "background-music"
+  ],
+  "generatedAssetRoles": [
+   "placeholder-brand-mark",
+   "user-supplied-brand-mark",
+   "user-supplied-audio"
+  ],
+  "slots": [
+   "wordmark",
+   "soundtrack"
+  ]
+ },
+ "styleOverrides": [
+  "text",
+  "font"
+ ],
+ "motion": {
+  "allowedPatterns": [
+   "scramble-in",
+   "color-shift-past-threshold"
+  ],
+  "reducedMotionFallback": {
+   "scramble-in": "show-final-text",
+   "color-shift-past-threshold": "instant-color-change"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "layerOrder": "shell"
+ },
+ "responsive": {
+  "lt1024": {
+   "nav": "hamburger (4 bars, 1200 ms ease-66)",
+   "toggles": "moved to mobile menu"
+  },
+  "gte1024": {
+   "nav": "inline links + toggles, basis 1/2 (xl 1/3)"
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "171-179",
+   "needle": "### 4.5 Header / HUD (module 88106)"
+  },
+  {
+   "file": "src/lib/dotted.js",
+   "lines": "2-2",
+   "needle": "export const DOTTED_BORDER_BASE ="
+  }
+ ]
+}

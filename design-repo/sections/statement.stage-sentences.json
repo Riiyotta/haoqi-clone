@@ -1,0 +1,110 @@
+{
+ "id": "statement.stage-sentences",
+ "version": "1.0.0",
+ "title": "Stage sentence pairs",
+ "category": "STATEMENT",
+ "layer": "in-flow",
+ "description": "Third scroll stage (2 viewports): four two-line sentence pairs placed on a staggered 12x6 grid around a lime ring of 7 ellipses that enters, cycles and exits with scroll.",
+ "source": {
+  "id": "hyper-space.seg1",
+  "file": "src/components/Innovate.jsx",
+  "tag": "function Seg1(",
+  "lines": "240-258"
+ },
+ "semantic": {
+  "id": "statement.stage-sentences",
+  "category": "STATEMENT"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.home"
+ ],
+ "routes": "home",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "pairs": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "additionalProperties": false,
+     "properties": {
+      "line1": {
+       "type": "string",
+       "minLength": 1,
+       "maxWords": 4,
+       "observedWords": 4
+      },
+      "line2": {
+       "type": "string",
+       "minLength": 1,
+       "maxWords": 4,
+       "observedWords": 4
+      }
+     },
+     "required": [
+      "line1",
+      "line2"
+     ]
+    },
+    "minItems": 4,
+    "maxItems": 4
+   }
+  },
+  "required": [
+   "pairs"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [
+  "text",
+  "accent"
+ ],
+ "motion": {
+  "allowedPatterns": [
+   "stagger-fade",
+   "sticky-stage-sequence",
+   "ring-cycle"
+  ],
+  "reducedMotionFallback": {
+   "stagger-fade": "show-final-text",
+   "sticky-stage-sequence": "stack-stages-statically",
+   "ring-cycle": "static-ring"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "stageGroup": "statement"
+ },
+ "responsive": {
+  "lt1024": {
+   "pairs": "8-col blocks at col 1 / 5",
+   "type": "5.6svw"
+  },
+  "gte1024": {
+   "pairs": "4-col blocks at col 7/9/2/4, rows 2-5",
+   "type": "text-3xl"
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "147-153",
+   "needle": "  - seg1 sentences:"
+  },
+  {
+   "file": "src/components/Innovate.jsx",
+   "lines": "51-71",
+   "needle": "const Ring = memo(function Ring"
+  }
+ ],
+ "observedWordCounts": {
+  "line": 4
+ }
+}

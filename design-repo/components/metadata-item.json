@@ -1,0 +1,13 @@
+{
+ "id": "metadata-item",
+ "kind": "component",
+ "description": "Label (semibold) over scrambled mono value.",
+ "composes": [
+  "scramble-text"
+ ],
+ "source": {
+  "file": "src/components/mdx/ArticleChrome.jsx",
+  "lines": "127-127",
+  "needle": "function MetaItem("
+ }
+}

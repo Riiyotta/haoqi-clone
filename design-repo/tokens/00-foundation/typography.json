@@ -1,0 +1,439 @@
+{
+ "$description": "Typography foundation from the theme layer of the original stylesheet + measured display sizes (viewport-relative) from the components.",
+ "fontFamily": {
+  "font.sans": {
+   "value": "\"tiktok\",sans-serif",
+   "file": "/fonts/TikTokSans.ttf",
+   "axes": {
+    "wght": "100-900",
+    "wdth": "used at 120"
+   },
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--font-sans"
+    },
+    {
+     "file": "src/index.css",
+     "lines": "2-2",
+     "needle": "font-family: \"tiktok\""
+    }
+   ]
+  },
+  "font.mono": {
+   "value": "\"mono\",monospace",
+   "file": "/fonts/GeistMono[wght].ttf",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--font-mono"
+    },
+    {
+     "file": "src/index.css",
+     "lines": "3-3",
+     "needle": "font-family: \"mono\""
+    }
+   ]
+  },
+  "font.mono-display": {
+   "value": "\"tronica-mono\",monospace",
+   "file": "/fonts/DepartureMono-Regular.otf",
+   "usage": "HUD, card meta, footer links, mobile menu",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--font-mono-2"
+    },
+    {
+     "file": "src/index.css",
+     "lines": "4-4",
+     "needle": "font-family: \"tronica-mono\""
+    }
+   ]
+  }
+ },
+ "fontLicenceNote": "Font files ship in the clone's public/ folder for study only. Their licences were not verified by this design-repo; the owner must confirm before any redistribution.",
+ "fontSize": {
+  "text.xs": {
+   "value": ".75rem",
+   "lineHeight": "calc(1/.75)",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--text-xs"
+    }
+   ]
+  },
+  "text.sm": {
+   "value": ".875rem",
+   "lineHeight": "calc(1.25/.875)",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--text-sm"
+    }
+   ]
+  },
+  "text.base": {
+   "value": "1rem",
+   "lineHeight": "calc(1.5/1)",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--text-base"
+    }
+   ]
+  },
+  "text.lg": {
+   "value": "1.125rem",
+   "lineHeight": "calc(1.75/1.125)",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--text-lg"
+    }
+   ]
+  },
+  "text.xl": {
+   "value": "1.25rem",
+   "lineHeight": "calc(1.75/1.25)",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--text-xl"
+    }
+   ]
+  },
+  "text.2xl": {
+   "value": "1.5rem",
+   "lineHeight": "calc(2/1.5)",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--text-2xl"
+    }
+   ]
+  },
+  "text.3xl": {
+   "value": "1.875rem",
+   "lineHeight": "calc(2.25/1.875)",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--text-3xl"
+    }
+   ]
+  },
+  "text.5xl": {
+   "value": "3rem",
+   "lineHeight": "1",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--text-5xl"
+    }
+   ]
+  }
+ },
+ "fontSizeArbitrary": {
+  "text.heading-1-lg": {
+   "value": "28px",
+   "source": [
+    {
+     "file": "src/components/mdx/MdxBasics.jsx",
+     "lines": "22-22",
+     "needle": "lg:text-[28px]"
+    }
+   ]
+  },
+  "text.heading-5-lg": {
+   "value": "17px",
+   "source": [
+    {
+     "file": "src/components/mdx/MdxBasics.jsx",
+     "lines": "26-26",
+     "needle": "lg:text-[17px]"
+    }
+   ]
+  },
+  "text.caption": {
+   "value": "14px",
+   "source": [
+    {
+     "file": "src/components/mdx/MdxImg.jsx",
+     "lines": "166-166",
+     "needle": "text-[14px]"
+    }
+   ]
+  },
+  "text.inline-code": {
+   "value": "0.9em",
+   "source": [
+    {
+     "file": "src/pages/ArticlePage.jsx",
+     "lines": "12-12",
+     "needle": "[&_:not(pre)>code]:text-[0.9em]"
+    }
+   ]
+  }
+ },
+ "fontSizeDisplay": {
+  "display.hero": {
+   "value": {
+    "base": "7.2svw",
+    "lg": "6svw",
+    "xl": "5.6svw",
+    "2xl": "5svw"
+   },
+   "usage": "hero headline + contact headline",
+   "source": [
+    {
+     "file": "src/components/Hero.jsx",
+     "lines": "48-48",
+     "needle": "text-[7.2svw] lg:text-[6svw]"
+    },
+    {
+     "file": "src/components/Footer.jsx",
+     "lines": "5-5",
+     "needle": "text-[7.2svw] lg:text-[6svw]"
+    }
+   ]
+  },
+  "display.stage": {
+   "value": {
+    "base": "7.2svw",
+    "lg": "6.8svw"
+   },
+   "usage": "hyper-space stage headlines",
+   "source": [
+    {
+     "file": "src/components/Innovate.jsx",
+     "lines": "224-224",
+     "needle": "lg:text-[6.8svw]"
+    }
+   ]
+  },
+  "display.sentence": {
+   "value": {
+    "base": "5.6svw",
+    "lg": "text.3xl"
+   },
+   "usage": "hyper-space sentence pairs",
+   "source": [
+    {
+     "file": "src/components/Innovate.jsx",
+     "lines": "239-239",
+     "needle": "text-[5.6svw] lg:text-3xl"
+    }
+   ]
+  },
+  "display.statement": {
+   "value": {
+    "base": "text.xl",
+    "md": "4.2svw"
+   },
+   "usage": "about statements",
+   "source": [
+    {
+     "file": "src/components/About.jsx",
+     "lines": "55-55",
+     "needle": "md:text-[4.2svw]"
+    }
+   ]
+  },
+  "display.discipline": {
+   "value": {
+    "base": "4svw",
+    "sm": "text.2xl",
+    "lg": "text.3xl"
+   },
+   "usage": "hero discipline label",
+   "source": [
+    {
+     "file": "src/components/Hero.jsx",
+     "lines": "33-33",
+     "needle": "text-[4svw]"
+    }
+   ]
+  },
+  "display.menu": {
+   "value": {
+    "base": "10svw"
+   },
+   "usage": "mobile menu items",
+   "source": [
+    {
+     "file": "src/components/Header.jsx",
+     "lines": "221-221",
+     "needle": "text-[10svw]"
+    }
+   ]
+  }
+ },
+ "fontWeight": {
+  "weight.regular": {
+   "value": 400,
+   "source": [
+    {
+     "file": "CLONE_SPEC_PAGES.md",
+     "lines": "127-127",
+     "needle": "| Intro `p` (first `div` after header) | 16/26, w400"
+    }
+   ]
+  },
+  "weight.medium": {
+   "value": 500,
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--font-weight-medium"
+    }
+   ]
+  },
+  "weight.semibold": {
+   "value": 600,
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--font-weight-semibold"
+    }
+   ]
+  },
+  "weight.bold": {
+   "value": 700,
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--font-weight-bold"
+    }
+   ]
+  }
+ },
+ "fontVariation": {
+  "variation.wide": {
+   "value": "\"wdth\" 120",
+   "usage": "every bold uppercase display line and article titles",
+   "source": [
+    {
+     "file": "src/components/Hero.jsx",
+     "lines": "49-49",
+     "needle": "fontVariationSettings: '\"wdth\" 120'"
+    }
+   ]
+  },
+  "variation.wordmark": {
+   "value": "\"wght\" 700, \"wdth\" 120",
+   "source": [
+    {
+     "file": "src/components/Header.jsx",
+     "lines": "139-139",
+     "needle": "fontVariationSettings: '\"wght\" 700, \"wdth\" 120'"
+    }
+   ]
+  }
+ },
+ "letterSpacing": {
+  "tracking.tight": {
+   "value": "-.025em",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--tracking-tight"
+    }
+   ]
+  },
+  "tracking.normal": {
+   "value": "0em",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--tracking-normal"
+    }
+   ]
+  },
+  "tracking.wide": {
+   "value": ".025em",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--tracking-wide"
+    }
+   ]
+  }
+ },
+ "lineHeight": {
+  "leading.tight": {
+   "value": "1.25",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--leading-tight"
+    }
+   ]
+  },
+  "leading.snug": {
+   "value": "1.375",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--leading-snug"
+    }
+   ]
+  },
+  "leading.relaxed": {
+   "value": "1.625",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--leading-relaxed"
+    }
+   ]
+  },
+  "leading.none": {
+   "value": "1",
+   "source": [
+    {
+     "file": "src/components/Hero.jsx",
+     "lines": "48-48",
+     "needle": "uppercase leading-none"
+    }
+   ]
+  },
+  "leading.statement": {
+   "value": "1.3",
+   "source": [
+    {
+     "file": "src/components/About.jsx",
+     "lines": "55-55",
+     "needle": "leading-[1.3]"
+    }
+   ]
+  }
+ },
+ "textTransform": {
+  "case.upper": {
+   "value": "uppercase",
+   "usage": "HUD, display lines, card rows"
+  }
+ }
+}

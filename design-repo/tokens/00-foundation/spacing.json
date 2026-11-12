@@ -1,0 +1,84 @@
+{
+ "$description": "Spacing scale: base unit --spacing .25rem; only steps that occur in the source class strings are listed (histogram in extraction/measured-values.json -> spacingHistogram).",
+ "base": {
+  "value": ".25rem",
+  "px": 4,
+  "source": [
+   {
+    "excerpt": "extraction/excerpts/original-css-tokens.css",
+    "block": "theme",
+    "var": "--spacing"
+   }
+  ]
+ },
+ "tokens": {
+  "space.0.5": {
+   "value": "calc(var(--spacing)*0.5)",
+   "px": 2.0
+  },
+  "space.1": {
+   "value": "calc(var(--spacing)*1)",
+   "px": 4
+  },
+  "space.1.5": {
+   "value": "calc(var(--spacing)*1.5)",
+   "px": 6.0
+  },
+  "space.2": {
+   "value": "calc(var(--spacing)*2)",
+   "px": 8
+  },
+  "space.3": {
+   "value": "calc(var(--spacing)*3)",
+   "px": 12
+  },
+  "space.4": {
+   "value": "calc(var(--spacing)*4)",
+   "px": 16
+  },
+  "space.5": {
+   "value": "calc(var(--spacing)*5)",
+   "px": 20
+  },
+  "space.6": {
+   "value": "calc(var(--spacing)*6)",
+   "px": 24
+  },
+  "space.7": {
+   "value": "calc(var(--spacing)*7)",
+   "px": 28
+  },
+  "space.8": {
+   "value": "calc(var(--spacing)*8)",
+   "px": 32
+  },
+  "space.10": {
+   "value": "calc(var(--spacing)*10)",
+   "px": 40
+  },
+  "space.12": {
+   "value": "calc(var(--spacing)*12)",
+   "px": 48
+  },
+  "space.14": {
+   "value": "calc(var(--spacing)*14)",
+   "px": 56
+  },
+  "space.16": {
+   "value": "calc(var(--spacing)*16)",
+   "px": 64
+  },
+  "space.18": {
+   "value": "calc(var(--spacing)*18)",
+   "px": 72
+  },
+  "space.24": {
+   "value": "calc(var(--spacing)*24)",
+   "px": 96
+  },
+  "space.28": {
+   "value": "calc(var(--spacing)*28)",
+   "px": 112
+  }
+ }
+}

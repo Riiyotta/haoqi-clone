@@ -1,0 +1,127 @@
+{
+ "id": "intro.about",
+ "version": "1.0.0",
+ "title": "About introduction",
+ "category": "INTRO",
+ "layer": "in-flow",
+ "description": "Portrait (WebGL negative-to-positive reveal) with a lime handwritten signature that draws on view, beside two large statement paragraphs (second one secondary-colour) with inline underlined links.",
+ "source": {
+  "id": "about",
+  "file": "src/components/About.jsx",
+  "tag": "data-section=\"about\"",
+  "lines": "48-72"
+ },
+ "semantic": {
+  "id": "intro.about",
+  "category": "INTRO"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.home"
+ ],
+ "routes": "home",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "statements": {
+    "type": "array",
+    "items": {
+     "type": "string",
+     "minLength": 1,
+     "maxWords": 23,
+     "observedWords": 18
+    },
+    "minItems": 2,
+    "maxItems": 2
+   },
+   "links": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "additionalProperties": false,
+     "properties": {
+      "label": {
+       "type": "string",
+       "minLength": 1,
+       "maxWords": 2,
+       "observedWords": 2
+      },
+      "href": {
+       "type": "string",
+       "minLength": 1,
+       "pattern": "^(/|#|https://|mailto:)"
+      }
+     },
+     "required": [
+      "label",
+      "href"
+     ]
+    },
+    "minItems": 0,
+    "maxItems": 3
+   }
+  },
+  "required": [
+   "statements",
+   "links"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [
+   "owner-portrait",
+   "owner-signature"
+  ],
+  "generatedAssetRoles": [
+   "fictional-portrait",
+   "user-supplied-portrait",
+   "generated-signature-mark"
+  ],
+  "slots": [
+   "portrait",
+   "signature"
+  ]
+ },
+ "styleOverrides": [
+  "text"
+ ],
+ "motion": {
+  "allowedPatterns": [
+   "signature-draw",
+   "polarity-reveal"
+  ],
+  "reducedMotionFallback": {
+   "signature-draw": "static-drawn",
+   "polarity-reveal": "show-positive-image"
+  }
+ },
+ "constraints": {
+  "onePerPage": true
+ },
+ "responsive": {
+  "lt640": {
+   "portrait": "full width",
+   "statements": "text-xl leading 1.3"
+  },
+  "gte640": {
+   "portrait": "4 cols (lg 3)",
+   "statements": "7 cols (lg 8), md+ 4.2svw leading-none"
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "164-170",
+   "needle": "### 4.4 Signature SVG"
+  },
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "316-316",
+   "needle": "**Bio inline links:**"
+  }
+ ],
+ "observedWordCounts": {
+  "statement": 18
+ }
+}

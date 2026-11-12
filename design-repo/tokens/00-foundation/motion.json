@@ -1,0 +1,282 @@
+{
+ "$description": "Motion foundation: easings and durations that occur in the source (stylesheet, component code, CLONE_SPEC measurements).",
+ "easing": {
+  "ease.cubic-66": {
+   "value": "cubic-bezier(.66,0,.01,1)",
+   "usage": "signature brand curve: HUD bars, transition mask, camera dolly",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "light",
+     "var": "--cubic-66"
+    }
+   ]
+  },
+  "ease.out": {
+   "value": "cubic-bezier(0,0,.2,1)",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--ease-out"
+    }
+   ]
+  },
+  "ease.default": {
+   "value": "cubic-bezier(.4,0,.2,1)",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--default-transition-timing-function"
+    }
+   ]
+  },
+  "ease.signature-draw": {
+   "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+   "source": [
+    {
+     "file": "src/index.css",
+     "lines": "14-14",
+     "needle": "cubic-bezier(0.65, 0, 0.35, 1)"
+    }
+   ]
+  },
+  "ease.layout": {
+   "value": "cubic-bezier(0.4, 0, 0.1, 1)",
+   "source": [
+    {
+     "file": "src/components/mdx/MdxImg.jsx",
+     "lines": "12-12",
+     "needle": "const LAYOUT_EASE"
+    }
+   ]
+  },
+  "ease.fade-presence": {
+   "value": "cubic-bezier(0.25, 1, 0.5, 1)",
+   "source": [
+    {
+     "file": "src/components/Header.jsx",
+     "lines": "205-205",
+     "needle": "transition: 'opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1)'"
+    }
+   ]
+  },
+  "ease.loader": {
+   "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+   "source": [
+    {
+     "file": "src/webgl/TransitionCanvas.jsx",
+     "lines": "204-204",
+     "needle": "cubic-bezier(0.22, 1, 0.36, 1)"
+    }
+   ]
+  },
+  "ease.linear": {
+   "value": "linear",
+   "source": [
+    {
+     "file": "src/components/Innovate.jsx",
+     "lines": "110-110",
+     "needle": "animationTimingFunction: 'linear'"
+    }
+   ]
+  }
+ },
+ "duration": {
+  "dur.tick": {
+   "value": "40ms",
+   "usage": "shared scramble interval",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "110-110",
+     "needle": "a single shared `setInterval` at **40 ms**"
+    }
+   ]
+  },
+  "dur.150": {
+   "value": ".15s",
+   "source": [
+    {
+     "excerpt": "extraction/excerpts/original-css-tokens.css",
+     "block": "theme",
+     "var": "--default-transition-duration"
+    }
+   ]
+  },
+  "dur.200": {
+   "value": "200ms",
+   "usage": "dotted border hover",
+   "source": [
+    {
+     "file": "src/lib/dotted.js",
+     "lines": "2-2",
+     "needle": "before:duration-200"
+    }
+   ]
+  },
+  "dur.230": {
+   "value": "0.23s",
+   "usage": "stagger char fade",
+   "source": [
+    {
+     "file": "src/components/Innovate.jsx",
+     "lines": "93-93",
+     "needle": "durationSec = 0.23"
+    }
+   ]
+  },
+  "dur.300": {
+   "value": "300ms",
+   "usage": "text colour shift past threshold, download hover",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "75-75",
+     "needle": "`transition-colors duration-300 ease-out`"
+    }
+   ]
+  },
+  "dur.400": {
+   "value": "0.4s",
+   "usage": "hint panel fade",
+   "source": [
+    {
+     "file": "src/components/Header.jsx",
+     "lines": "205-205",
+     "needle": "transition: 'opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1)'"
+    }
+   ]
+  },
+  "dur.450": {
+   "value": "450ms",
+   "usage": "lightbox FLIP",
+   "source": [
+    {
+     "file": "src/components/mdx/MdxImg.jsx",
+     "lines": "13-13",
+     "needle": "const LAYOUT_MS = 450"
+    }
+   ]
+  },
+  "dur.500": {
+   "value": "500ms",
+   "usage": "scroll thumb fade",
+   "source": [
+    {
+     "file": "src/components/ScrollProgress.jsx",
+     "lines": "107-107",
+     "needle": "transition-opacity duration-500"
+    }
+   ]
+  },
+  "dur.520": {
+   "value": "520ms",
+   "usage": "loader bar width",
+   "source": [
+    {
+     "file": "src/webgl/TransitionCanvas.jsx",
+     "lines": "204-204",
+     "needle": "width 520ms"
+    }
+   ]
+  },
+  "dur.660": {
+   "value": "0.66s",
+   "usage": "mobile to-top ring scale",
+   "source": [
+    {
+     "file": "src/components/ScrollProgress.jsx",
+     "lines": "146-146",
+     "needle": "duration-[0.66s] ease-66"
+    }
+   ]
+  },
+  "dur.800": {
+   "value": "0.8s",
+   "usage": "dot-iris transition, image polarity reveal",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "321-321",
+     "needle": "over **0.8 s** with customCubic"
+    }
+   ]
+  },
+  "dur.1200": {
+   "value": "1200ms",
+   "usage": "hamburger bars, camera dolly-in",
+   "source": [
+    {
+     "file": "src/components/Header.jsx",
+     "lines": "99-99",
+     "needle": "duration-[1200ms] ease-66"
+    }
+   ]
+  },
+  "dur.2600": {
+   "value": "2600ms",
+   "usage": "globe meridian loop",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "185-185",
+     "needle": "dur=\"2600ms\""
+    }
+   ]
+  }
+ },
+ "stagger": {
+  "stagger.letter-fast": {
+   "value": "10ms",
+   "source": [
+    {
+     "file": "src/components/Hero.jsx",
+     "lines": "34-34",
+     "needle": "letterDelayMs={10}"
+    }
+   ]
+  },
+  "stagger.letter-hud": {
+   "value": "40ms",
+   "source": [
+    {
+     "file": "src/components/Header.jsx",
+     "lines": "178-178",
+     "needle": "letterDelayMs={40}"
+    }
+   ]
+  },
+  "stagger.letter-default": {
+   "value": "80ms",
+   "source": [
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "107-107",
+     "needle": "`letterDelayMs 80`"
+    }
+   ]
+  },
+  "stagger.char-spread": {
+   "value": "290ms",
+   "source": [
+    {
+     "file": "src/components/Innovate.jsx",
+     "lines": "93-93",
+     "needle": "staggerSpreadMs = 290"
+    }
+   ]
+  },
+  "stagger.line-group": {
+   "value": "100ms",
+   "source": [
+    {
+     "file": "src/components/Innovate.jsx",
+     "lines": "233-233",
+     "needle": "groupDelayMs={100 * n}"
+    }
+   ]
+  }
+ }
+}

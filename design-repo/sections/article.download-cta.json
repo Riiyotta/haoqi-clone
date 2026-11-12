@@ -1,0 +1,70 @@
+{
+ "id": "article.download-cta",
+ "version": "1.0.0",
+ "title": "Download button",
+ "category": "CTA",
+ "layer": "in-flow",
+ "description": "Full-width 52 px pill button on the hairline colour (hover tertiary) that downloads a file; the only conversion element on article pages.",
+ "source": {
+  "id": "article.download",
+  "file": "src/pages/content/inspire_mono.json",
+  "tag": "\"download\":\"InspireMono.zip\"",
+  "lines": "1-1"
+ },
+ "semantic": {
+  "id": "article.download-cta",
+  "category": "CTA"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.article"
+ ],
+ "routes": "/inspire_mono",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "label": {
+    "type": "string",
+    "minLength": 1,
+    "maxWords": 4,
+    "observedWords": 2
+   }
+  },
+  "required": [
+   "label"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [
+   "downloadable-archive"
+  ],
+  "generatedAssetRoles": [
+   "placeholder-download"
+  ],
+  "slots": [
+   "download"
+  ]
+ },
+ "styleOverrides": [],
+ "motion": {
+  "allowedPatterns": [
+   "none"
+  ],
+  "reducedMotionFallback": {
+   "none": "none"
+  }
+ },
+ "constraints": {
+  "maxPerPage": 1
+ },
+ "responsive": {},
+ "evidence": [
+  {
+   "file": "CLONE_SPEC_PAGES.md",
+   "lines": "229-233",
+   "needle": "#### 1.7.5 Download button"
+  }
+ ]
+}

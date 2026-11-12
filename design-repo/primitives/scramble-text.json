@@ -1,0 +1,17 @@
+{
+ "id": "scramble-text",
+ "kind": "primitive",
+ "description": "Text that reveals with the scramble-in motion; used for nearly every label.",
+ "props": [
+  "text",
+  "startDelayMs",
+  "letterDelayMs",
+  "reverse",
+  "scrambleColors"
+ ],
+ "source": {
+  "file": "src/components/ScrambleText.jsx",
+  "lines": "27-30",
+  "needle": "export default function ScrambleText({"
+ }
+}

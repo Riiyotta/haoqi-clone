@@ -1,0 +1,110 @@
+{
+ "$description": "Token usage policy for PageSpecs. Enforced by schema/semantic_validate.py (rules TOKEN_*). Category names are the exact catalog `category` keys.",
+ "policyVersion": "1.0.0",
+ "styleFields": {
+  "surface": {
+   "category": "color",
+   "allowedPrefixes": [
+    "surface.",
+    "accent."
+   ]
+  },
+  "text": {
+   "category": "color",
+   "allowedPrefixes": [
+    "text."
+   ]
+  },
+  "accent": {
+   "category": "color",
+   "allowedPrefixes": [
+    "accent."
+   ]
+  },
+  "font": {
+   "category": "fontFamily",
+   "allowedPrefixes": [
+    "font."
+   ]
+  },
+  "paddingY": {
+   "category": "spacing",
+   "allowedTokens": [
+    "space.18",
+    "space.24",
+    "space.28",
+    "space.16",
+    "space.6",
+    "space.4"
+   ]
+  },
+  "radius": {
+   "category": "radius",
+   "allowedPrefixes": [
+    "radius."
+   ]
+  }
+ },
+ "rawValueRestrictions": {
+  "color": {
+   "forbid": [
+    "#hex",
+    "rgb()/rgba()",
+    "hsl()",
+    "lab()/lch()/oklch()",
+    "named colours"
+   ],
+   "rule": "TOKEN_RAW_COLOR"
+  },
+  "spacing": {
+   "forbid": [
+    "px/rem/em/vh/vw/% literals"
+   ],
+   "rule": "TOKEN_ARBITRARY_SPACING"
+  },
+  "fontFamily": {
+   "allowOnly": [
+    "font.sans",
+    "font.mono",
+    "font.mono-display"
+   ],
+   "rule": "TOKEN_UNSUPPORTED_FONT"
+  },
+  "radius": {
+   "forbid": [
+    "px/rem literals"
+   ],
+   "rule": "TOKEN_UNKNOWN"
+  }
+ },
+ "themeRules": [
+  {
+   "id": "TOKEN_THEME_MISMATCH",
+   "rule": "a token whose catalog `themes` list does not include the PageSpec theme is invalid (theme 'system' requires both light and dark)"
+  },
+  {
+   "id": "TOKEN_SCENE_SCOPE",
+   "rule": "tokens with scope 'scene' are only valid on BACKDROP nodes (WebGL palette, not page chrome)"
+  },
+  {
+   "id": "TOKEN_ON_ACCENT_PAIRING",
+   "rule": "text.on-accent is only valid together with surface accent.selection (evidence: CODING PROJECT tag)"
+  }
+ ],
+ "overridesNote": "Only the fields in styleFields exist; a section's settable style fields are listed per section in tokens/llm/component-allowlist.json (styleOverrides).",
+ "catalogCategories": [
+  "breakpoint",
+  "color",
+  "elevation",
+  "fontFamily",
+  "fontSize",
+  "fontVariation",
+  "fontWeight",
+  "letterSpacing",
+  "lineHeight",
+  "motionDuration",
+  "motionEasing",
+  "radius",
+  "spacing"
+ ]
+}

@@ -1,0 +1,344 @@
+{
+ "$description": "Closed asset-role vocabulary. availability: reference-only (real evidence, reference PageSpecs only) | blocked-for-generation (identity/proprietary media: never in generated pages, never imitated) | generation-safe. Pinned in code (PINNED_AVAILABILITY in schema/semantic_validate.py and extraction/verify_all.py).",
+ "version": "1.0.0",
+ "licensing": "The source is a real person's live personal portfolio. Its photo, signature, wordmark, project screenshots, 3D models, stickers, music, downloadable font release and all copy belong to the owner (or to the third parties shown). A generated page must never reproduce, trace or imitate them, never depict the owner or any real person, and never embed the owner's live products. Use only the generation-safe roles; reference mode exists solely to describe the source faithfully.",
+ "noRatingsNote": "The source has no reviews, ratings or testimonials (no such content in src/ or the content JSON), so no rating role exists; any rating-like content in a generated page is rejected (GENERATED_MODE_RATING) and no section contract has a rating field.",
+ "roles": {
+  "project-thumbnail": {
+   "availability": "reference-only",
+   "generationPolicy": "must-not-reuse",
+   "description": "Real project screenshots of the owner's work.",
+   "usedBy": [
+    "work.selected-grid"
+   ],
+   "sourceExamples": [
+    "/work/reunimos01.png",
+    "/work/ali01.png"
+   ],
+   "generationSafeSubstitutes": [
+    "generated-project-visual"
+   ]
+  },
+  "project-hover-thumbnail": {
+   "availability": "reference-only",
+   "generationPolicy": "must-not-reuse",
+   "description": "Second (hover) screenshot of a real project.",
+   "usedBy": [
+    "work.selected-grid"
+   ],
+   "sourceExamples": [
+    "/work/reunimos02.png"
+   ],
+   "generationSafeSubstitutes": [
+    "generated-project-visual"
+   ]
+  },
+  "article-figure": {
+   "availability": "reference-only",
+   "generationPolicy": "must-not-reuse",
+   "description": "Screenshots/diagrams inside the owner's project write-ups (some show third-party products).",
+   "usedBy": [
+    "article.chapter"
+   ],
+   "sourceExamples": [
+    "/blog/adrive/ad1.jpg",
+    "/blog/shore/icon01.png"
+   ],
+   "generationSafeSubstitutes": [
+    "generated-article-figure"
+   ]
+  },
+  "article-slide": {
+   "availability": "reference-only",
+   "generationPolicy": "must-not-reuse",
+   "description": "Specimen slides of a real typeface project.",
+   "usedBy": [
+    "article.image-grid"
+   ],
+   "sourceExamples": [
+    "/blog/mono/1.png",
+    "/blog/mono/Cover.png"
+   ],
+   "generationSafeSubstitutes": [
+    "generated-article-figure"
+   ]
+  },
+  "source-wordmark": {
+   "availability": "blocked-for-generation",
+   "generationPolicy": "must-not-reuse-or-imitate",
+   "description": "The owner's wordmark and favicon.",
+   "usedBy": [
+    "shell.header-nav"
+   ],
+   "sourceExamples": [
+    "HAOQI.DESIGN header wordmark (text)",
+    "/icon.svg",
+    "/apple-icon.png"
+   ],
+   "generationSafeSubstitutes": [
+    "placeholder-brand-mark",
+    "user-supplied-brand-mark"
+   ]
+  },
+  "owner-portrait": {
+   "availability": "blocked-for-generation",
+   "generationPolicy": "must-not-fabricate-likeness",
+   "description": "Photo of a real, identifiable person.",
+   "usedBy": [
+    "intro.about"
+   ],
+   "sourceExamples": [
+    "/img/m3.png"
+   ],
+   "generationSafeSubstitutes": [
+    "fictional-portrait",
+    "user-supplied-portrait"
+   ]
+  },
+  "owner-signature": {
+   "availability": "blocked-for-generation",
+   "generationPolicy": "must-not-reuse-or-imitate",
+   "description": "The owner's handwritten signature.",
+   "usedBy": [
+    "intro.about"
+   ],
+   "sourceExamples": [
+    "inline signature SVG paths in the about section"
+   ],
+   "generationSafeSubstitutes": [
+    "generated-signature-mark"
+   ]
+  },
+  "glass-3d-model": {
+   "availability": "blocked-for-generation",
+   "generationPolicy": "must-not-reuse",
+   "description": "Custom 3D lettering/cursor models made for the source site.",
+   "usedBy": [
+    "backdrop.webgl-scene"
+   ],
+   "sourceExamples": [
+    "/model/hello.gltf",
+    "/model/cursor.glb",
+    "/model/cnt.gltf"
+   ],
+   "generationSafeSubstitutes": [
+    "generated-3d-model"
+   ]
+  },
+  "sticker-set": {
+   "availability": "blocked-for-generation",
+   "generationPolicy": "must-not-reuse",
+   "description": "Illustrated stickers drawn for the source site.",
+   "usedBy": [
+    "backdrop.webgl-scene"
+   ],
+   "sourceExamples": [
+    "/sticker_img/s_01.png"
+   ],
+   "generationSafeSubstitutes": [
+    "generated-sticker"
+   ]
+  },
+  "live-site-embed": {
+   "availability": "blocked-for-generation",
+   "generationPolicy": "must-not-embed-live-third-party",
+   "description": "A live third-party product loaded in an iframe.",
+   "usedBy": [
+    "article.live-embed"
+   ],
+   "sourceExamples": [
+    "https://www.reunimos.cc (iframe)"
+   ],
+   "generationSafeSubstitutes": [
+    "placeholder-embed"
+   ]
+  },
+  "downloadable-archive": {
+   "availability": "blocked-for-generation",
+   "generationPolicy": "must-not-reuse",
+   "description": "A real downloadable font release.",
+   "usedBy": [
+    "article.download-cta"
+   ],
+   "sourceExamples": [
+    "/fonts/InspireMono.zip"
+   ],
+   "generationSafeSubstitutes": [
+    "placeholder-download"
+   ]
+  },
+  "background-music": {
+   "availability": "blocked-for-generation",
+   "generationPolicy": "must-not-reuse",
+   "description": "The site's soundtrack (rights unknown).",
+   "usedBy": [
+    "shell.header-nav"
+   ],
+   "sourceExamples": [
+    "/bgm.mp3"
+   ],
+   "generationSafeSubstitutes": [
+    "user-supplied-audio"
+   ]
+  },
+  "placeholder-brand-mark": {
+   "availability": "generation-safe",
+   "generationPolicy": "may-generate-new",
+   "description": "Neutral text wordmark or generated mark for a fictional/new brand.",
+   "usedBy": [
+    "shell.header-nav"
+   ],
+   "refSchemes": [
+    "generated:",
+    "user-supplied:"
+   ]
+  },
+  "user-supplied-brand-mark": {
+   "availability": "generation-safe",
+   "generationPolicy": "user-supplied-only",
+   "description": "A mark the requesting user owns and supplies.",
+   "usedBy": [
+    "shell.header-nav"
+   ],
+   "refSchemes": [
+    "user-supplied:"
+   ]
+  },
+  "fictional-portrait": {
+   "availability": "generation-safe",
+   "generationPolicy": "may-generate-new",
+   "description": "Generated portrait of a fictional person (never resembling a real person).",
+   "usedBy": [
+    "intro.about"
+   ],
+   "refSchemes": [
+    "generated:",
+    "user-supplied:"
+   ]
+  },
+  "user-supplied-portrait": {
+   "availability": "generation-safe",
+   "generationPolicy": "user-supplied-only",
+   "description": "A portrait the depicted user supplies with consent.",
+   "usedBy": [
+    "intro.about"
+   ],
+   "refSchemes": [
+    "user-supplied:"
+   ]
+  },
+  "generated-signature-mark": {
+   "availability": "generation-safe",
+   "generationPolicy": "may-generate-new",
+   "description": "A newly drawn scribble/signature for a fictional person.",
+   "usedBy": [
+    "intro.about"
+   ],
+   "refSchemes": [
+    "generated:",
+    "user-supplied:"
+   ]
+  },
+  "generated-project-visual": {
+   "availability": "generation-safe",
+   "generationPolicy": "may-generate-new",
+   "description": "Generated or user-supplied project imagery.",
+   "usedBy": [
+    "work.selected-grid"
+   ],
+   "refSchemes": [
+    "generated:",
+    "user-supplied:"
+   ]
+  },
+  "generated-article-figure": {
+   "availability": "generation-safe",
+   "generationPolicy": "may-generate-new",
+   "description": "Generated diagram/screenshot for original article content.",
+   "usedBy": [
+    "article.chapter",
+    "article.image-grid"
+   ],
+   "refSchemes": [
+    "generated:",
+    "user-supplied:"
+   ]
+  },
+  "generated-3d-model": {
+   "availability": "generation-safe",
+   "generationPolicy": "may-generate-new",
+   "description": "New abstract 3D model rendered with the glass treatment.",
+   "usedBy": [
+    "backdrop.webgl-scene"
+   ],
+   "refSchemes": [
+    "generated:",
+    "user-supplied:"
+   ]
+  },
+  "generated-sticker": {
+   "availability": "generation-safe",
+   "generationPolicy": "may-generate-new",
+   "description": "New sticker illustrations.",
+   "usedBy": [
+    "backdrop.webgl-scene"
+   ],
+   "refSchemes": [
+    "generated:",
+    "user-supplied:"
+   ]
+  },
+  "placeholder-embed": {
+   "availability": "generation-safe",
+   "generationPolicy": "placeholder-only",
+   "description": "Embed pointing at a reserved .example host.",
+   "usedBy": [
+    "article.live-embed"
+   ],
+   "refSchemes": [
+    "placeholder:",
+    "https://*.example/"
+   ]
+  },
+  "placeholder-download": {
+   "availability": "generation-safe",
+   "generationPolicy": "placeholder-only",
+   "description": "Download link to a reserved .example host or a user-supplied file.",
+   "usedBy": [
+    "article.download-cta"
+   ],
+   "refSchemes": [
+    "placeholder:",
+    "https://*.example/"
+   ]
+  },
+  "user-supplied-audio": {
+   "availability": "generation-safe",
+   "generationPolicy": "user-supplied-only",
+   "description": "Audio the requesting user owns.",
+   "usedBy": [
+    "shell.header-nav"
+   ],
+   "refSchemes": [
+    "user-supplied:"
+   ]
+  },
+  "ui-glyph": {
+   "availability": "generation-safe",
+   "generationPolicy": "may-reuse-geometry",
+   "description": "Generic UI geometry drawn in code; not proprietary.",
+   "usedBy": [
+    "shell.status-row",
+    "shell.status-row"
+   ],
+   "sourceExamples": [
+    "globe wireframe SVG",
+    "↗ arrow",
+    "hamburger bars"
+   ],
+   "refSchemes": [
+    "glyph:"
+   ]
+  }
+ }
+}

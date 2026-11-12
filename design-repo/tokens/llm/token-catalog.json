@@ -1,0 +1,1122 @@
+{
+ "$description": "Approved tokens an AI may reference from a PageSpec node `style` object. Derived by the design-repo generator from tokens/00-foundation + 10-semantic, which are themselves derived from extraction/excerpts/original-css-tokens.css (sha256-pinned) and cited component code. verify_all.py re-derives the excerpt-backed colour values and compares.",
+ "catalogVersion": "1.0.0",
+ "categories": [
+  "breakpoint",
+  "color",
+  "elevation",
+  "fontFamily",
+  "fontSize",
+  "fontVariation",
+  "fontWeight",
+  "letterSpacing",
+  "lineHeight",
+  "motionDuration",
+  "motionEasing",
+  "radius",
+  "spacing"
+ ],
+ "count": 133,
+ "tokens": {
+  "accent.selection": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "#c0fe04",
+   "dark": "#c0fe04",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "border.hairline": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "rgba(54,54,48,.1)",
+   "dark": "rgba(230,232,232,.08)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "bp.2xl": {
+   "category": "breakpoint",
+   "tier": "foundation",
+   "value": "96rem",
+   "from": "tokens/00-foundation/breakpoint.json"
+  },
+  "bp.lg": {
+   "category": "breakpoint",
+   "tier": "foundation",
+   "value": "64rem",
+   "from": "tokens/00-foundation/breakpoint.json"
+  },
+  "bp.md": {
+   "category": "breakpoint",
+   "tier": "foundation",
+   "value": "48rem",
+   "from": "tokens/00-foundation/breakpoint.json"
+  },
+  "bp.sm": {
+   "category": "breakpoint",
+   "tier": "foundation",
+   "value": "40rem",
+   "from": "tokens/00-foundation/breakpoint.json"
+  },
+  "bp.xl": {
+   "category": "breakpoint",
+   "tier": "foundation",
+   "value": "80rem",
+   "from": "tokens/00-foundation/breakpoint.json"
+  },
+  "code.comment": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "rgba(54,54,48,.45)",
+   "dark": "rgba(230,232,232,.5)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "code.function": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "#0077bc",
+   "dark": "#8dcbff",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "code.keyword": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "#5e53e3",
+   "dark": "#afb6ff",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "code.number": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "#8a6a00",
+   "dark": "#ebc669",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "code.operator": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "rgba(54,54,48,.75)",
+   "dark": "rgba(230,232,232,.85)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "code.string": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "#00784a",
+   "dark": "#80daac",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "code.tag": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "#c0434c",
+   "dark": "#ffa3a3",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "color.background-1": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "rgb(251,250,244)",
+   "dark": "rgb(15,17,17)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.background-elevated": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "#efede7",
+   "dark": "#191b1b",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.black": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "#000",
+   "dark": "#000",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.code-comment": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "rgba(54,54,48,.45)",
+   "dark": "rgba(230,232,232,.5)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.code-function": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "#0077bc",
+   "dark": "#8dcbff",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.code-keyword": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "#5e53e3",
+   "dark": "#afb6ff",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.code-number": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "#8a6a00",
+   "dark": "#ebc669",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.code-operator": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "rgba(54,54,48,.75)",
+   "dark": "rgba(230,232,232,.85)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.code-string": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "#00784a",
+   "dark": "#80daac",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.code-tag": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "#c0434c",
+   "dark": "#ffa3a3",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.label-1": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "rgba(0,0,0,1)",
+   "dark": "rgba(255,255,255,1)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.label-2": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "rgba(54,54,48,.6)",
+   "dark": "rgba(230,232,232,.6)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.label-3": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "rgba(54,54,48,.32)",
+   "dark": "rgba(230,232,232,.32)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.label-4": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "rgba(54,54,48,.18)",
+   "dark": "rgba(230,232,232,.16)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.line": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "rgba(54,54,48,.1)",
+   "dark": "rgba(230,232,232,.08)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.scene.accent-blue": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "#009dff",
+   "dark": "#64c3ff",
+   "scope": "scene",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.scene.bokeh-background-dark": {
+   "category": "color",
+   "tier": "foundation",
+   "value": "#2c4bd5",
+   "scope": "scene",
+   "themes": [
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json",
+   "note": "bokeh palette for the dark theme only (palettes swap with the theme, CLONE_SPEC.md §5)"
+  },
+  "color.scene.bokeh-background-light": {
+   "category": "color",
+   "tier": "foundation",
+   "value": "#ffead6",
+   "scope": "scene",
+   "themes": [
+    "light"
+   ],
+   "from": "tokens/00-foundation/color.json",
+   "note": "bokeh palette for the light theme only (palettes swap with the theme, CLONE_SPEC.md §5)"
+  },
+  "color.scene.bokeh-output-dark": {
+   "category": "color",
+   "tier": "foundation",
+   "value": "#00344C",
+   "scope": "scene",
+   "themes": [
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json",
+   "note": "bokeh palette for the dark theme only (palettes swap with the theme, CLONE_SPEC.md §5)"
+  },
+  "color.scene.bokeh-output-light": {
+   "category": "color",
+   "tier": "foundation",
+   "value": "#acffb9",
+   "scope": "scene",
+   "themes": [
+    "light"
+   ],
+   "from": "tokens/00-foundation/color.json",
+   "note": "bokeh palette for the light theme only (palettes swap with the theme, CLONE_SPEC.md §5)"
+  },
+  "color.scene.bokeh-vignette-dark": {
+   "category": "color",
+   "tier": "foundation",
+   "value": "#00000d",
+   "scope": "scene",
+   "themes": [
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json",
+   "note": "bokeh palette for the dark theme only (palettes swap with the theme, CLONE_SPEC.md §5)"
+  },
+  "color.scene.bokeh-vignette-light": {
+   "category": "color",
+   "tier": "foundation",
+   "value": "#6196ff",
+   "scope": "scene",
+   "themes": [
+    "light"
+   ],
+   "from": "tokens/00-foundation/color.json",
+   "note": "bokeh palette for the light theme only (palettes swap with the theme, CLONE_SPEC.md §5)"
+  },
+  "color.scene.dot-overlay": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "#FBFAF4",
+   "dark": "#0F1111",
+   "scope": "scene",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.scene.glass-tint-b": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "#ffffff",
+   "dark": "#8e9dc4",
+   "scope": "scene",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.scene.grid-line": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "rgba(255,255,255,0.1)",
+   "dark": "rgba(255,255,255,0.1)",
+   "scope": "scene",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.scene.scramble-glyph-2": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "#607F02",
+   "dark": "#DFFF81",
+   "scope": "scene",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.selection": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "#c0fe04",
+   "dark": "#c0fe04",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "color.white": {
+   "category": "color",
+   "tier": "foundation",
+   "light": "#fff",
+   "dark": "#fff",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/00-foundation/color.json"
+  },
+  "display.discipline": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": {
+    "base": "4svw",
+    "sm": "text.2xl",
+    "lg": "text.3xl"
+   },
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "display.hero": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": {
+    "base": "7.2svw",
+    "lg": "6svw",
+    "xl": "5.6svw",
+    "2xl": "5svw"
+   },
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "display.menu": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": {
+    "base": "10svw"
+   },
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "display.sentence": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": {
+    "base": "5.6svw",
+    "lg": "text.3xl"
+   },
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "display.stage": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": {
+    "base": "7.2svw",
+    "lg": "6.8svw"
+   },
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "display.statement": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": {
+    "base": "text.xl",
+    "md": "4.2svw"
+   },
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "dur.1200": {
+   "category": "motionDuration",
+   "tier": "foundation",
+   "value": "1200ms",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "dur.150": {
+   "category": "motionDuration",
+   "tier": "foundation",
+   "value": ".15s",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "dur.200": {
+   "category": "motionDuration",
+   "tier": "foundation",
+   "value": "200ms",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "dur.230": {
+   "category": "motionDuration",
+   "tier": "foundation",
+   "value": "0.23s",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "dur.2600": {
+   "category": "motionDuration",
+   "tier": "foundation",
+   "value": "2600ms",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "dur.300": {
+   "category": "motionDuration",
+   "tier": "foundation",
+   "value": "300ms",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "dur.400": {
+   "category": "motionDuration",
+   "tier": "foundation",
+   "value": "0.4s",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "dur.450": {
+   "category": "motionDuration",
+   "tier": "foundation",
+   "value": "450ms",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "dur.500": {
+   "category": "motionDuration",
+   "tier": "foundation",
+   "value": "500ms",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "dur.520": {
+   "category": "motionDuration",
+   "tier": "foundation",
+   "value": "520ms",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "dur.660": {
+   "category": "motionDuration",
+   "tier": "foundation",
+   "value": "0.66s",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "dur.800": {
+   "category": "motionDuration",
+   "tier": "foundation",
+   "value": "0.8s",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "dur.tick": {
+   "category": "motionDuration",
+   "tier": "foundation",
+   "value": "40ms",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "ease.cubic-66": {
+   "category": "motionEasing",
+   "tier": "foundation",
+   "value": "cubic-bezier(.66,0,.01,1)",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "ease.default": {
+   "category": "motionEasing",
+   "tier": "foundation",
+   "value": "cubic-bezier(.4,0,.2,1)",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "ease.fade-presence": {
+   "category": "motionEasing",
+   "tier": "foundation",
+   "value": "cubic-bezier(0.25, 1, 0.5, 1)",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "ease.layout": {
+   "category": "motionEasing",
+   "tier": "foundation",
+   "value": "cubic-bezier(0.4, 0, 0.1, 1)",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "ease.linear": {
+   "category": "motionEasing",
+   "tier": "foundation",
+   "value": "linear",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "ease.loader": {
+   "category": "motionEasing",
+   "tier": "foundation",
+   "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "ease.out": {
+   "category": "motionEasing",
+   "tier": "foundation",
+   "value": "cubic-bezier(0,0,.2,1)",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "ease.signature-draw": {
+   "category": "motionEasing",
+   "tier": "foundation",
+   "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+   "from": "tokens/00-foundation/motion.json"
+  },
+  "elevation.inset-hairline": {
+   "category": "elevation",
+   "tier": "foundation",
+   "value": "inset 0 -1px 0 0 var(--line)",
+   "from": "tokens/00-foundation/elevation.json"
+  },
+  "elevation.ring-hairline": {
+   "category": "elevation",
+   "tier": "foundation",
+   "value": "0 0 0 1px var(--line)",
+   "from": "tokens/00-foundation/elevation.json"
+  },
+  "font.mono": {
+   "category": "fontFamily",
+   "tier": "foundation",
+   "value": "\"mono\",monospace",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "font.mono-display": {
+   "category": "fontFamily",
+   "tier": "foundation",
+   "value": "\"tronica-mono\",monospace",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "font.sans": {
+   "category": "fontFamily",
+   "tier": "foundation",
+   "value": "\"tiktok\",sans-serif",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "leading.none": {
+   "category": "lineHeight",
+   "tier": "foundation",
+   "value": "1",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "leading.relaxed": {
+   "category": "lineHeight",
+   "tier": "foundation",
+   "value": "1.625",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "leading.snug": {
+   "category": "lineHeight",
+   "tier": "foundation",
+   "value": "1.375",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "leading.statement": {
+   "category": "lineHeight",
+   "tier": "foundation",
+   "value": "1.3",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "leading.tight": {
+   "category": "lineHeight",
+   "tier": "foundation",
+   "value": "1.25",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "radius.full": {
+   "category": "radius",
+   "tier": "foundation",
+   "value": "9999px",
+   "from": "tokens/00-foundation/radius.json"
+  },
+  "radius.md": {
+   "category": "radius",
+   "tier": "foundation",
+   "value": ".375rem",
+   "from": "tokens/00-foundation/radius.json"
+  },
+  "radius.none": {
+   "category": "radius",
+   "tier": "foundation",
+   "value": "0",
+   "from": "tokens/00-foundation/radius.json"
+  },
+  "radius.sm": {
+   "category": "radius",
+   "tier": "foundation",
+   "value": ".25rem",
+   "from": "tokens/00-foundation/radius.json"
+  },
+  "radius.xl": {
+   "category": "radius",
+   "tier": "foundation",
+   "value": ".75rem",
+   "from": "tokens/00-foundation/radius.json"
+  },
+  "space.0.5": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*0.5)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.1": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*1)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.1.5": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*1.5)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.10": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*10)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.12": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*12)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.14": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*14)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.16": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*16)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.18": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*18)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.2": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*2)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.24": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*24)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.28": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*28)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.3": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*3)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.4": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*4)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.5": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*5)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.6": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*6)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.7": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*7)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "space.8": {
+   "category": "spacing",
+   "tier": "foundation",
+   "value": "calc(var(--spacing)*8)",
+   "from": "tokens/00-foundation/spacing.json"
+  },
+  "surface.elevated": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "#efede7",
+   "dark": "#191b1b",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "surface.page": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "rgb(251,250,244)",
+   "dark": "rgb(15,17,17)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "surface.tint-code": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "rgba(54,54,48,.08)",
+   "dark": "rgba(230,232,232,.08)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "surface.tint-media": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "rgba(54,54,48,.05)",
+   "dark": "rgba(230,232,232,.05)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "surface.tint-subtle": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "rgba(54,54,48,.03)",
+   "dark": "rgba(230,232,232,.03)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "text.2xl": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": "1.5rem",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "text.3xl": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": "1.875rem",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "text.5xl": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": "3rem",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "text.base": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": "1rem",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "text.caption": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": "14px",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "text.heading-1-lg": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": "28px",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "text.heading-5-lg": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": "17px",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "text.inline-code": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": "0.9em",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "text.lg": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": "1.125rem",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "text.on-accent": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "#000",
+   "dark": "#000",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "text.over-scene": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "#fff",
+   "dark": "#fff",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "text.primary": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "rgba(0,0,0,1)",
+   "dark": "rgba(255,255,255,1)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "text.quaternary": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "rgba(54,54,48,.18)",
+   "dark": "rgba(230,232,232,.16)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "text.secondary": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "rgba(54,54,48,.6)",
+   "dark": "rgba(230,232,232,.6)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "text.sm": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": ".875rem",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "text.tertiary": {
+   "category": "color",
+   "tier": "semantic",
+   "light": "rgba(54,54,48,.32)",
+   "dark": "rgba(230,232,232,.32)",
+   "scope": "page",
+   "themes": [
+    "light",
+    "dark"
+   ],
+   "from": "tokens/10-semantic/semantic.json"
+  },
+  "text.xl": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": "1.25rem",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "text.xs": {
+   "category": "fontSize",
+   "tier": "foundation",
+   "value": ".75rem",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "tracking.normal": {
+   "category": "letterSpacing",
+   "tier": "foundation",
+   "value": "0em",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "tracking.tight": {
+   "category": "letterSpacing",
+   "tier": "foundation",
+   "value": "-.025em",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "tracking.wide": {
+   "category": "letterSpacing",
+   "tier": "foundation",
+   "value": ".025em",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "variation.wide": {
+   "category": "fontVariation",
+   "tier": "foundation",
+   "value": "\"wdth\" 120",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "variation.wordmark": {
+   "category": "fontVariation",
+   "tier": "foundation",
+   "value": "\"wght\" 700, \"wdth\" 120",
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "weight.bold": {
+   "category": "fontWeight",
+   "tier": "foundation",
+   "value": 700,
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "weight.medium": {
+   "category": "fontWeight",
+   "tier": "foundation",
+   "value": 500,
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "weight.regular": {
+   "category": "fontWeight",
+   "tier": "foundation",
+   "value": 400,
+   "from": "tokens/00-foundation/typography.json"
+  },
+  "weight.semibold": {
+   "category": "fontWeight",
+   "tier": "foundation",
+   "value": 600,
+   "from": "tokens/00-foundation/typography.json"
+  }
+ }
+}

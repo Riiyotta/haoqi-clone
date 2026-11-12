@@ -1,0 +1,14 @@
+{
+ "id": "inline-link",
+ "kind": "primitive",
+ "description": "Underlined inline link (decoration label-3 -> label-2/label-1 on hover).",
+ "props": [
+  "label",
+  "href"
+ ],
+ "source": {
+  "file": "src/components/mdx/MdxBasics.jsx",
+  "lines": "64-64",
+  "needle": "export function MdxA("
+ }
+}

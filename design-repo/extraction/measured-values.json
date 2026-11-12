@@ -1,0 +1,1066 @@
+{
+ "$description": "Measurement + citation ledger. Every claim here points at a tracked file (src/, CLONE_SPEC*.md, ia.json, package.json) or at an in-package excerpt pinned by sha256. verify_all.py resolves the citations when the sibling clone source is present and WARNs (does not fail) when the design-repo is used standalone.",
+ "excerpts": {
+  "extraction/excerpts/original-css-tokens.css": {
+   "sha256": "bb2012b6379cb83a49785cc899133755ba4400ac26976a0bf57378a79ac3b0a8",
+   "sourceFile": "src/styles/original.css",
+   "blocks": [
+    {
+     "block": "theme",
+     "byteOffset": 1400,
+     "length": 1302
+    },
+    {
+     "block": "light",
+     "byteOffset": 6289,
+     "length": 629
+    },
+    {
+     "block": "light-lab",
+     "byteOffset": 6948,
+     "length": 273
+    },
+    {
+     "block": "dark",
+     "byteOffset": 7222,
+     "length": 574
+    },
+    {
+     "block": "dark-lab",
+     "byteOffset": 7826,
+     "length": 230
+    }
+   ]
+  }
+ },
+ "sourceStack": {
+  "note": "documentation only; never used in contracts",
+  "framework": "React ^19.2.4 + Vite ^5.4.10",
+  "webgl": "three ^0.184.0 via @react-three/fiber ^9.8.2, postprocessing ^6.39.6",
+  "scroll": "lenis ^1.3.23 (home only)",
+  "css": "the original site's precompiled stylesheet reused verbatim (src/styles/original.css); no CSS build step",
+  "evidence": [
+   {
+    "file": "package.json",
+    "lines": "16-16",
+    "needle": "\"react\": \""
+   },
+   {
+    "file": "package.json",
+    "lines": "18-18",
+    "needle": "\"three\": \""
+   },
+   {
+    "file": "src/index.css",
+    "lines": "1-1",
+    "needle": "@import \"./styles/original.css\";"
+   }
+  ]
+ },
+ "sectionHeights": {
+  "tool": "extraction/measure_sections.mjs (+ section_geometry.mjs)",
+  "measuredFrom": "clone dev server, Chromium + SwiftShader, light colour scheme, lazy figures loaded",
+  "measuredAt": "2026-11-12T12:47:32.505Z",
+  "viewport": "1440x900",
+  "thresholds": {
+   "heroWarnPx": 1800,
+   "heroFailPx": 3000,
+   "shareWarn": 0.5,
+   "shareFail": 0.6,
+   "minSections": 3
+  },
+  "pages": {
+   "/": {
+    "pageHeight": 12319,
+    "sections": [
+     {
+      "id": "hero.banner",
+      "topPx": 0,
+      "heightPx": 900,
+      "share": 0.0731
+     },
+     {
+      "id": "intro.about",
+      "topPx": 900,
+      "heightPx": 687.39,
+      "share": 0.0558
+     },
+     {
+      "id": "work.selected-grid",
+      "topPx": 1587.39,
+      "heightPx": 2632.05,
+      "share": 0.2137
+     },
+     {
+      "id": "statement.stage-headline",
+      "variant": "primary",
+      "topPx": 4219.44,
+      "heightPx": 1800,
+      "share": 0.1461,
+      "derivedFrom": {
+       "wrapper": "hyper-space",
+       "wrapperHeight": 7200,
+       "segments": [
+        0,
+        1
+       ]
+      }
+     },
+     {
+      "id": "statement.stage-headline",
+      "variant": "secondary",
+      "topPx": 6019.44,
+      "heightPx": 1800,
+      "share": 0.1461,
+      "derivedFrom": {
+       "wrapper": "hyper-space",
+       "wrapperHeight": 7200,
+       "segments": [
+        2,
+        3
+       ]
+      }
+     },
+     {
+      "id": "statement.stage-sentences",
+      "topPx": 7819.44,
+      "heightPx": 1800,
+      "share": 0.1461,
+      "derivedFrom": {
+       "wrapper": "hyper-space",
+       "wrapperHeight": 7200,
+       "segments": [
+        4,
+        5
+       ]
+      }
+     },
+     {
+      "id": "statement.stage-headline",
+      "variant": "closing",
+      "topPx": 9619.44,
+      "heightPx": 1800,
+      "share": 0.1461,
+      "derivedFrom": {
+       "wrapper": "hyper-space",
+       "wrapperHeight": 7200,
+       "segments": [
+        6,
+        7
+       ]
+      }
+     },
+     {
+      "id": "contact.footer-cta",
+      "topPx": 11419.44,
+      "heightPx": 900,
+      "share": 0.0731
+     }
+    ],
+    "stageSignatures": [
+     {
+      "childBlocks": 1,
+      "ringEllipses": 0,
+      "lines": 3
+     },
+     {
+      "childBlocks": 1,
+      "ringEllipses": 0,
+      "lines": 3
+     },
+     {
+      "childBlocks": 5,
+      "ringEllipses": 7,
+      "lines": 1
+     },
+     {
+      "childBlocks": 1,
+      "ringEllipses": 0,
+      "lines": 2
+     }
+    ]
+   },
+   "/reunimos": {
+    "pageHeight": 1862,
+    "sections": [
+     {
+      "id": "article.header",
+      "topPx": 96,
+      "heightPx": 243,
+      "share": 0.1305
+     },
+     {
+      "id": "article.intro",
+      "topPx": 339,
+      "heightPx": 492,
+      "share": 0.2642
+     },
+     {
+      "id": "article.live-embed",
+      "topPx": 831,
+      "heightPx": 664,
+      "share": 0.3566
+     },
+     {
+      "id": "article.meta-footer",
+      "topPx": 1495,
+      "heightPx": 271,
+      "share": 0.1455
+     }
+    ],
+    "tocPresent": false
+   },
+   "/inspire_mono": {
+    "pageHeight": 3007,
+    "sections": [
+     {
+      "id": "article.header",
+      "topPx": 96,
+      "heightPx": 243,
+      "share": 0.0808
+     },
+     {
+      "id": "article.intro",
+      "topPx": 339,
+      "heightPx": 206,
+      "share": 0.0685
+     },
+     {
+      "id": "article.download-cta",
+      "topPx": 545,
+      "heightPx": 76,
+      "share": 0.0253
+     },
+     {
+      "id": "article.image-grid",
+      "topPx": 621,
+      "heightPx": 2019,
+      "share": 0.6714
+     },
+     {
+      "id": "article.meta-footer",
+      "topPx": 2640,
+      "heightPx": 271,
+      "share": 0.0901
+     }
+    ],
+    "tocPresent": false
+   },
+   "/wasm_design_utils": {
+    "pageHeight": 3000,
+    "sections": [
+     {
+      "id": "article.header",
+      "topPx": 96,
+      "heightPx": 243,
+      "share": 0.081
+     },
+     {
+      "id": "article.intro",
+      "topPx": 339,
+      "heightPx": 138,
+      "share": 0.046
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 2,
+      "topPx": 477,
+      "heightPx": 272.75,
+      "share": 0.0909
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 2,
+      "topPx": 749.75,
+      "heightPx": 198,
+      "share": 0.066
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 2,
+      "topPx": 947.75,
+      "heightPx": 461.5,
+      "share": 0.1538
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 2,
+      "topPx": 1409.25,
+      "heightPx": 458.25,
+      "share": 0.1527
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 2,
+      "topPx": 1867.5,
+      "heightPx": 363.75,
+      "share": 0.1212
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 2,
+      "topPx": 2231.25,
+      "heightPx": 240,
+      "share": 0.08
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 2,
+      "topPx": 2471.25,
+      "heightPx": 162,
+      "share": 0.054
+     },
+     {
+      "id": "article.meta-footer",
+      "topPx": 2633.25,
+      "heightPx": 271,
+      "share": 0.0903
+     }
+    ],
+    "tocPresent": true
+   },
+   "/adrive": {
+    "pageHeight": 11038,
+    "sections": [
+     {
+      "id": "article.header",
+      "topPx": 96,
+      "heightPx": 205,
+      "share": 0.0186
+     },
+     {
+      "id": "article.intro",
+      "topPx": 301,
+      "heightPx": 134,
+      "share": 0.0121
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 1,
+      "topPx": 435,
+      "heightPx": 1600.03,
+      "share": 0.145
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 1,
+      "topPx": 2035.03,
+      "heightPx": 4382.89,
+      "share": 0.3971
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 1,
+      "topPx": 6417.92,
+      "heightPx": 4253.34,
+      "share": 0.3853
+     },
+     {
+      "id": "article.meta-footer",
+      "topPx": 10671.27,
+      "heightPx": 271,
+      "share": 0.0246
+     }
+    ],
+    "tocPresent": true
+   },
+   "/shore_icon": {
+    "pageHeight": 10931,
+    "sections": [
+     {
+      "id": "article.header",
+      "topPx": 96,
+      "heightPx": 243,
+      "share": 0.0222
+     },
+     {
+      "id": "article.intro",
+      "topPx": 339,
+      "heightPx": 160,
+      "share": 0.0146
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 1,
+      "topPx": 499,
+      "heightPx": 1584.91,
+      "share": 0.145
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 1,
+      "topPx": 2083.91,
+      "heightPx": 3391.38,
+      "share": 0.3103
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 1,
+      "topPx": 5475.28,
+      "heightPx": 4242.63,
+      "share": 0.3881
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 1,
+      "topPx": 9717.91,
+      "heightPx": 845.91,
+      "share": 0.0774
+     },
+     {
+      "id": "article.meta-footer",
+      "topPx": 10563.81,
+      "heightPx": 271,
+      "share": 0.0248
+     }
+    ],
+    "tocPresent": true
+   },
+   "/teambition": {
+    "pageHeight": 900,
+    "sections": [
+     {
+      "id": "article.header",
+      "topPx": 96,
+      "heightPx": 243,
+      "share": 0.27
+     },
+     {
+      "id": "article.intro",
+      "topPx": 339,
+      "heightPx": 192,
+      "share": 0.2133
+     },
+     {
+      "id": "article.meta-footer",
+      "topPx": 531,
+      "heightPx": 271,
+      "share": 0.3011
+     }
+    ],
+    "tocPresent": false
+   },
+   "/__not_found_probe__": {
+    "pageHeight": 1092,
+    "sections": [
+     {
+      "id": "error.not-found",
+      "topPx": 96,
+      "heightPx": 900,
+      "share": 0.8242
+     }
+    ],
+    "tocPresent": false
+   }
+  },
+  "liveComparison": {
+   "measuredAt": "2026-11-12T12:14:15.423Z",
+   "base": "https://haoqi.design",
+   "differencesOver1px": []
+  }
+ },
+ "sectionHeightsMobile": {
+  "viewport": "390x844",
+  "informational": true,
+  "pages": {
+   "/": {
+    "pageHeight": 11301,
+    "sections": [
+     {
+      "id": "hero.banner",
+      "topPx": 0,
+      "heightPx": 844,
+      "share": 0.0747
+     },
+     {
+      "id": "intro.about",
+      "topPx": 844,
+      "heightPx": 740,
+      "share": 0.0655
+     },
+     {
+      "id": "work.selected-grid",
+      "topPx": 1584,
+      "heightPx": 2121.06,
+      "share": 0.1877
+     },
+     {
+      "id": "statement.stage-headline",
+      "variant": "primary",
+      "topPx": 3705.06,
+      "heightPx": 1688,
+      "share": 0.1494,
+      "derivedFrom": {
+       "wrapper": "hyper-space",
+       "wrapperHeight": 6752,
+       "segments": [
+        0,
+        1
+       ]
+      }
+     },
+     {
+      "id": "statement.stage-headline",
+      "variant": "secondary",
+      "topPx": 5393.06,
+      "heightPx": 1688,
+      "share": 0.1494,
+      "derivedFrom": {
+       "wrapper": "hyper-space",
+       "wrapperHeight": 6752,
+       "segments": [
+        2,
+        3
+       ]
+      }
+     },
+     {
+      "id": "statement.stage-sentences",
+      "topPx": 7081.06,
+      "heightPx": 1688,
+      "share": 0.1494,
+      "derivedFrom": {
+       "wrapper": "hyper-space",
+       "wrapperHeight": 6752,
+       "segments": [
+        4,
+        5
+       ]
+      }
+     },
+     {
+      "id": "statement.stage-headline",
+      "variant": "closing",
+      "topPx": 8769.06,
+      "heightPx": 1688,
+      "share": 0.1494,
+      "derivedFrom": {
+       "wrapper": "hyper-space",
+       "wrapperHeight": 6752,
+       "segments": [
+        6,
+        7
+       ]
+      }
+     },
+     {
+      "id": "contact.footer-cta",
+      "topPx": 10457.06,
+      "heightPx": 844,
+      "share": 0.0747
+     }
+    ],
+    "stageSignatures": [
+     {
+      "childBlocks": 1,
+      "ringEllipses": 0,
+      "lines": 3
+     },
+     {
+      "childBlocks": 1,
+      "ringEllipses": 0,
+      "lines": 3
+     },
+     {
+      "childBlocks": 5,
+      "ringEllipses": 7,
+      "lines": 1
+     },
+     {
+      "childBlocks": 1,
+      "ringEllipses": 0,
+      "lines": 2
+     }
+    ]
+   },
+   "/reunimos": {
+    "pageHeight": 2149,
+    "sections": [
+     {
+      "id": "article.header",
+      "topPx": 72,
+      "heightPx": 208.39,
+      "share": 0.097
+     },
+     {
+      "id": "article.intro",
+      "topPx": 280.39,
+      "heightPx": 804,
+      "share": 0.3741
+     },
+     {
+      "id": "article.live-embed",
+      "topPx": 1084.39,
+      "heightPx": 664,
+      "share": 0.309
+     },
+     {
+      "id": "article.meta-footer",
+      "topPx": 1748.39,
+      "heightPx": 329,
+      "share": 0.1531
+     }
+    ],
+    "tocPresent": false
+   },
+   "/inspire_mono": {
+    "pageHeight": 4332,
+    "sections": [
+     {
+      "id": "article.header",
+      "topPx": 72,
+      "heightPx": 208.39,
+      "share": 0.0481
+     },
+     {
+      "id": "article.intro",
+      "topPx": 280.39,
+      "heightPx": 388,
+      "share": 0.0896
+     },
+     {
+      "id": "article.download-cta",
+      "topPx": 668.39,
+      "heightPx": 76,
+      "share": 0.0175
+     },
+     {
+      "id": "article.image-grid",
+      "topPx": 744.39,
+      "heightPx": 3186.75,
+      "share": 0.7356
+     },
+     {
+      "id": "article.meta-footer",
+      "topPx": 3931.14,
+      "heightPx": 329,
+      "share": 0.0759
+     }
+    ],
+    "tocPresent": false
+   },
+   "/wasm_design_utils": {
+    "pageHeight": 3086,
+    "sections": [
+     {
+      "id": "article.header",
+      "topPx": 72,
+      "heightPx": 208.39,
+      "share": 0.0675
+     },
+     {
+      "id": "article.intro",
+      "topPx": 280.39,
+      "heightPx": 188.5,
+      "share": 0.0611
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 2,
+      "topPx": 468.89,
+      "heightPx": 268.75,
+      "share": 0.0871
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 2,
+      "topPx": 737.64,
+      "heightPx": 282.5,
+      "share": 0.0915
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 2,
+      "topPx": 1020.14,
+      "heightPx": 428.25,
+      "share": 0.1388
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 2,
+      "topPx": 1448.39,
+      "heightPx": 425,
+      "share": 0.1377
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 2,
+      "topPx": 1873.39,
+      "heightPx": 369.5,
+      "share": 0.1197
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 2,
+      "topPx": 2242.89,
+      "heightPx": 269.25,
+      "share": 0.0872
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 2,
+      "topPx": 2512.14,
+      "heightPx": 173.25,
+      "share": 0.0561
+     },
+     {
+      "id": "article.meta-footer",
+      "topPx": 2685.39,
+      "heightPx": 329,
+      "share": 0.1066
+     }
+    ],
+    "tocPresent": true
+   },
+   "/adrive": {
+    "pageHeight": 7101,
+    "sections": [
+     {
+      "id": "article.header",
+      "topPx": 72,
+      "heightPx": 173.64,
+      "share": 0.0245
+     },
+     {
+      "id": "article.intro",
+      "topPx": 245.64,
+      "heightPx": 161.75,
+      "share": 0.0228
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 1,
+      "topPx": 407.39,
+      "heightPx": 972.52,
+      "share": 0.137
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 1,
+      "topPx": 1379.91,
+      "heightPx": 2806.81,
+      "share": 0.3953
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 1,
+      "topPx": 4186.72,
+      "heightPx": 2513.22,
+      "share": 0.3539
+     },
+     {
+      "id": "article.meta-footer",
+      "topPx": 6699.94,
+      "heightPx": 329,
+      "share": 0.0463
+     }
+    ],
+    "tocPresent": true
+   },
+   "/shore_icon": {
+    "pageHeight": 8407,
+    "sections": [
+     {
+      "id": "article.header",
+      "topPx": 72,
+      "heightPx": 208.39,
+      "share": 0.0248
+     },
+     {
+      "id": "article.intro",
+      "topPx": 280.39,
+      "heightPx": 230,
+      "share": 0.0274
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 1,
+      "topPx": 510.39,
+      "heightPx": 1223.94,
+      "share": 0.1456
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 1,
+      "topPx": 1734.33,
+      "heightPx": 2209.97,
+      "share": 0.2629
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 1,
+      "topPx": 3944.3,
+      "heightPx": 3482.92,
+      "share": 0.4143
+     },
+     {
+      "id": "article.chapter",
+      "headingLevel": 1,
+      "topPx": 7427.22,
+      "heightPx": 578.31,
+      "share": 0.0688
+     },
+     {
+      "id": "article.meta-footer",
+      "topPx": 8005.53,
+      "heightPx": 329,
+      "share": 0.0391
+     }
+    ],
+    "tocPresent": true
+   },
+   "/teambition": {
+    "pageHeight": 906,
+    "sections": [
+     {
+      "id": "article.header",
+      "topPx": 72,
+      "heightPx": 208.39,
+      "share": 0.23
+     },
+     {
+      "id": "article.intro",
+      "topPx": 280.39,
+      "heightPx": 224.5,
+      "share": 0.2478
+     },
+     {
+      "id": "article.meta-footer",
+      "topPx": 504.89,
+      "heightPx": 329,
+      "share": 0.3631
+     }
+    ],
+    "tocPresent": false
+   },
+   "/__not_found_probe__": {
+    "pageHeight": 988,
+    "sections": [
+     {
+      "id": "error.not-found",
+      "topPx": 72,
+      "heightPx": 844,
+      "share": 0.8543
+     }
+    ],
+    "tocPresent": false
+   }
+  },
+  "liveComparison": {
+   "differencesOver1px": []
+  }
+ },
+ "stageDecomposition": {
+  "claim": "The home statement wrapper (one sticky container 8 viewports tall, 7200 px at 900 px viewport) holds 4 distinct content states, each spanning 2 segments; it is modelled as 4 semantic sections (statement.stage-headline primary/secondary/closing, statement.stage-sentences), not one 58% wrapper.",
+  "evidence": [
+   {
+    "file": "src/components/Innovate.jsx",
+    "lines": "122-127",
+    "needle": "const STAGES = ["
+   },
+   {
+    "file": "src/components/Innovate.jsx",
+    "lines": "290-290",
+    "needle": "style={{ height: `${8 * vh}px` }}"
+   },
+   {
+    "file": "CLONE_SPEC.md",
+    "lines": "95-101",
+    "needle": "Hyper-space stage formula"
+   }
+  ],
+  "renderedCheck": "measure_sections.mjs scrolls to the middle of each stage and records a text-free signature (line count, ring ellipses); see sectionHeights.pages['/'].stageSignatures: 3 lines / 3 lines / 4 pairs + 7 ellipses / 2 lines, identical on live."
+ },
+ "articleDecomposition": {
+  "claim": "Article bodies are cut into heading-bounded chapters at the article's top heading level (h1 for /adrive and /shore_icon, h2 for /wasm_design_utils); a chapter over 50% of the page would split at the next level (none did).",
+  "evidence": [
+   {
+    "file": "design-repo/extraction/section_geometry.mjs",
+    "lines": "59-61",
+    "needle": "const chapters = (els, level, endTop) =>"
+   }
+  ]
+ },
+ "spacingHistogram": {
+  "0": 21,
+  "0.5": 4,
+  "1": 20,
+  "1.5": 3,
+  "2": 43,
+  "2.5": 1,
+  "3": 28,
+  "4": 21,
+  "5": 6,
+  "6": 21,
+  "7": 5,
+  "8": 4,
+  "10": 2,
+  "12": 2,
+  "14": 10,
+  "16": 3,
+  "18": 6,
+  "24": 6,
+  "28": 1
+ },
+ "iaReconciliation": {
+  "source": "ia.json (strong first draft, spot-checked against src/)",
+  "routes": "all 8 ia.json routes mapped 1:1 (templates/routes.json); /<any unknown path> -> /*",
+  "sectionMapping": {
+   "shell.header-nav": [
+    "shell.header-nav",
+    "shell.mobile-menu",
+    "shell.hint-panel"
+   ],
+   "shell.status-row": [
+    "shell.status-row"
+   ],
+   "shell.grid-overlay": [
+    "shell.grid-overlay"
+   ],
+   "shell.scroll-progress": [
+    "shell.scroll-progress"
+   ],
+   "shell.transition-mask": [
+    "shell.transition-mask"
+   ],
+   "backdrop.webgl-scene": [
+    "backdrop.webgl-scene",
+    "effect.pointer-trail"
+   ],
+   "hero.banner": [
+    "hero.banner"
+   ],
+   "intro.about": [
+    "intro.about"
+   ],
+   "work.selected-grid": [
+    "work.selected-grid"
+   ],
+   "statement.hyper-space": [
+    "statement.stage-headline:primary",
+    "statement.stage-headline:secondary",
+    "statement.stage-sentences",
+    "statement.stage-headline:closing"
+   ],
+   "contact.footer-cta": [
+    "contact.footer-cta"
+   ],
+   "article.header": [
+    "article.header"
+   ],
+   "article.intro": [
+    "article.intro"
+   ],
+   "article.body": [
+    "article.chapter (x per heading)",
+    "article.live-embed",
+    "article.download-cta",
+    "article.image-grid",
+    "overlay.image-lightbox"
+   ],
+   "article.toc": [
+    "article.toc"
+   ],
+   "article.meta-footer": [
+    "article.meta-footer"
+   ],
+   "error.not-found": [
+    "error.not-found"
+   ]
+  },
+  "corrections": [
+   "ia.json's statement.hyper-space and article.body are whole-wrapper / whole-article units; decomposed by real content boundaries (R6).",
+   "Mobile menu, hint panel and lightbox are separate runtime overlays in the DOM (Header.jsx, MdxImg.jsx), split out of header-nav / article.body so they can be pinned retrievalEligible=false (R8).",
+   "The lime pointer trail is a WebGL post-pass cursor follower, split out of backdrop.webgl-scene (R8).",
+   "Download button is a conversion element: CTA category, not ARTICLE content (R6 category honesty)."
+  ],
+  "evidence": [
+   {
+    "file": "ia.json",
+    "lines": "75-80",
+    "needle": "\"statement.hyper-space\": {"
+   },
+   {
+    "file": "ia.json",
+    "lines": "93-98",
+    "needle": "\"article.body\": {"
+   }
+  ]
+ },
+ "structuralNotes": [
+  {
+   "note": "/2026 and /unlock/* exist on the original but are deliberately excluded (passcode-protected, assets not public); the hero's locked slot is a no-op.",
+   "evidence": [
+    {
+     "file": "src/components/Hero.jsx",
+     "lines": "8-8",
+     "needle": "// Locked passcode slot."
+    },
+    {
+     "file": "CLONE_SPEC_PAGES.md",
+     "lines": "5-5",
+     "needle": "`/2026` and `/unlock/*` are out of scope."
+    }
+   ]
+  },
+  {
+   "note": "/reunimos embeds a live third-party product iframe (https://www.reunimos.cc); role live-site-embed is blocked-for-generation.",
+   "evidence": [
+    {
+     "file": "CLONE_SPEC_PAGES.md",
+     "lines": "268-271",
+     "needle": "#### 1.7.7 iframe"
+    }
+   ]
+  },
+  {
+   "note": "Deliberate deviation: the clone's weather line uses keyless Open-Meteo instead of the original's keyed QWeather endpoint.",
+   "evidence": [
+    {
+     "file": "src/lib/hooks.js",
+     "lines": "64-64",
+     "needle": "api.open-meteo.com"
+    },
+    {
+     "file": "CLONE_SPEC.md",
+     "lines": "180-180",
+     "needle": "Temperature comes from QWeather"
+    }
+   ]
+  },
+  {
+   "note": "/inspire_mono offers /fonts/InspireMono.zip as a download (role downloadable-archive, blocked-for-generation).",
+   "evidence": [
+    {
+     "file": "CLONE_SPEC_PAGES.md",
+     "lines": "229-233",
+     "needle": "#### 1.7.5 Download button"
+    }
+   ]
+  },
+  {
+   "note": "All copy, photos, signature, models, stickers and music belong to the site's owner: reference mode only; generated mode is checked against policy/source-identity.json.",
+   "evidence": [
+    {
+     "file": "README.md",
+     "lines": "3-3",
+     "needle": "Not for deployment"
+    }
+   ]
+  },
+  {
+   "note": "?nogate skips the home entry loader in the clone (captures only); the original has no such switch.",
+   "evidence": [
+    {
+     "file": "src/webgl/TransitionCanvas.jsx",
+     "lines": "254-254",
+     "needle": "const [{ transition: y, shouldRenderCanvas: x }, M] = useReducer(reducer, NOGATE"
+    }
+   ]
+  }
+ ],
+ "parity": {
+  "results": "extraction/parity/parity-results.json",
+  "exceptions": []
+ }
+}

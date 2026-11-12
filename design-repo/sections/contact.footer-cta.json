@@ -1,0 +1,118 @@
+{
+ "id": "contact.footer-cta",
+ "version": "1.0.0",
+ "title": "Contact call-to-action",
+ "category": "CTA",
+ "layer": "in-flow",
+ "description": "Full-viewport closer: a 4-word bold uppercase wide headline laid out in 3 staggered rows (words 2 and 4 scramble in reverse), over the glass closer model; email link bottom-left, up to three social links bottom-right, all with dotted hover frames.",
+ "source": {
+  "id": "footer",
+  "file": "src/components/Footer.jsx",
+  "tag": "<footer id={CONTACT_SECTION_ID}",
+  "lines": "16-41"
+ },
+ "semantic": {
+  "id": "contact.footer-cta",
+  "category": "CTA"
+ },
+ "retrievalEligible": true,
+ "templates": [
+  "template.home"
+ ],
+ "routes": "home",
+ "variants": [],
+ "contentSchema": {
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+   "headlineWords": {
+    "type": "array",
+    "items": {
+     "type": "string",
+     "minLength": 1,
+     "maxWords": 1,
+     "observedWords": 1
+    },
+    "minItems": 4,
+    "maxItems": 4
+   },
+   "email": {
+    "type": "string",
+    "pattern": "^[^@\\s]+@[^@\\s]+\\.[a-z]{2,}$"
+   },
+   "socials": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "additionalProperties": false,
+     "properties": {
+      "label": {
+       "type": "string",
+       "minLength": 1,
+       "maxWords": 2,
+       "observedWords": 2
+      },
+      "href": {
+       "type": "string",
+       "minLength": 1,
+       "pattern": "^(/|#|https://|mailto:)"
+      }
+     },
+     "required": [
+      "label",
+      "href"
+     ]
+    },
+    "minItems": 0,
+    "maxItems": 3
+   }
+  },
+  "required": [
+   "headlineWords",
+   "email",
+   "socials"
+  ]
+ },
+ "assets": {
+  "referenceAssetRoles": [],
+  "generatedAssetRoles": [],
+  "slots": []
+ },
+ "styleOverrides": [
+  "text"
+ ],
+ "motion": {
+  "allowedPatterns": [
+   "scramble-in"
+  ],
+  "reducedMotionFallback": {
+   "scramble-in": "show-final-text"
+  }
+ },
+ "constraints": {
+  "onePerPage": true,
+  "mustBeLastInFlow": true,
+  "anchorId": "contact",
+  "heightViewports": 1
+ },
+ "responsive": {
+  "lt1024": {
+   "links": "stacked column",
+   "padding": "p-6"
+  },
+  "gte1024": {
+   "links": "row, space-between",
+   "padding": "p-16"
+  }
+ },
+ "evidence": [
+  {
+   "file": "CLONE_SPEC.md",
+   "lines": "315-315",
+   "needle": "- **Footer links**"
+  }
+ ],
+ "observedWordCounts": {
+  "headlineWord": 1
+ }
+}

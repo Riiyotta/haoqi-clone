@@ -1,0 +1,16 @@
+{
+ "$description": "Reviewed exceptions to the R9 wrapper gate. Thresholds live in extraction/wrapper_gate.py.",
+ "entries": [
+  {
+   "route": "/inspire_mono",
+   "section": "article.image-grid",
+   "variant": null,
+   "measuredHeightPx": 2019,
+   "measuredShare": 0.6714,
+   "maxHeightPx": 2300,
+   "maxShare": 0.72,
+   "justification": "The image grid is the page's single gallery body: 15 specimen slides of one typeface in one 2-column grid with no headings or captions between them, so there is no real content boundary to cut at. Splitting by row would invent sections.",
+   "reviewedBy": "design-repo build agent, 2026-11-12 (agent attestation, not a human sign-off)"
+  }
+ ]
+}

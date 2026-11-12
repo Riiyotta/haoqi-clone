@@ -1,0 +1,327 @@
+{
+ "$description": "Closed list of what an AI may compose and override. verify_all.py checks parity with sections/, primitives/, components/ and the PageSpec schema (ALLOWLIST_* checks).",
+ "allowlistVersion": "1.0.0",
+ "nodeProperties": [
+  "section",
+  "variant",
+  "content",
+  "assets",
+  "style",
+  "motion",
+  "retrievalEligible"
+ ],
+ "sections": {
+  "article.chapter": {
+   "variants": [],
+   "styleOverrides": [],
+   "motionPatterns": [
+    "none"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": [
+    "generated-article-figure"
+   ]
+  },
+  "article.download-cta": {
+   "variants": [],
+   "styleOverrides": [],
+   "motionPatterns": [
+    "none"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": [
+    "placeholder-download"
+   ]
+  },
+  "article.header": {
+   "variants": [],
+   "styleOverrides": [
+    "text"
+   ],
+   "motionPatterns": [
+    "none"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": []
+  },
+  "article.image-grid": {
+   "variants": [],
+   "styleOverrides": [],
+   "motionPatterns": [
+    "none"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": [
+    "generated-article-figure"
+   ]
+  },
+  "article.intro": {
+   "variants": [],
+   "styleOverrides": [
+    "text"
+   ],
+   "motionPatterns": [
+    "none"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": []
+  },
+  "article.live-embed": {
+   "variants": [],
+   "styleOverrides": [],
+   "motionPatterns": [
+    "none"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": [
+    "placeholder-embed"
+   ]
+  },
+  "article.meta-footer": {
+   "variants": [],
+   "styleOverrides": [
+    "surface"
+   ],
+   "motionPatterns": [
+    "scramble-in"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": []
+  },
+  "article.toc": {
+   "variants": [],
+   "styleOverrides": [],
+   "motionPatterns": [
+    "none"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": []
+  },
+  "backdrop.webgl-scene": {
+   "variants": [],
+   "styleOverrides": [
+    "surface",
+    "accent"
+   ],
+   "motionPatterns": [
+    "backdrop-scene",
+    "glass-scroll-rotate"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": [
+    "generated-3d-model",
+    "generated-sticker"
+   ]
+  },
+  "contact.footer-cta": {
+   "variants": [],
+   "styleOverrides": [
+    "text"
+   ],
+   "motionPatterns": [
+    "scramble-in"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": []
+  },
+  "effect.pointer-trail": {
+   "variants": [],
+   "styleOverrides": [],
+   "motionPatterns": [
+    "pointer-trail"
+   ],
+   "retrievalEligible": false,
+   "generatedAssetRoles": []
+  },
+  "error.not-found": {
+   "variants": [],
+   "styleOverrides": [],
+   "motionPatterns": [
+    "none"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": []
+  },
+  "hero.banner": {
+   "variants": [],
+   "styleOverrides": [
+    "text"
+   ],
+   "motionPatterns": [
+    "scramble-in"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": []
+  },
+  "intro.about": {
+   "variants": [],
+   "styleOverrides": [
+    "text"
+   ],
+   "motionPatterns": [
+    "signature-draw",
+    "polarity-reveal"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": [
+    "fictional-portrait",
+    "user-supplied-portrait",
+    "generated-signature-mark"
+   ]
+  },
+  "overlay.image-lightbox": {
+   "variants": [],
+   "styleOverrides": [],
+   "motionPatterns": [
+    "lightbox-flip"
+   ],
+   "retrievalEligible": false,
+   "generatedAssetRoles": []
+  },
+  "shell.grid-overlay": {
+   "variants": [],
+   "styleOverrides": [],
+   "motionPatterns": [
+    "none"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": []
+  },
+  "shell.header-nav": {
+   "variants": [],
+   "styleOverrides": [
+    "text",
+    "font"
+   ],
+   "motionPatterns": [
+    "scramble-in",
+    "color-shift-past-threshold"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": [
+    "placeholder-brand-mark",
+    "user-supplied-brand-mark",
+    "user-supplied-audio"
+   ]
+  },
+  "shell.hint-panel": {
+   "variants": [],
+   "styleOverrides": [
+    "surface"
+   ],
+   "motionPatterns": [
+    "fade-presence",
+    "scramble-in"
+   ],
+   "retrievalEligible": false,
+   "generatedAssetRoles": []
+  },
+  "shell.mobile-menu": {
+   "variants": [],
+   "styleOverrides": [],
+   "motionPatterns": [
+    "scramble-in",
+    "dot-iris-transition"
+   ],
+   "retrievalEligible": false,
+   "generatedAssetRoles": []
+  },
+  "shell.scroll-progress": {
+   "variants": [],
+   "styleOverrides": [],
+   "motionPatterns": [
+    "scroll-thumb"
+   ],
+   "retrievalEligible": false,
+   "generatedAssetRoles": []
+  },
+  "shell.status-row": {
+   "variants": [],
+   "styleOverrides": [
+    "text"
+   ],
+   "motionPatterns": [
+    "scramble-in",
+    "globe-spin"
+   ],
+   "retrievalEligible": false,
+   "generatedAssetRoles": [
+    "ui-glyph"
+   ]
+  },
+  "shell.transition-mask": {
+   "variants": [],
+   "styleOverrides": [],
+   "motionPatterns": [
+    "dot-iris-transition"
+   ],
+   "retrievalEligible": false,
+   "generatedAssetRoles": []
+  },
+  "statement.stage-headline": {
+   "variants": [
+    "primary",
+    "secondary",
+    "closing"
+   ],
+   "styleOverrides": [
+    "text"
+   ],
+   "motionPatterns": [
+    "stagger-fade",
+    "sticky-stage-sequence",
+    "color-shift-past-threshold"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": []
+  },
+  "statement.stage-sentences": {
+   "variants": [],
+   "styleOverrides": [
+    "text",
+    "accent"
+   ],
+   "motionPatterns": [
+    "stagger-fade",
+    "sticky-stage-sequence",
+    "ring-cycle"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": []
+  },
+  "work.selected-grid": {
+   "variants": [],
+   "styleOverrides": [],
+   "motionPatterns": [
+    "polarity-reveal",
+    "dot-wipe-hover"
+   ],
+   "retrievalEligible": true,
+   "generatedAssetRoles": [
+    "generated-project-visual"
+   ]
+  }
+ },
+ "primitives": [
+  "dotted-button",
+  "figure-image",
+  "glyph-icon",
+  "heading-anchor",
+  "inline-code",
+  "inline-link",
+  "loader-bar",
+  "rule",
+  "scramble-text",
+  "tag-chip"
+ ],
+ "components": [
+  "code-block",
+  "lime-ring",
+  "metadata-item",
+  "sentence-pair",
+  "signature-mark",
+  "stage-line-stack",
+  "toggle-control",
+  "work-card"
+ ]
+}

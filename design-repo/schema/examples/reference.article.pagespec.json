@@ -1,0 +1,171 @@
+{
+ "pageSpecVersion": "1.0.0",
+ "mode": "reference",
+ "template": "template.article",
+ "route": "/teambition",
+ "theme": "system",
+ "brand": {
+  "name": "HAOQI.DESIGN",
+  "markRole": "source-wordmark"
+ },
+ "meta": {
+  "title": "Teambition"
+ },
+ "nodes": [
+  {
+   "section": "shell.header-nav",
+   "content": {
+    "brandLabel": "haoqi.design",
+    "navItems": [
+     {
+      "label": "Work",
+      "target": "#selected-work"
+     },
+     {
+      "label": "Contact",
+      "target": "#contact"
+     }
+    ],
+    "themeToggle": true,
+    "soundToggle": true
+   },
+   "assets": [
+    {
+     "slot": "wordmark",
+     "role": "source-wordmark",
+     "ref": "/icon.svg"
+    },
+    {
+     "slot": "soundtrack",
+     "role": "background-music",
+     "ref": "/bgm.mp3"
+    }
+   ],
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text",
+    "trigger": "on-load"
+   }
+  },
+  {
+   "section": "shell.status-row",
+   "content": {
+    "zoneLabel": "GMT+8 CN",
+    "showTemperature": true,
+    "showPointerReadout": true
+   },
+   "assets": [
+    {
+     "slot": "globe",
+     "role": "ui-glyph",
+     "ref": "glyph:globe"
+    }
+   ],
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text"
+   },
+   "retrievalEligible": false
+  },
+  {
+   "section": "shell.scroll-progress",
+   "content": {},
+   "motion": {
+    "pattern": "scroll-thumb",
+    "reducedMotionFallback": "always-visible"
+   }
+  },
+  {
+   "section": "shell.transition-mask",
+   "content": {
+    "showLoader": false
+   },
+   "motion": {
+    "pattern": "dot-iris-transition",
+    "reducedMotionFallback": "instant-cut",
+    "trigger": "on-route"
+   }
+  },
+  {
+   "section": "shell.mobile-menu",
+   "content": {
+    "items": [
+     "Home",
+     "Work",
+     "Contact"
+    ]
+   },
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text"
+   }
+  },
+  {
+   "section": "shell.hint-panel",
+   "content": {
+    "text": "Press [L] for light mode, [D] for dark mode, [A] for auto mode, or click THEME. Press [S] to pause or resume background music, or click SOUND; your choice is saved in this browser. [T] scroll to top, [B] scroll to bottom."
+   },
+   "motion": {
+    "pattern": "fade-presence",
+    "reducedMotionFallback": "instant-show-hide",
+    "trigger": "on-hover"
+   }
+  },
+  {
+   "section": "article.header",
+   "content": {
+    "title": "Teambition",
+    "updated": "May 31, 2026",
+    "years": "2018-2020"
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "article.intro",
+   "content": {
+    "paragraphs": [
+     "Work in progress — this page is not finished yet.",
+     "From 2018 to 2020, I worked on product and design at Teambition (Alibaba), focused on collaboration and project management. More details coming soon."
+    ],
+    "links": [
+     {
+      "label": "teambition.com",
+      "href": "https://www.teambition.com/"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "none",
+    "reducedMotionFallback": "none"
+   }
+  },
+  {
+   "section": "article.meta-footer",
+   "content": {
+    "updated": "May 31, 2026",
+    "socials": [
+     {
+      "label": "Twitter/X",
+      "href": "https://twitter.com/wenhaoqi"
+     },
+     {
+      "label": "GitHub",
+      "href": "https://github.com/wenhaoqiasd"
+     },
+     {
+      "label": "Figma",
+      "href": "https://www.figma.com/@wenhaoqi"
+     }
+    ]
+   },
+   "motion": {
+    "pattern": "scramble-in",
+    "reducedMotionFallback": "show-final-text",
+    "trigger": "on-enter"
+   }
+  }
+ ]
+}
