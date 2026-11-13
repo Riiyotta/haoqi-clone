@@ -76,99 +76,101 @@ Harness: `extraction/parity/capture.mjs` + `compare.py` (details and capture sta
 Live screenshots are not committed; `extraction/parity/parity-results.json` holds the scores.
 
 Metric: share of pixels with max |RGB diff| <= 24 over the rows each section occupies; gate >= 0.8 per section.
-**Sections scored: 88, mean 0.994, below gate: 1.** Reproducibility: **single-run — second run pending**.
+**Sections scored: 88, mean 0.994, below gate: 1.** Reproducibility: **NOT reproducible: runs disagree** (max per-section delta between runs 0.0261, tolerance 0.01).
 
 | route | viewport | section | matchRatio | min over offsets | run 2 |
 |---|---|---|---|---|---|
-| / | 1440x900 | hero.banner | 0.974 | 0.974 | — |
-| / | 1440x900 | intro.about | 0.998 | 0.998 | — |
-| / | 1440x900 | work.selected-grid | 0.999 | 0.998 | — |
-| / | 1440x900 | statement.stage-headline:primary | 0.998 | 0.995 | — |
-| / | 1440x900 | statement.stage-headline:secondary | 1.000 | 1.000 | — |
-| / | 1440x900 | statement.stage-sentences | 1.000 | 1.000 | — |
-| / | 1440x900 | statement.stage-headline:closing | 1.000 | 1.000 | — |
-| / | 1440x900 | contact.footer-cta | 0.971 | 0.971 | — |
-| /reunimos | 1440x900 | article.header | 1.000 | 1.000 | — |
-| /reunimos | 1440x900 | article.intro | 1.000 | 1.000 | — |
-| /reunimos | 1440x900 | article.live-embed | 0.615 | 0.590 | — |
-| /reunimos | 1440x900 | article.meta-footer | 0.999 | 0.999 | — |
-| /inspire_mono | 1440x900 | article.header | 1.000 | 1.000 | — |
-| /inspire_mono | 1440x900 | article.intro | 1.000 | 1.000 | — |
-| /inspire_mono | 1440x900 | article.download-cta | 1.000 | 1.000 | — |
-| /inspire_mono | 1440x900 | article.image-grid | 1.000 | 0.999 | — |
-| /inspire_mono | 1440x900 | article.meta-footer | 1.000 | 1.000 | — |
-| /wasm_design_utils | 1440x900 | article.header | 1.000 | 1.000 | — |
-| /wasm_design_utils | 1440x900 | article.intro | 1.000 | 1.000 | — |
-| /wasm_design_utils | 1440x900 | article.chapter #2 | 1.000 | 1.000 | — |
-| /wasm_design_utils | 1440x900 | article.chapter #3 | 1.000 | 1.000 | — |
-| /wasm_design_utils | 1440x900 | article.chapter #4 | 1.000 | 0.998 | — |
-| /wasm_design_utils | 1440x900 | article.chapter #5 | 1.000 | 0.999 | — |
-| /wasm_design_utils | 1440x900 | article.chapter #6 | 1.000 | 1.000 | — |
-| /wasm_design_utils | 1440x900 | article.chapter #7 | 0.999 | 0.998 | — |
-| /wasm_design_utils | 1440x900 | article.chapter #8 | 1.000 | 1.000 | — |
-| /wasm_design_utils | 1440x900 | article.meta-footer | 1.000 | 0.999 | — |
-| /adrive | 1440x900 | article.header | 1.000 | 1.000 | — |
-| /adrive | 1440x900 | article.intro | 1.000 | 1.000 | — |
-| /adrive | 1440x900 | article.chapter #2 | 1.000 | 1.000 | — |
-| /adrive | 1440x900 | article.chapter #3 | 1.000 | 1.000 | — |
-| /adrive | 1440x900 | article.chapter #4 | 1.000 | 1.000 | — |
-| /adrive | 1440x900 | article.meta-footer | 1.000 | 1.000 | — |
-| /shore_icon | 1440x900 | article.header | 1.000 | 1.000 | — |
-| /shore_icon | 1440x900 | article.intro | 1.000 | 1.000 | — |
-| /shore_icon | 1440x900 | article.chapter #2 | 1.000 | 1.000 | — |
-| /shore_icon | 1440x900 | article.chapter #3 | 1.000 | 0.999 | — |
-| /shore_icon | 1440x900 | article.chapter #4 | 1.000 | 0.999 | — |
-| /shore_icon | 1440x900 | article.chapter #5 | 1.000 | 0.999 | — |
-| /shore_icon | 1440x900 | article.meta-footer | 0.999 | 0.997 | — |
-| /teambition | 1440x900 | article.header | 1.000 | 1.000 | — |
-| /teambition | 1440x900 | article.intro | 1.000 | 1.000 | — |
-| /teambition | 1440x900 | article.meta-footer | 1.000 | 1.000 | — |
-| /__not_found_probe__ | 1440x900 | error.not-found | 1.000 | 1.000 | — |
-| / | 390x844 | hero.banner | 0.944 | 0.944 | — |
-| / | 390x844 | intro.about | 0.999 | 0.999 | — |
-| / | 390x844 | work.selected-grid | 0.999 | 0.999 | — |
-| / | 390x844 | statement.stage-headline:primary | 1.000 | 0.999 | — |
-| / | 390x844 | statement.stage-headline:secondary | 1.000 | 1.000 | — |
-| / | 390x844 | statement.stage-sentences | 1.000 | 1.000 | — |
-| / | 390x844 | statement.stage-headline:closing | 1.000 | 1.000 | — |
-| / | 390x844 | contact.footer-cta | 0.951 | 0.951 | — |
-| /reunimos | 390x844 | article.header | 1.000 | 1.000 | — |
-| /reunimos | 390x844 | article.intro | 1.000 | 1.000 | — |
-| /reunimos | 390x844 | article.live-embed | 1.000 | 1.000 | — |
-| /reunimos | 390x844 | article.meta-footer | 1.000 | 1.000 | — |
-| /inspire_mono | 390x844 | article.header | 1.000 | 1.000 | — |
-| /inspire_mono | 390x844 | article.intro | 1.000 | 1.000 | — |
-| /inspire_mono | 390x844 | article.download-cta | 1.000 | 1.000 | — |
-| /inspire_mono | 390x844 | article.image-grid | 1.000 | 1.000 | — |
-| /inspire_mono | 390x844 | article.meta-footer | 1.000 | 1.000 | — |
-| /wasm_design_utils | 390x844 | article.header | 1.000 | 1.000 | — |
-| /wasm_design_utils | 390x844 | article.intro | 1.000 | 1.000 | — |
-| /wasm_design_utils | 390x844 | article.chapter #2 | 1.000 | 1.000 | — |
-| /wasm_design_utils | 390x844 | article.chapter #3 | 1.000 | 1.000 | — |
-| /wasm_design_utils | 390x844 | article.chapter #4 | 1.000 | 1.000 | — |
-| /wasm_design_utils | 390x844 | article.chapter #5 | 1.000 | 1.000 | — |
-| /wasm_design_utils | 390x844 | article.chapter #6 | 1.000 | 1.000 | — |
-| /wasm_design_utils | 390x844 | article.chapter #7 | 1.000 | 1.000 | — |
-| /wasm_design_utils | 390x844 | article.chapter #8 | 1.000 | 1.000 | — |
-| /wasm_design_utils | 390x844 | article.meta-footer | 1.000 | 1.000 | — |
-| /adrive | 390x844 | article.header | 1.000 | 1.000 | — |
-| /adrive | 390x844 | article.intro | 1.000 | 1.000 | — |
-| /adrive | 390x844 | article.chapter #2 | 1.000 | 1.000 | — |
-| /adrive | 390x844 | article.chapter #3 | 1.000 | 1.000 | — |
-| /adrive | 390x844 | article.chapter #4 | 1.000 | 1.000 | — |
-| /adrive | 390x844 | article.meta-footer | 1.000 | 1.000 | — |
-| /shore_icon | 390x844 | article.header | 1.000 | 1.000 | — |
-| /shore_icon | 390x844 | article.intro | 1.000 | 1.000 | — |
-| /shore_icon | 390x844 | article.chapter #2 | 1.000 | 1.000 | — |
-| /shore_icon | 390x844 | article.chapter #3 | 1.000 | 1.000 | — |
-| /shore_icon | 390x844 | article.chapter #4 | 1.000 | 1.000 | — |
-| /shore_icon | 390x844 | article.chapter #5 | 1.000 | 1.000 | — |
-| /shore_icon | 390x844 | article.meta-footer | 1.000 | 1.000 | — |
-| /teambition | 390x844 | article.header | 1.000 | 1.000 | — |
-| /teambition | 390x844 | article.intro | 1.000 | 1.000 | — |
-| /teambition | 390x844 | article.meta-footer | 1.000 | 1.000 | — |
-| /__not_found_probe__ | 390x844 | error.not-found | 1.000 | 1.000 | — |
+| / | 1440x900 | hero.banner | 0.974 | 0.974 | 0.963 |
+| / | 1440x900 | intro.about | 0.998 | 0.998 | 0.999 |
+| / | 1440x900 | work.selected-grid | 0.999 | 0.998 | 0.999 |
+| / | 1440x900 | statement.stage-headline:primary | 0.998 | 0.995 | 0.998 |
+| / | 1440x900 | statement.stage-headline:secondary | 1.000 | 1.000 | 1.000 |
+| / | 1440x900 | statement.stage-sentences | 1.000 | 1.000 | 1.000 |
+| / | 1440x900 | statement.stage-headline:closing | 1.000 | 1.000 | 0.999 |
+| / | 1440x900 | contact.footer-cta | 0.971 | 0.971 | 0.964 |
+| /reunimos | 1440x900 | article.header | 1.000 | 1.000 | 1.000 |
+| /reunimos | 1440x900 | article.intro | 1.000 | 1.000 | 1.000 |
+| /reunimos | 1440x900 | article.live-embed | 0.615 | 0.590 | 0.617 |
+| /reunimos | 1440x900 | article.meta-footer | 0.999 | 0.999 | 1.000 |
+| /inspire_mono | 1440x900 | article.header | 1.000 | 1.000 | 1.000 |
+| /inspire_mono | 1440x900 | article.intro | 1.000 | 1.000 | 1.000 |
+| /inspire_mono | 1440x900 | article.download-cta | 1.000 | 1.000 | 1.000 |
+| /inspire_mono | 1440x900 | article.image-grid | 1.000 | 0.999 | 1.000 |
+| /inspire_mono | 1440x900 | article.meta-footer | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 1440x900 | article.header | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 1440x900 | article.intro | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 1440x900 | article.chapter #2 | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 1440x900 | article.chapter #3 | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 1440x900 | article.chapter #4 | 1.000 | 0.998 | 1.000 |
+| /wasm_design_utils | 1440x900 | article.chapter #5 | 1.000 | 0.999 | 1.000 |
+| /wasm_design_utils | 1440x900 | article.chapter #6 | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 1440x900 | article.chapter #7 | 0.999 | 0.998 | 0.999 |
+| /wasm_design_utils | 1440x900 | article.chapter #8 | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 1440x900 | article.meta-footer | 1.000 | 0.999 | 0.999 |
+| /adrive | 1440x900 | article.header | 1.000 | 1.000 | 1.000 |
+| /adrive | 1440x900 | article.intro | 1.000 | 1.000 | 1.000 |
+| /adrive | 1440x900 | article.chapter #2 | 1.000 | 1.000 | 1.000 |
+| /adrive | 1440x900 | article.chapter #3 | 1.000 | 1.000 | 1.000 |
+| /adrive | 1440x900 | article.chapter #4 | 1.000 | 1.000 | 1.000 |
+| /adrive | 1440x900 | article.meta-footer | 1.000 | 1.000 | 1.000 |
+| /shore_icon | 1440x900 | article.header | 1.000 | 1.000 | 1.000 |
+| /shore_icon | 1440x900 | article.intro | 1.000 | 1.000 | 1.000 |
+| /shore_icon | 1440x900 | article.chapter #2 | 1.000 | 1.000 | 1.000 |
+| /shore_icon | 1440x900 | article.chapter #3 | 1.000 | 0.999 | 1.000 |
+| /shore_icon | 1440x900 | article.chapter #4 | 1.000 | 0.999 | 1.000 |
+| /shore_icon | 1440x900 | article.chapter #5 | 1.000 | 0.999 | 1.000 |
+| /shore_icon | 1440x900 | article.meta-footer | 0.999 | 0.997 | 0.998 |
+| /teambition | 1440x900 | article.header | 1.000 | 1.000 | 1.000 |
+| /teambition | 1440x900 | article.intro | 1.000 | 1.000 | 1.000 |
+| /teambition | 1440x900 | article.meta-footer | 1.000 | 1.000 | 1.000 |
+| /__not_found_probe__ | 1440x900 | error.not-found | 1.000 | 1.000 | 1.000 |
+| / | 390x844 | hero.banner | 0.944 | 0.944 | 0.965 |
+| / | 390x844 | intro.about | 0.999 | 0.999 | 1.000 |
+| / | 390x844 | work.selected-grid | 0.999 | 0.999 | 1.000 |
+| / | 390x844 | statement.stage-headline:primary | 1.000 | 0.999 | 1.000 |
+| / | 390x844 | statement.stage-headline:secondary | 1.000 | 1.000 | 1.000 |
+| / | 390x844 | statement.stage-sentences | 1.000 | 1.000 | 1.000 |
+| / | 390x844 | statement.stage-headline:closing | 1.000 | 1.000 | 1.000 |
+| / | 390x844 | contact.footer-cta | 0.951 | 0.951 | 0.977 |
+| /reunimos | 390x844 | article.header | 1.000 | 1.000 | 1.000 |
+| /reunimos | 390x844 | article.intro | 1.000 | 1.000 | 1.000 |
+| /reunimos | 390x844 | article.live-embed | 1.000 | 1.000 | 1.000 |
+| /reunimos | 390x844 | article.meta-footer | 1.000 | 1.000 | 1.000 |
+| /inspire_mono | 390x844 | article.header | 1.000 | 1.000 | 1.000 |
+| /inspire_mono | 390x844 | article.intro | 1.000 | 1.000 | 1.000 |
+| /inspire_mono | 390x844 | article.download-cta | 1.000 | 1.000 | 1.000 |
+| /inspire_mono | 390x844 | article.image-grid | 1.000 | 1.000 | 1.000 |
+| /inspire_mono | 390x844 | article.meta-footer | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 390x844 | article.header | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 390x844 | article.intro | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 390x844 | article.chapter #2 | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 390x844 | article.chapter #3 | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 390x844 | article.chapter #4 | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 390x844 | article.chapter #5 | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 390x844 | article.chapter #6 | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 390x844 | article.chapter #7 | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 390x844 | article.chapter #8 | 1.000 | 1.000 | 1.000 |
+| /wasm_design_utils | 390x844 | article.meta-footer | 1.000 | 1.000 | 1.000 |
+| /adrive | 390x844 | article.header | 1.000 | 1.000 | 1.000 |
+| /adrive | 390x844 | article.intro | 1.000 | 1.000 | 1.000 |
+| /adrive | 390x844 | article.chapter #2 | 1.000 | 1.000 | 1.000 |
+| /adrive | 390x844 | article.chapter #3 | 1.000 | 1.000 | 1.000 |
+| /adrive | 390x844 | article.chapter #4 | 1.000 | 1.000 | 1.000 |
+| /adrive | 390x844 | article.meta-footer | 1.000 | 1.000 | 1.000 |
+| /shore_icon | 390x844 | article.header | 1.000 | 1.000 | 1.000 |
+| /shore_icon | 390x844 | article.intro | 1.000 | 1.000 | 1.000 |
+| /shore_icon | 390x844 | article.chapter #2 | 1.000 | 1.000 | 1.000 |
+| /shore_icon | 390x844 | article.chapter #3 | 1.000 | 1.000 | 1.000 |
+| /shore_icon | 390x844 | article.chapter #4 | 1.000 | 1.000 | 1.000 |
+| /shore_icon | 390x844 | article.chapter #5 | 1.000 | 1.000 | 1.000 |
+| /shore_icon | 390x844 | article.meta-footer | 1.000 | 1.000 | 1.000 |
+| /teambition | 390x844 | article.header | 1.000 | 1.000 | 1.000 |
+| /teambition | 390x844 | article.intro | 1.000 | 1.000 | 1.000 |
+| /teambition | 390x844 | article.meta-footer | 1.000 | 1.000 | 1.000 |
+| /__not_found_probe__ | 390x844 | error.not-found | 1.000 | 1.000 | 1.000 |
 
 Exceptions (status `pending human approval`, `approvedBy: null` - an agent never approves its own exception):
 
-- /reunimos 1440x900 article.live-embed: 0.6154 - The section is a live third-party product (https://www.reunimos.cc) loaded in an iframe on both sides. At the same virtual frame the clone-side iframe had painted the product's sign-in screen while the live-side iframe was still blank (white); frame, size, radius and ring match. The embedded page is not part of the clone and loads on its own network timing. The same section scores 1.0 at 390x844 in this run, where both iframes had painted. Not masked, not copied.
+- /reunimos 1440x900 article.live-embed: 0.6154 - The section is a live third-party product (https://www.reunimos.cc) loaded in an iframe on both sides. At the same virtual frame the clone-side iframe had painted the product's sign-in screen while the live-side iframe was still blank (white); frame, size, radius and ring match. The embedded page is not part of the clone and loads on its own network timing. Below the gate in both runs (run 1 0.6154, run 2 0.6171); the same section scores 1.0 / 1.0 at 390x844, where both iframes had painted. Not masked, not copied.
+
+Reproducibility (two runs, unchanged harness): 85/88 sections within 0.01; over tolerance: / 1440x900 hero.banner: run1 0.9743, run2 0.9631 (delta 0.0112); / 390x844 hero.banner: run1 0.9443, run2 0.9649 (delta 0.0206); / 390x844 contact.footer-cta: run1 0.9505, run2 0.9766 (delta 0.0261). Gate outcome identical in both runs. All three over-tolerance sections are the WebGL opener/closer of the home page (bokeh streaks, falling stickers, glass models); every DOM-only section, every article and every statement stage agrees within 0.001-0.0005. Both runs captured at identical virtual frame schedules. First hypothesis - asset load timing during the free-running load phase - was TESTED AND REFUTED: two extra home-only runs with frames frozen from the start until network idle (and the clone served by the harness itself) still differed by 0.031 (hero 1440), 0.024 (hero 390) and 0.018 (contact 1440). The remaining nondeterminism lies inside the WebGL frame itself (not controlled by frame count) and is not yet isolated; the gate outcome never changes between runs and no section moves by more than 0.03.

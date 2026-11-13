@@ -1,6 +1,6 @@
 {
  "repositoryId": "haoqi-portfolio-design-repo",
- "repositoryVersion": "1.0.0",
+ "repositoryVersion": "1.0.1",
  "pageSpecVersion": "1.0.0",
  "allowlistVersion": "1.0.0",
  "versionFieldNote": "allowlistVersion and pageSpecVersion are machine-checked by extraction/verify_all.py (VERSION_FIELDS); repositoryVersion is documentation-only and hand-maintained (see CHANGELOG.md).",

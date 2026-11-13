@@ -29,3 +29,7 @@ Why not Playwright's fake clock: tried first; the live bundle never reached `loa
 starve the fake clock), so the harness drives animation frames itself instead.
 
 Only `parity-results.json` (scores + geometry, no images, no copy) is tracked.
+
+Guards: each unit must find the page kind its route implies (home / article / not-found) on both sides, a unit whose
+virtual frame counter goes backwards (document reloaded) is redone, a failed attempt relaunches the browser, and a
+single-writer lock prevents two captures sharing a run directory.

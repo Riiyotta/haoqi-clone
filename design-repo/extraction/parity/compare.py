@@ -77,6 +77,7 @@ def main():
     runs = [score_run(c) for c in a.captures]
     base_man, base = runs[0]
     repro = []
+    flips, over = [], []
     if len(runs) > 1:
         other = {(p["route"], p["viewport"], s["index"]): s["matchRatio"] for p in runs[1][1] for s in p["sections"]}
         for p in base:
@@ -84,7 +85,14 @@ def main():
                 k = (p["route"], p["viewport"], s["index"])
                 if k in other:
                     s["matchRatioRun2"] = other[k]
-                    repro.append(abs(other[k] - s["matchRatio"]))
+                    d = abs(other[k] - s["matchRatio"])
+                    repro.append(d)
+                    lab = {"route": p["route"], "viewport": p["viewport"], "id": s["id"], "variant": s.get("variant"), "index": s["index"],
+                           "run1": s["matchRatio"], "run2": other[k], "delta": round(d, 4)}
+                    if d > REPRO_TOL:
+                        over.append(lab)
+                    if (s["matchRatio"] >= GATE) != (other[k] >= GATE):
+                        flips.append(lab)
     allsec = [s for p in base for s in p["sections"]]
     below = [{"route": p["route"], "viewport": p["viewport"], "id": s["id"], "variant": s.get("variant"), "index": s["index"],
               "matchRatio": s["matchRatio"]} for p in base for s in p["sections"] if not s["passesGate"]]
@@ -95,9 +103,11 @@ def main():
         "runs": [m["run"] for m, _ in runs],
         "capturedAt": [m["capturedAt"] for m, _ in runs],
         "reproducibility": {"status": ("single-run — second run pending" if len(runs) == 1 else
+                                       "no overlapping sections between runs" if not repro else
                                        ("reproducible: two runs agree within tolerance" if max(repro) <= REPRO_TOL else "NOT reproducible: runs disagree")),
                             "maxRunDelta": round(max(repro), 4) if repro else None, "tolerance": REPRO_TOL,
-                            "ok": (max(repro) <= REPRO_TOL) if repro else None, "comparedSections": len(repro)},
+                            "ok": (max(repro) <= REPRO_TOL) if repro else None, "comparedSections": len(repro),
+                            "withinTolerance": sum(1 for d in repro if d <= REPRO_TOL), "overTolerance": over, "gateFlips": flips},
         "summary": {"sections": len(allsec), "meanMatchRatio": round(sum(s["matchRatio"] for s in allsec) / max(1, len(allsec)), 4),
                     "belowGate": below},
         "pages": base,

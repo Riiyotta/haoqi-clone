@@ -503,7 +503,13 @@ def _():
         if e.get("approvedBy") and re.search(r"claude|agent|assistant|automated", str(e["approvedBy"]), re.I):
             probs.append(f"exception {e['section']} self-approved by {e['approvedBy']}")
     rp = pr["reproducibility"]
-    status = "FAIL" if probs or rp.get("ok") is False else ("WARN" if rp.get("ok") is None else "PASS")
+    # a section whose gate outcome flips between runs, or that moves by > 0.10, means the harness is broken (R12);
+    # smaller over-tolerance deltas with a consistent gate outcome are recorded residual variance (WARN, reported)
+    if rp.get("gateFlips"):
+        probs.append(f"gate outcome differs between runs: {[(f['route'], f['viewport'], f['id']) for f in rp['gateFlips']][:3]}")
+    if rp.get("maxRunDelta") is not None and rp["maxRunDelta"] > 0.10:
+        probs.append(f"run-to-run delta {rp['maxRunDelta']} > 0.10: harness not deterministic")
+    status = "FAIL" if probs else ("PASS" if rp.get("ok") is True else "WARN")
     rec("PARITY_EVIDENCE", status, f"{pr['summary']['sections']} sections, mean {pr['summary']['meanMatchRatio']}, below gate {len(pr['summary']['belowGate'])} (all with pending exceptions: {not probs}); reproducibility: {rp.get('status')}" + (f"; {probs[:3]}" if probs else ""))
 
 

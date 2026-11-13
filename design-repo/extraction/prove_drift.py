@@ -74,6 +74,8 @@ CASES = [
     ("gate threshold edited in code", text("extraction/wrapper_gate.py", "SHARE_FAIL = 0.60", "SHARE_FAIL = 0.95"), ["WRAPPER_GATE"]),
     ("source-identity registry tampered", edit("policy/source-identity.json", lambda d: d["patterns"]["brand"].pop(0)), ["SOURCE_IDENTITY", "POLICY_HASH"]),
     ("parity exception self-approved", edit("extraction/measured-values.json", lambda d: d["parity"]["exceptions"].append({"route": "/", "viewport": "1440x900", "section": "hero.banner", "index": 0, "status": "approved", "approvedBy": "claude agent"})), ["PARITY_EVIDENCE"]),
+    ("parity: gate outcome flips between runs", edit("extraction/parity/parity-results.json", lambda d: d["reproducibility"]["gateFlips"].append({"route": "/", "viewport": "1440x900", "id": "hero.banner", "run1": 0.85, "run2": 0.75})), ["PARITY_EVIDENCE"]),
+    ("parity: run-to-run delta > 0.10", edit("extraction/parity/parity-results.json", lambda d: d["reproducibility"].__setitem__("maxRunDelta", 0.65)), ["PARITY_EVIDENCE"]),
     ("route mapped twice", edit("templates/routes.json", lambda d: d["routes"].append(dict(d["routes"][1], template="template.not-found"))), ["TEMPLATES_ROUTES"]),
     ("template node / contract disagree", edit("sections/intro.about.json", lambda d: d.__setitem__("templates", ["template.article"])), ["TEMPLATES_ROUTES"]),
     ("entry point outside package", edit("registry.manifest.json", lambda d: d["entryPoints"].__setitem__("ia", "../ia.json")), ["ENTRY_POINTS"]),

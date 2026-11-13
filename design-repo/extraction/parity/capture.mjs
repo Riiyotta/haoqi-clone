@@ -140,6 +140,12 @@ const LOCK = join(DIR, '.lock')
 }
 const say = (m) => { const line = `${new Date().toISOString()} ${m}`; appendFileSync(PROGRESS, line + '\n'); console.error(line) }
 const readJSON = (f) => { try { return JSON.parse(readFileSync(f, 'utf8')) } catch { return null } }
+// Structural guard: the page kind must match the route, on both sides. A different server answering on the clone
+// port (it happened: another process took over the port mid-run) or a redirect fails the unit instead of being scored.
+const expectedKind = (route) => (route === '/' ? 'home' : route.startsWith('/__not_found') ? 'not-found' : 'article')
+function assertKind(geom, route, side) {
+  if (geom.kind !== expectedKind(route)) throw new Error(`${side} ${route}: page kind '${geom.kind}', expected '${expectedKind(route)}' (wrong server or redirect)`)
+}
 
 async function measureGeometry(browser, route, w, h, slug) {
   const f = join(DIR, `geom-${slug}-${w}.json`)
@@ -148,6 +154,7 @@ async function measureGeometry(browser, route, w, h, slug) {
   const c = await openPage(browser, CLONE, route, w, h)
   try {
     const geom = await c.page.evaluate(collect)
+    assertKind(geom, route, 'clone')
     const maxScroll = Math.max(0, geom.pageHeight - h)
     const offsets = new Set()
     for (const s of geom.sections) {
@@ -170,6 +177,7 @@ async function captureUnit(browser, route, w, h, slug, side, offsets) {
   const pg = await openPage(browser, side === 'clone' ? CLONE : LIVE, route, w, h)
   try {
     const unit = { route, viewport: `${w}x${h}`, side, loadFrames: pg.loadFrames, geometry: await pg.page.evaluate(collect), shots: [], complete: false }
+    assertKind(unit.geometry, route, side)
     for (const y of offsets) {
       await scrollTo(pg.page, y)
       await frames(pg.page, OFFSET_FRAMES) // pump stops (freezes) exactly at the target frame

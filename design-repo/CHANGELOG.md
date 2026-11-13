@@ -3,6 +3,19 @@
 `repositoryVersion` is documentation-only (hand-maintained here); `allowlistVersion` and `pageSpecVersion` are
 machine-checked by `extraction/verify_all.py`.
 
+## 1.0.1 - 2026-11-13
+
+Parity phase 2 (second run, harness unchanged except a page-kind guard that alters no capture state).
+- Run 1 vs run 2: 85/88 sections agree within 0.01; outcome **NOT reproducible: runs disagree**, max delta 0.0261,
+  no section changes its gate outcome. Over tolerance: home hero 1440 (0.9743 / 0.9631), home hero 390 (0.9443 / 0.9649),
+  home contact 390 (0.9505 / 0.9766), all WebGL-driven.
+- Load-timing hypothesis tested and refuted (two extra frozen-load runs still differ by up to 0.031); source of the
+  in-frame WebGL variance not yet isolated - follow-up.
+- /reunimos 1440 live third-party iframe below the gate in both runs (0.6154 / 0.6171): exception pending human approval.
+- verify_all PARITY_EVIDENCE: a gate flip between runs or a delta > 0.10 FAILs (broken harness); smaller over-tolerance
+  deltas with a consistent gate outcome WARN and are reported.
+- compare.py records withinTolerance / overTolerance / gateFlips; harness asserts page kind per route.
+
 ## 1.0.0 - 2026-11-12
 
 Initial build (Situation A) from the local clone (commit b2be9df) with every baseline requirement R1-R16 in the first pass.

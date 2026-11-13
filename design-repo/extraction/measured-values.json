@@ -1070,13 +1070,30 @@
     "matchRatio": 0.6154,
     "minMatchRatio": 0.5901,
     "similarity": 0.8365,
-    "cause": "The section is a live third-party product (https://www.reunimos.cc) loaded in an iframe on both sides. At the same virtual frame the clone-side iframe had painted the product's sign-in screen while the live-side iframe was still blank (white); frame, size, radius and ring match. The embedded page is not part of the clone and loads on its own network timing. The same section scores 1.0 at 390x844 in this run, where both iframes had painted. Not masked, not copied.",
+    "cause": "The section is a live third-party product (https://www.reunimos.cc) loaded in an iframe on both sides. At the same virtual frame the clone-side iframe had painted the product's sign-in screen while the live-side iframe was still blank (white); frame, size, radius and ring match. The embedded page is not part of the clone and loads on its own network timing. Below the gate in both runs (run 1 0.6154, run 2 0.6171); the same section scores 1.0 / 1.0 at 390x844, where both iframes had painted. Not masked, not copied.",
     "status": "pending human approval",
-    "approvedBy": null
+    "approvedBy": null,
+    "matchRatioRun2": 0.6171
    }
   ],
   "harnessNotes": [
-   "/shore_icon 1440x900: the two sides reached their offsets 4 virtual frames apart (1276 vs 1280...) because the lazy-image walk steps over a scrollHeight that grows while images load. Article pages have no rAF/WebGL-driven content, so this cannot change the pixels; it is fixed symmetrically (fixed step count) before the second run."
-  ]
+   "/shore_icon 1440x900: the two sides reached their offsets 4 virtual frames apart (1276 vs 1280...) because the lazy-image walk steps over a scrollHeight that grows while images load. Article pages have no rAF/WebGL-driven content, so this cannot change the pixels; it is fixed symmetrically (fixed step count) before the second run.",
+   "Run 2 was redone once: during the first attempt another (foreign) process took over the clone port and served an unrelated site; 14 units were invalid and discarded. The harness now asserts the page kind per route on both sides (all 32 run-1 and run-2 units pass)."
+  ],
+  "reproducibility": {
+   "status": "NOT reproducible: runs disagree",
+   "runs": 2,
+   "withinTolerance": "85/88",
+   "tolerance": 0.01,
+   "maxRunDelta": 0.0261,
+   "gateFlips": 0,
+   "overTolerance": [
+    "/ 1440x900 hero.banner: run1 0.9743, run2 0.9631 (delta 0.0112)",
+    "/ 390x844 hero.banner: run1 0.9443, run2 0.9649 (delta 0.0206)",
+    "/ 390x844 contact.footer-cta: run1 0.9505, run2 0.9766 (delta 0.0261)"
+   ],
+   "diagnosis": "All three over-tolerance sections are the WebGL opener/closer of the home page (bokeh streaks, falling stickers, glass models); every DOM-only section, every article and every statement stage agrees within 0.001-0.0005. Both runs captured at identical virtual frame schedules. First hypothesis - asset load timing during the free-running load phase - was TESTED AND REFUTED: two extra home-only runs with frames frozen from the start until network idle (and the clone served by the harness itself) still differed by 0.031 (hero 1440), 0.024 (hero 390) and 0.018 (contact 1440). The remaining nondeterminism lies inside the WebGL frame itself (not controlled by frame count) and is not yet isolated; the gate outcome never changes between runs and no section moves by more than 0.03.",
+   "followUp": "isolate the WebGL source of run-to-run variance (candidates: SwiftShader multi-threaded rasterisation, the fluid/flare post passes, sticker spawn order); then capture run 3 + run 4 with the final harness"
+  }
  }
 }
