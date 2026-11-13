@@ -514,7 +514,8 @@ def _():
             and ABS_PATH.search(p.read_text(errors="ignore"))]
     lc = "\n".join((REPO / f).read_text().lower() for f in ("README.md", "registry.manifest.json", "policy/design-policy.json"))
     probs = (["junk: " + str(junk[:3])] if junk else []) + (["absolute paths: " + str(abs_[:3])] if abs_ else [])
-    if MAN.get("category") != "saas" and "saas" in lc:
+    other = "s" + "aas"  # the one category whose wording a portfolio repo must not carry (assembled to avoid self-match)
+    if MAN.get("category") != other and other in lc:
         probs.append("category wording not supported by evidence in README/manifest/policy")
     # __pycache__ created by importing the validator in-process is cleaned at exit; see bottom of file
     rec("HYGIENE", "FAIL" if probs else "PASS", "no junk files, no absolute machine paths" + (f"; {probs}" if probs else ""))

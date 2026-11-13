@@ -1,0 +1,3672 @@
+{
+ "tool": "extraction/parity/compare.py",
+ "metric": {
+  "gate": 0.8,
+  "pixelTolerance": 24,
+  "definition": "share of pixels with max |RGB diff| <= 24 over the rows a section occupies"
+ },
+ "captureState": {
+  "fixedTime": "2026-11-12T02:00:00.000Z",
+  "seed": 20261112,
+  "live": "https://haoqi.design",
+  "clone": "http://localhost:5193",
+  "renderer": "swiftshader",
+  "settleFrames": 600,
+  "offsetFrames": 120
+ },
+ "runs": [
+  "run1"
+ ],
+ "capturedAt": [
+  "2026-11-13T04:42:52.523Z"
+ ],
+ "reproducibility": {
+  "status": "single-run — second run pending",
+  "maxRunDelta": null,
+  "tolerance": 0.01,
+  "ok": null,
+  "comparedSections": 0
+ },
+ "summary": {
+  "sections": 88,
+  "meanMatchRatio": 0.9936,
+  "belowGate": [
+   {
+    "route": "/reunimos",
+    "viewport": "1440x900",
+    "id": "article.live-embed",
+    "variant": null,
+    "index": 2,
+    "matchRatio": 0.6154
+   }
+  ]
+ },
+ "pages": [
+  {
+   "route": "/",
+   "viewport": "1440x900",
+   "clonePageHeight": 12319,
+   "livePageHeight": 12319,
+   "sections": [
+    {
+     "index": 0,
+     "id": "hero.banner",
+     "variant": null,
+     "headingLevel": null,
+     "top": 0,
+     "height": 900,
+     "matchRatio": 0.9743,
+     "minMatchRatio": 0.9743,
+     "similarity": 0.9867,
+     "offsets": [
+      {
+       "offset": 0,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9743,
+       "similarity": 0.9867,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 1,
+     "id": "intro.about",
+     "variant": null,
+     "headingLevel": null,
+     "top": 900,
+     "height": 687.39,
+     "matchRatio": 0.9982,
+     "minMatchRatio": 0.9982,
+     "similarity": 0.9992,
+     "offsets": [
+      {
+       "offset": 900,
+       "rows": [
+        0,
+        687
+       ],
+       "matchRatio": 0.9982,
+       "similarity": 0.9992,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 2,
+     "id": "work.selected-grid",
+     "variant": null,
+     "headingLevel": null,
+     "top": 1587.39,
+     "height": 2632.05,
+     "matchRatio": 0.9987,
+     "minMatchRatio": 0.9983,
+     "similarity": 0.9994,
+     "offsets": [
+      {
+       "offset": 900,
+       "rows": [
+        687,
+        900
+       ],
+       "matchRatio": 0.9983,
+       "similarity": 0.9992,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1587,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9992,
+       "similarity": 0.9996,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2487,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9988,
+       "similarity": 0.9995,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 3387,
+       "rows": [
+        0,
+        832
+       ],
+       "matchRatio": 0.9985,
+       "similarity": 0.9994,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 3,
+     "id": "statement.stage-headline",
+     "variant": "primary",
+     "headingLevel": null,
+     "top": 4219.44,
+     "height": 1800,
+     "matchRatio": 0.9982,
+     "minMatchRatio": 0.9953,
+     "similarity": 0.9991,
+     "offsets": [
+      {
+       "offset": 3387,
+       "rows": [
+        832,
+        900
+       ],
+       "matchRatio": 0.9953,
+       "similarity": 0.9976,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 4219,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9996,
+       "similarity": 0.9998,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 5119,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 4,
+     "id": "statement.stage-headline",
+     "variant": "secondary",
+     "headingLevel": null,
+     "top": 6019.44,
+     "height": 1800,
+     "matchRatio": 0.9997,
+     "minMatchRatio": 0.9997,
+     "similarity": 0.9998,
+     "offsets": [
+      {
+       "offset": 6019,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9998,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 6919,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9998,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 5,
+     "id": "statement.stage-sentences",
+     "variant": null,
+     "headingLevel": null,
+     "top": 7819.44,
+     "height": 1800,
+     "matchRatio": 0.9997,
+     "minMatchRatio": 0.9997,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 7819,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 8719,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9998,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 6,
+     "id": "statement.stage-headline",
+     "variant": "closing",
+     "headingLevel": null,
+     "top": 9619.44,
+     "height": 1800,
+     "matchRatio": 0.9997,
+     "minMatchRatio": 0.9996,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 9619,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 10519,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9996,
+       "similarity": 0.9998,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 7,
+     "id": "contact.footer-cta",
+     "variant": null,
+     "headingLevel": null,
+     "top": 11419.44,
+     "height": 900,
+     "matchRatio": 0.9711,
+     "minMatchRatio": 0.9711,
+     "similarity": 0.9866,
+     "offsets": [
+      {
+       "offset": 11419,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9711,
+       "similarity": 0.9866,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 0.9924
+  },
+  {
+   "route": "/reunimos",
+   "viewport": "1440x900",
+   "clonePageHeight": 1862,
+   "livePageHeight": 1862,
+   "sections": [
+    {
+     "index": 0,
+     "id": "article.header",
+     "variant": null,
+     "headingLevel": null,
+     "top": 96,
+     "height": 243,
+     "matchRatio": 0.9999,
+     "minMatchRatio": 0.9999,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        0,
+        243
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 1,
+     "id": "article.intro",
+     "variant": null,
+     "headingLevel": null,
+     "top": 339,
+     "height": 492,
+     "matchRatio": 1.0,
+     "minMatchRatio": 0.9999,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        243,
+        735
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 339,
+       "rows": [
+        0,
+        492
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 2,
+     "id": "article.live-embed",
+     "variant": null,
+     "headingLevel": null,
+     "top": 831,
+     "height": 664,
+     "matchRatio": 0.6154,
+     "minMatchRatio": 0.5901,
+     "similarity": 0.8365,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        735,
+        900
+       ],
+       "matchRatio": 0.5904,
+       "similarity": 0.8607,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 339,
+       "rows": [
+        492,
+        900
+       ],
+       "matchRatio": 0.5901,
+       "similarity": 0.8212,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 831,
+       "rows": [
+        0,
+        664
+       ],
+       "matchRatio": 0.6334,
+       "similarity": 0.8361,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 962,
+       "rows": [
+        0,
+        533
+       ],
+       "matchRatio": 0.6478,
+       "similarity": 0.8281,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": false
+    },
+    {
+     "index": 3,
+     "id": "article.meta-footer",
+     "variant": null,
+     "headingLevel": null,
+     "top": 1495,
+     "height": 271,
+     "matchRatio": 0.9994,
+     "minMatchRatio": 0.9989,
+     "similarity": 0.9998,
+     "offsets": [
+      {
+       "offset": 831,
+       "rows": [
+        664,
+        900
+       ],
+       "matchRatio": 0.9989,
+       "similarity": 0.9995,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 962,
+       "rows": [
+        533,
+        804
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 0.9037
+  },
+  {
+   "route": "/inspire_mono",
+   "viewport": "1440x900",
+   "clonePageHeight": 3007,
+   "livePageHeight": 3007,
+   "sections": [
+    {
+     "index": 0,
+     "id": "article.header",
+     "variant": null,
+     "headingLevel": null,
+     "top": 96,
+     "height": 243,
+     "matchRatio": 0.9999,
+     "minMatchRatio": 0.9999,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        0,
+        243
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 1,
+     "id": "article.intro",
+     "variant": null,
+     "headingLevel": null,
+     "top": 339,
+     "height": 206,
+     "matchRatio": 1.0,
+     "minMatchRatio": 0.9999,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        243,
+        449
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 339,
+       "rows": [
+        0,
+        206
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 2,
+     "id": "article.download-cta",
+     "variant": null,
+     "headingLevel": null,
+     "top": 545,
+     "height": 76,
+     "matchRatio": 0.9999,
+     "minMatchRatio": 0.9996,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        449,
+        525
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 339,
+       "rows": [
+        206,
+        282
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 545,
+       "rows": [
+        0,
+        76
+       ],
+       "matchRatio": 0.9996,
+       "similarity": 0.9998,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 3,
+     "id": "article.image-grid",
+     "variant": null,
+     "headingLevel": null,
+     "top": 621,
+     "height": 2019,
+     "matchRatio": 0.9997,
+     "minMatchRatio": 0.9993,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        525,
+        900
+       ],
+       "matchRatio": 0.9993,
+       "similarity": 0.9996,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 339,
+       "rows": [
+        282,
+        900
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 545,
+       "rows": [
+        76,
+        900
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 621,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1521,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2107,
+       "rows": [
+        0,
+        533
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 4,
+     "id": "article.meta-footer",
+     "variant": null,
+     "headingLevel": null,
+     "top": 2640,
+     "height": 271,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 2107,
+       "rows": [
+        533,
+        804
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 0.9999
+  },
+  {
+   "route": "/wasm_design_utils",
+   "viewport": "1440x900",
+   "clonePageHeight": 3000,
+   "livePageHeight": 3000,
+   "sections": [
+    {
+     "index": 0,
+     "id": "article.header",
+     "variant": null,
+     "headingLevel": null,
+     "top": 96,
+     "height": 243,
+     "matchRatio": 0.9999,
+     "minMatchRatio": 0.9999,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        0,
+        243
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 1,
+     "id": "article.intro",
+     "variant": null,
+     "headingLevel": null,
+     "top": 339,
+     "height": 138,
+     "matchRatio": 0.9999,
+     "minMatchRatio": 0.9998,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        243,
+        381
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 339,
+       "rows": [
+        0,
+        138
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 2,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 2,
+     "top": 477,
+     "height": 272.75,
+     "matchRatio": 1.0,
+     "minMatchRatio": 0.9999,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        381,
+        654
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 339,
+       "rows": [
+        138,
+        411
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 477,
+       "rows": [
+        0,
+        273
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 3,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 2,
+     "top": 749.75,
+     "height": 198,
+     "matchRatio": 0.9999,
+     "minMatchRatio": 0.9996,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        654,
+        852
+       ],
+       "matchRatio": 0.9996,
+       "similarity": 0.9998,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 339,
+       "rows": [
+        411,
+        609
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 477,
+       "rows": [
+        273,
+        471
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 750,
+       "rows": [
+        0,
+        198
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 4,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 2,
+     "top": 947.75,
+     "height": 461.5,
+     "matchRatio": 0.9995,
+     "minMatchRatio": 0.9983,
+     "similarity": 0.9998,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        852,
+        900
+       ],
+       "matchRatio": 0.9983,
+       "similarity": 0.9993,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 339,
+       "rows": [
+        609,
+        900
+       ],
+       "matchRatio": 0.9996,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 477,
+       "rows": [
+        471,
+        900
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 750,
+       "rows": [
+        198,
+        659
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 948,
+       "rows": [
+        0,
+        461
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 5,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 2,
+     "top": 1409.25,
+     "height": 458.25,
+     "matchRatio": 0.9996,
+     "minMatchRatio": 0.9991,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 750,
+       "rows": [
+        659,
+        900
+       ],
+       "matchRatio": 0.9991,
+       "similarity": 0.9996,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 948,
+       "rows": [
+        461,
+        900
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1409,
+       "rows": [
+        0,
+        458
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 6,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 2,
+     "top": 1867.5,
+     "height": 363.75,
+     "matchRatio": 0.9999,
+     "minMatchRatio": 0.9997,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 1409,
+       "rows": [
+        458,
+        822
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1868,
+       "rows": [
+        0,
+        363
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2100,
+       "rows": [
+        0,
+        131
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9998,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 7,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 2,
+     "top": 2231.25,
+     "height": 240,
+     "matchRatio": 0.9993,
+     "minMatchRatio": 0.9978,
+     "similarity": 0.9997,
+     "offsets": [
+      {
+       "offset": 1409,
+       "rows": [
+        822,
+        900
+       ],
+       "matchRatio": 0.9978,
+       "similarity": 0.9991,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1868,
+       "rows": [
+        363,
+        603
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2100,
+       "rows": [
+        131,
+        371
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 8,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 2,
+     "top": 2471.25,
+     "height": 162,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 1868,
+       "rows": [
+        603,
+        765
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2100,
+       "rows": [
+        371,
+        533
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 9,
+     "id": "article.meta-footer",
+     "variant": null,
+     "headingLevel": null,
+     "top": 2633.25,
+     "height": 271,
+     "matchRatio": 0.9995,
+     "minMatchRatio": 0.999,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 1868,
+       "rows": [
+        765,
+        900
+       ],
+       "matchRatio": 0.999,
+       "similarity": 0.9997,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2100,
+       "rows": [
+        533,
+        804
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 0.9998
+  },
+  {
+   "route": "/adrive",
+   "viewport": "1440x900",
+   "clonePageHeight": 11038,
+   "livePageHeight": 11038,
+   "sections": [
+    {
+     "index": 0,
+     "id": "article.header",
+     "variant": null,
+     "headingLevel": null,
+     "top": 96,
+     "height": 205,
+     "matchRatio": 0.9998,
+     "minMatchRatio": 0.9998,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        0,
+        205
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 1,
+     "id": "article.intro",
+     "variant": null,
+     "headingLevel": null,
+     "top": 301,
+     "height": 134,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        205,
+        339
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 301,
+       "rows": [
+        0,
+        134
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 2,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 1,
+     "top": 435,
+     "height": 1600.03,
+     "matchRatio": 0.9998,
+     "minMatchRatio": 0.9995,
+     "similarity": 0.9995,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        339,
+        900
+       ],
+       "matchRatio": 0.9995,
+       "similarity": 0.9993,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 301,
+       "rows": [
+        134,
+        900
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9994,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 435,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9995,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1335,
+       "rows": [
+        0,
+        700
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 3,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 1,
+     "top": 2035.03,
+     "height": 4382.89,
+     "matchRatio": 0.9998,
+     "minMatchRatio": 0.9995,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 1335,
+       "rows": [
+        700,
+        900
+       ],
+       "matchRatio": 0.9995,
+       "similarity": 0.9998,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2035,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2935,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 3835,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 4735,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 5635,
+       "rows": [
+        0,
+        783
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 4,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 1,
+     "top": 6417.92,
+     "height": 4253.34,
+     "matchRatio": 0.9999,
+     "minMatchRatio": 0.9997,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 5635,
+       "rows": [
+        783,
+        900
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 6418,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 7318,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 8218,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9998,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 9118,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 10018,
+       "rows": [
+        0,
+        653
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 10138,
+       "rows": [
+        0,
+        533
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 5,
+     "id": "article.meta-footer",
+     "variant": null,
+     "headingLevel": null,
+     "top": 10671.27,
+     "height": 271,
+     "matchRatio": 0.9998,
+     "minMatchRatio": 0.9996,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 10018,
+       "rows": [
+        653,
+        900
+       ],
+       "matchRatio": 0.9996,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 10138,
+       "rows": [
+        533,
+        804
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 0.9999
+  },
+  {
+   "route": "/shore_icon",
+   "viewport": "1440x900",
+   "clonePageHeight": 10931,
+   "livePageHeight": 10931,
+   "sections": [
+    {
+     "index": 0,
+     "id": "article.header",
+     "variant": null,
+     "headingLevel": null,
+     "top": 96,
+     "height": 243,
+     "matchRatio": 0.9998,
+     "minMatchRatio": 0.9998,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        0,
+        243
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 1,
+     "id": "article.intro",
+     "variant": null,
+     "headingLevel": null,
+     "top": 339,
+     "height": 160,
+     "matchRatio": 0.9999,
+     "minMatchRatio": 0.9997,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        243,
+        403
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 339,
+       "rows": [
+        0,
+        160
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 2,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 1,
+     "top": 499,
+     "height": 1584.91,
+     "matchRatio": 0.9998,
+     "minMatchRatio": 0.9995,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        403,
+        900
+       ],
+       "matchRatio": 0.9995,
+       "similarity": 0.9998,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 339,
+       "rows": [
+        160,
+        900
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 499,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1399,
+       "rows": [
+        0,
+        685
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 3,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 1,
+     "top": 2083.91,
+     "height": 3391.38,
+     "matchRatio": 0.9996,
+     "minMatchRatio": 0.999,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 1399,
+       "rows": [
+        685,
+        900
+       ],
+       "matchRatio": 0.999,
+       "similarity": 0.9995,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2084,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2984,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 3884,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 4784,
+       "rows": [
+        0,
+        691
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 4,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 1,
+     "top": 5475.28,
+     "height": 4242.63,
+     "matchRatio": 0.9997,
+     "minMatchRatio": 0.9992,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 4784,
+       "rows": [
+        691,
+        900
+       ],
+       "matchRatio": 0.9992,
+       "similarity": 0.9996,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 5475,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 6375,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 7275,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 8175,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 9075,
+       "rows": [
+        0,
+        643
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 5,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 1,
+     "top": 9717.91,
+     "height": 845.91,
+     "matchRatio": 0.9997,
+     "minMatchRatio": 0.9992,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 9075,
+       "rows": [
+        643,
+        900
+       ],
+       "matchRatio": 0.9992,
+       "similarity": 0.9996,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 9718,
+       "rows": [
+        0,
+        846
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 10031,
+       "rows": [
+        0,
+        533
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 6,
+     "id": "article.meta-footer",
+     "variant": null,
+     "headingLevel": null,
+     "top": 10563.81,
+     "height": 271,
+     "matchRatio": 0.9985,
+     "minMatchRatio": 0.9969,
+     "similarity": 0.9992,
+     "offsets": [
+      {
+       "offset": 9718,
+       "rows": [
+        846,
+        900
+       ],
+       "matchRatio": 0.9969,
+       "similarity": 0.9985,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 10031,
+       "rows": [
+        533,
+        804
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 0.9996
+  },
+  {
+   "route": "/teambition",
+   "viewport": "1440x900",
+   "clonePageHeight": 900,
+   "livePageHeight": 900,
+   "sections": [
+    {
+     "index": 0,
+     "id": "article.header",
+     "variant": null,
+     "headingLevel": null,
+     "top": 96,
+     "height": 243,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 0,
+       "rows": [
+        96,
+        339
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 1,
+     "id": "article.intro",
+     "variant": null,
+     "headingLevel": null,
+     "top": 339,
+     "height": 192,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 0,
+       "rows": [
+        339,
+        531
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 2,
+     "id": "article.meta-footer",
+     "variant": null,
+     "headingLevel": null,
+     "top": 531,
+     "height": 271,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 0,
+       "rows": [
+        531,
+        802
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 1.0
+  },
+  {
+   "route": "/__not_found_probe__",
+   "viewport": "1440x900",
+   "clonePageHeight": 1092,
+   "livePageHeight": 1092,
+   "sections": [
+    {
+     "index": 0,
+     "id": "error.not-found",
+     "variant": null,
+     "headingLevel": null,
+     "top": 96,
+     "height": 900,
+     "matchRatio": 0.9997,
+     "minMatchRatio": 0.9997,
+     "similarity": 0.9998,
+     "offsets": [
+      {
+       "offset": 96,
+       "rows": [
+        0,
+        900
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9998,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 0.9997
+  },
+  {
+   "route": "/",
+   "viewport": "390x844",
+   "clonePageHeight": 11301,
+   "livePageHeight": 11301,
+   "sections": [
+    {
+     "index": 0,
+     "id": "hero.banner",
+     "variant": null,
+     "headingLevel": null,
+     "top": 0,
+     "height": 844,
+     "matchRatio": 0.9443,
+     "minMatchRatio": 0.9443,
+     "similarity": 0.9719,
+     "offsets": [
+      {
+       "offset": 0,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 0.9443,
+       "similarity": 0.9719,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 1,
+     "id": "intro.about",
+     "variant": null,
+     "headingLevel": null,
+     "top": 844,
+     "height": 740,
+     "matchRatio": 0.9994,
+     "minMatchRatio": 0.9994,
+     "similarity": 0.9996,
+     "offsets": [
+      {
+       "offset": 844,
+       "rows": [
+        0,
+        740
+       ],
+       "matchRatio": 0.9994,
+       "similarity": 0.9996,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 2,
+     "id": "work.selected-grid",
+     "variant": null,
+     "headingLevel": null,
+     "top": 1584,
+     "height": 2121.06,
+     "matchRatio": 0.9994,
+     "minMatchRatio": 0.9985,
+     "similarity": 0.9997,
+     "offsets": [
+      {
+       "offset": 844,
+       "rows": [
+        740,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1584,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 0.9994,
+       "similarity": 0.9997,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2428,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 0.9998,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 3272,
+       "rows": [
+        0,
+        433
+       ],
+       "matchRatio": 0.9985,
+       "similarity": 0.9992,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 3,
+     "id": "statement.stage-headline",
+     "variant": "primary",
+     "headingLevel": null,
+     "top": 3705.06,
+     "height": 1688,
+     "matchRatio": 0.9996,
+     "minMatchRatio": 0.999,
+     "similarity": 0.9997,
+     "offsets": [
+      {
+       "offset": 3272,
+       "rows": [
+        433,
+        844
+       ],
+       "matchRatio": 0.999,
+       "similarity": 0.9993,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 3705,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 0.9999,
+       "similarity": 0.9999,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 4549,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 4,
+     "id": "statement.stage-headline",
+     "variant": "secondary",
+     "headingLevel": null,
+     "top": 5393.06,
+     "height": 1688,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 5393,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 6237,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 5,
+     "id": "statement.stage-sentences",
+     "variant": null,
+     "headingLevel": null,
+     "top": 7081.06,
+     "height": 1688,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 7081,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 7925,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 6,
+     "id": "statement.stage-headline",
+     "variant": "closing",
+     "headingLevel": null,
+     "top": 8769.06,
+     "height": 1688,
+     "matchRatio": 0.9999,
+     "minMatchRatio": 0.9997,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 8769,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 9613,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 0.9997,
+       "similarity": 0.9998,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 7,
+     "id": "contact.footer-cta",
+     "variant": null,
+     "headingLevel": null,
+     "top": 10457.06,
+     "height": 844,
+     "matchRatio": 0.9505,
+     "minMatchRatio": 0.9505,
+     "similarity": 0.9764,
+     "offsets": [
+      {
+       "offset": 10457,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 0.9505,
+       "similarity": 0.9764,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 0.9866
+  },
+  {
+   "route": "/reunimos",
+   "viewport": "390x844",
+   "clonePageHeight": 2149,
+   "livePageHeight": 2149,
+   "sections": [
+    {
+     "index": 0,
+     "id": "article.header",
+     "variant": null,
+     "headingLevel": null,
+     "top": 72,
+     "height": 208.39,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        0,
+        208
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 1,
+     "id": "article.intro",
+     "variant": null,
+     "headingLevel": null,
+     "top": 280.39,
+     "height": 804,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        208,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 280,
+       "rows": [
+        0,
+        804
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 2,
+     "id": "article.live-embed",
+     "variant": null,
+     "headingLevel": null,
+     "top": 1084.39,
+     "height": 664,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 280,
+       "rows": [
+        804,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1084,
+       "rows": [
+        0,
+        664
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1305,
+       "rows": [
+        0,
+        443
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 3,
+     "id": "article.meta-footer",
+     "variant": null,
+     "headingLevel": null,
+     "top": 1748.39,
+     "height": 329,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 1084,
+       "rows": [
+        664,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1305,
+       "rows": [
+        443,
+        772
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 1.0
+  },
+  {
+   "route": "/inspire_mono",
+   "viewport": "390x844",
+   "clonePageHeight": 4332,
+   "livePageHeight": 4332,
+   "sections": [
+    {
+     "index": 0,
+     "id": "article.header",
+     "variant": null,
+     "headingLevel": null,
+     "top": 72,
+     "height": 208.39,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        0,
+        208
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 1,
+     "id": "article.intro",
+     "variant": null,
+     "headingLevel": null,
+     "top": 280.39,
+     "height": 388,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        208,
+        596
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 280,
+       "rows": [
+        0,
+        388
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 2,
+     "id": "article.download-cta",
+     "variant": null,
+     "headingLevel": null,
+     "top": 668.39,
+     "height": 76,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        596,
+        672
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 280,
+       "rows": [
+        388,
+        464
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 668,
+       "rows": [
+        0,
+        76
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 3,
+     "id": "article.image-grid",
+     "variant": null,
+     "headingLevel": null,
+     "top": 744.39,
+     "height": 3186.75,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        672,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 280,
+       "rows": [
+        464,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 668,
+       "rows": [
+        76,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 744,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1588,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2432,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 3276,
+       "rows": [
+        0,
+        655
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 3488,
+       "rows": [
+        0,
+        443
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 4,
+     "id": "article.meta-footer",
+     "variant": null,
+     "headingLevel": null,
+     "top": 3931.14,
+     "height": 329,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 3276,
+       "rows": [
+        655,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 3488,
+       "rows": [
+        443,
+        772
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 1.0
+  },
+  {
+   "route": "/wasm_design_utils",
+   "viewport": "390x844",
+   "clonePageHeight": 3086,
+   "livePageHeight": 3086,
+   "sections": [
+    {
+     "index": 0,
+     "id": "article.header",
+     "variant": null,
+     "headingLevel": null,
+     "top": 72,
+     "height": 208.39,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        0,
+        208
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 1,
+     "id": "article.intro",
+     "variant": null,
+     "headingLevel": null,
+     "top": 280.39,
+     "height": 188.5,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        208,
+        397
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 280,
+       "rows": [
+        0,
+        189
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 2,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 2,
+     "top": 468.89,
+     "height": 268.75,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        397,
+        666
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 280,
+       "rows": [
+        189,
+        458
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 469,
+       "rows": [
+        0,
+        269
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 3,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 2,
+     "top": 737.64,
+     "height": 282.5,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        666,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 280,
+       "rows": [
+        458,
+        740
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 469,
+       "rows": [
+        269,
+        551
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 738,
+       "rows": [
+        0,
+        282
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 4,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 2,
+     "top": 1020.14,
+     "height": 428.25,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 280,
+       "rows": [
+        740,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 469,
+       "rows": [
+        551,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 738,
+       "rows": [
+        282,
+        710
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1020,
+       "rows": [
+        0,
+        428
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 5,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 2,
+     "top": 1448.39,
+     "height": 425,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 738,
+       "rows": [
+        710,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1020,
+       "rows": [
+        428,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1448,
+       "rows": [
+        0,
+        425
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 6,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 2,
+     "top": 1873.39,
+     "height": 369.5,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 1448,
+       "rows": [
+        425,
+        795
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1873,
+       "rows": [
+        0,
+        370
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 7,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 2,
+     "top": 2242.89,
+     "height": 269.25,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 1448,
+       "rows": [
+        795,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1873,
+       "rows": [
+        370,
+        639
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2242,
+       "rows": [
+        1,
+        270
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 8,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 2,
+     "top": 2512.14,
+     "height": 173.25,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 1873,
+       "rows": [
+        639,
+        812
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2242,
+       "rows": [
+        270,
+        443
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 9,
+     "id": "article.meta-footer",
+     "variant": null,
+     "headingLevel": null,
+     "top": 2685.39,
+     "height": 329,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 2242,
+       "rows": [
+        443,
+        772
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 1.0
+  },
+  {
+   "route": "/adrive",
+   "viewport": "390x844",
+   "clonePageHeight": 7101,
+   "livePageHeight": 7101,
+   "sections": [
+    {
+     "index": 0,
+     "id": "article.header",
+     "variant": null,
+     "headingLevel": null,
+     "top": 72,
+     "height": 173.64,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        0,
+        174
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 1,
+     "id": "article.intro",
+     "variant": null,
+     "headingLevel": null,
+     "top": 245.64,
+     "height": 161.75,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        174,
+        335
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 246,
+       "rows": [
+        0,
+        161
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 2,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 1,
+     "top": 407.39,
+     "height": 972.52,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        335,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 246,
+       "rows": [
+        161,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 407,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1251,
+       "rows": [
+        0,
+        129
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 3,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 1,
+     "top": 1379.91,
+     "height": 2806.81,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 1251,
+       "rows": [
+        129,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1380,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2224,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 3068,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 3912,
+       "rows": [
+        0,
+        275
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 4,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 1,
+     "top": 4186.72,
+     "height": 2513.22,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 0.9999,
+     "offsets": [
+      {
+       "offset": 3912,
+       "rows": [
+        275,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 0.9997,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 4187,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 0.9997,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 5031,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 5875,
+       "rows": [
+        0,
+        825
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 6257,
+       "rows": [
+        0,
+        443
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 5,
+     "id": "article.meta-footer",
+     "variant": null,
+     "headingLevel": null,
+     "top": 6699.94,
+     "height": 329,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 6257,
+       "rows": [
+        443,
+        772
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 1.0
+  },
+  {
+   "route": "/shore_icon",
+   "viewport": "390x844",
+   "clonePageHeight": 8407,
+   "livePageHeight": 8407,
+   "sections": [
+    {
+     "index": 0,
+     "id": "article.header",
+     "variant": null,
+     "headingLevel": null,
+     "top": 72,
+     "height": 208.39,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        0,
+        208
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 1,
+     "id": "article.intro",
+     "variant": null,
+     "headingLevel": null,
+     "top": 280.39,
+     "height": 230,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        208,
+        438
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 280,
+       "rows": [
+        0,
+        230
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 2,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 1,
+     "top": 510.39,
+     "height": 1223.94,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        438,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 280,
+       "rows": [
+        230,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 510,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1354,
+       "rows": [
+        0,
+        380
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 3,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 1,
+     "top": 1734.33,
+     "height": 2209.97,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 1354,
+       "rows": [
+        380,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 1734,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 2578,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 3422,
+       "rows": [
+        0,
+        522
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 4,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 1,
+     "top": 3944.3,
+     "height": 3482.92,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 3422,
+       "rows": [
+        522,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 3944,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 4788,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 5632,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 6476,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 7320,
+       "rows": [
+        0,
+        107
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 5,
+     "id": "article.chapter",
+     "variant": null,
+     "headingLevel": 1,
+     "top": 7427.22,
+     "height": 578.31,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 7320,
+       "rows": [
+        107,
+        686
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 7427,
+       "rows": [
+        0,
+        579
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 7563,
+       "rows": [
+        0,
+        443
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 6,
+     "id": "article.meta-footer",
+     "variant": null,
+     "headingLevel": null,
+     "top": 8005.53,
+     "height": 329,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 7320,
+       "rows": [
+        686,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 7427,
+       "rows": [
+        579,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      },
+      {
+       "offset": 7563,
+       "rows": [
+        443,
+        772
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 1.0
+  },
+  {
+   "route": "/teambition",
+   "viewport": "390x844",
+   "clonePageHeight": 906,
+   "livePageHeight": 906,
+   "sections": [
+    {
+     "index": 0,
+     "id": "article.header",
+     "variant": null,
+     "headingLevel": null,
+     "top": 72,
+     "height": 208.39,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 62,
+       "rows": [
+        10,
+        218
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 1,
+     "id": "article.intro",
+     "variant": null,
+     "headingLevel": null,
+     "top": 280.39,
+     "height": 224.5,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 62,
+       "rows": [
+        218,
+        443
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    },
+    {
+     "index": 2,
+     "id": "article.meta-footer",
+     "variant": null,
+     "headingLevel": null,
+     "top": 504.89,
+     "height": 329,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 62,
+       "rows": [
+        443,
+        772
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 1.0
+  },
+  {
+   "route": "/__not_found_probe__",
+   "viewport": "390x844",
+   "clonePageHeight": 988,
+   "livePageHeight": 988,
+   "sections": [
+    {
+     "index": 0,
+     "id": "error.not-found",
+     "variant": null,
+     "headingLevel": null,
+     "top": 72,
+     "height": 844,
+     "matchRatio": 1.0,
+     "minMatchRatio": 1.0,
+     "similarity": 1.0,
+     "offsets": [
+      {
+       "offset": 72,
+       "rows": [
+        0,
+        844
+       ],
+       "matchRatio": 1.0,
+       "similarity": 1.0,
+       "scrollDelta": 0
+      }
+     ],
+     "passesGate": true
+    }
+   ],
+   "pageMeanMatchRatio": 1.0
+  }
+ ]
+}

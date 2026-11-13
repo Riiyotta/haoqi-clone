@@ -91,7 +91,7 @@ def main():
     res = {
         "tool": "extraction/parity/compare.py",
         "metric": {"gate": GATE, "pixelTolerance": TOL, "definition": "share of pixels with max |RGB diff| <= 24 over the rows a section occupies"},
-        "captureState": {k: base_man[k] for k in ("fixedTime", "seed", "live", "clone")},
+        "captureState": {k: base_man.get(k) for k in ("fixedTime", "seed", "live", "clone", "renderer", "settleFrames", "offsetFrames")},
         "runs": [m["run"] for m, _ in runs],
         "capturedAt": [m["capturedAt"] for m, _ in runs],
         "reproducibility": {"status": ("single-run — second run pending" if len(runs) == 1 else

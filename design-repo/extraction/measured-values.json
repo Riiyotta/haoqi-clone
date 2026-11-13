@@ -1042,9 +1042,9 @@
    "note": "All copy, photos, signature, models, stickers and music belong to the site's owner: reference mode only; generated mode is checked against policy/source-identity.json.",
    "evidence": [
     {
-     "file": "README.md",
-     "lines": "3-3",
-     "needle": "Not for deployment"
+     "file": "CLONE_SPEC.md",
+     "lines": "1-1",
+     "needle": "Source: https://haoqi.design/"
     }
    ]
   },
@@ -1061,6 +1061,22 @@
  ],
  "parity": {
   "results": "extraction/parity/parity-results.json",
-  "exceptions": []
+  "exceptions": [
+   {
+    "route": "/reunimos",
+    "viewport": "1440x900",
+    "section": "article.live-embed",
+    "index": 2,
+    "matchRatio": 0.6154,
+    "minMatchRatio": 0.5901,
+    "similarity": 0.8365,
+    "cause": "The section is a live third-party product (https://www.reunimos.cc) loaded in an iframe on both sides. At the same virtual frame the clone-side iframe had painted the product's sign-in screen while the live-side iframe was still blank (white); frame, size, radius and ring match. The embedded page is not part of the clone and loads on its own network timing. The same section scores 1.0 at 390x844 in this run, where both iframes had painted. Not masked, not copied.",
+    "status": "pending human approval",
+    "approvedBy": null
+   }
+  ],
+  "harnessNotes": [
+   "/shore_icon 1440x900: the two sides reached their offsets 4 virtual frames apart (1276 vs 1280...) because the lazy-image walk steps over a scrollHeight that grows while images load. Article pages have no rAF/WebGL-driven content, so this cannot change the pixels; it is fixed symmetrically (fixed step count) before the second run."
+  ]
  }
 }

@@ -12,6 +12,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 ROOT = REPO.parent
+SOURCE_DEPENDENT = {"CITATIONS", "SOURCE_IDENTITY"}  # WARN-only when the design-repo is used standalone
 SIBLINGS = ["src", "public", "CLONE_SPEC.md", "CLONE_SPEC_PAGES.md", "SHADERS.md", "ia.json", "IA.md", "index.html", "package.json", "README.md"]
 
 
@@ -107,12 +108,20 @@ def main():
     rc, fails, out = run_copy(None)
     print(f"{'ok  ' if rc == 0 else 'MISS'} control (unmodified copy) exit={rc} fails={sorted(fails)}")
     ok &= rc == 0
+    has_source = (ROOT / "src").is_dir()
+    skipped = 0
     for name, mut, expect in CASES:
-        rc, fails, out = run_copy(mut)
-        hit = rc != 0 and set(expect) <= fails
+        # checks that need the sibling clone source only WARN standalone, so they cannot be proven there
+        exp = [e for e in expect if has_source or e not in SOURCE_DEPENDENT]
+        if not exp:
+            skipped += 1
+            print(f"skip {name:50} needs the sibling clone source ({expect})")
+            continue
+        rc, fails, out = run_copy(mut, with_source=has_source)
+        hit = rc != 0 and set(exp) <= fails
         ok &= hit
-        print(f"{'ok  ' if hit else 'MISS'} {name:50} expect {expect} -> FAIL {sorted(fails)}")
-    print(f"\nprove_drift: {len(CASES)} injected defects, {'all caught' if ok else 'SOME NOT CAUGHT'}; control {'passes' if rc is not None else ''}")
+        print(f"{'ok  ' if hit else 'MISS'} {name:50} expect {exp} -> FAIL {sorted(fails)}")
+    print(f"\nprove_drift: {len(CASES) - skipped} injected defects run, {'all caught' if ok else 'SOME NOT CAUGHT'}" + (f", {skipped} skipped (need sibling source)" if skipped else "") + "; control passes")
     return 0 if ok else 1
 
 

@@ -75,4 +75,100 @@ After any change to the clone's `src/`: `python3 extraction/repoint_citations.py
 Harness: `extraction/parity/capture.mjs` + `compare.py` (details and capture state in `extraction/parity/README.md`).
 Live screenshots are not committed; `extraction/parity/parity-results.json` holds the scores.
 
-Not measured yet.
+Metric: share of pixels with max |RGB diff| <= 24 over the rows each section occupies; gate >= 0.8 per section.
+**Sections scored: 88, mean 0.994, below gate: 1.** Reproducibility: **single-run — second run pending**.
+
+| route | viewport | section | matchRatio | min over offsets | run 2 |
+|---|---|---|---|---|---|
+| / | 1440x900 | hero.banner | 0.974 | 0.974 | — |
+| / | 1440x900 | intro.about | 0.998 | 0.998 | — |
+| / | 1440x900 | work.selected-grid | 0.999 | 0.998 | — |
+| / | 1440x900 | statement.stage-headline:primary | 0.998 | 0.995 | — |
+| / | 1440x900 | statement.stage-headline:secondary | 1.000 | 1.000 | — |
+| / | 1440x900 | statement.stage-sentences | 1.000 | 1.000 | — |
+| / | 1440x900 | statement.stage-headline:closing | 1.000 | 1.000 | — |
+| / | 1440x900 | contact.footer-cta | 0.971 | 0.971 | — |
+| /reunimos | 1440x900 | article.header | 1.000 | 1.000 | — |
+| /reunimos | 1440x900 | article.intro | 1.000 | 1.000 | — |
+| /reunimos | 1440x900 | article.live-embed | 0.615 | 0.590 | — |
+| /reunimos | 1440x900 | article.meta-footer | 0.999 | 0.999 | — |
+| /inspire_mono | 1440x900 | article.header | 1.000 | 1.000 | — |
+| /inspire_mono | 1440x900 | article.intro | 1.000 | 1.000 | — |
+| /inspire_mono | 1440x900 | article.download-cta | 1.000 | 1.000 | — |
+| /inspire_mono | 1440x900 | article.image-grid | 1.000 | 0.999 | — |
+| /inspire_mono | 1440x900 | article.meta-footer | 1.000 | 1.000 | — |
+| /wasm_design_utils | 1440x900 | article.header | 1.000 | 1.000 | — |
+| /wasm_design_utils | 1440x900 | article.intro | 1.000 | 1.000 | — |
+| /wasm_design_utils | 1440x900 | article.chapter #2 | 1.000 | 1.000 | — |
+| /wasm_design_utils | 1440x900 | article.chapter #3 | 1.000 | 1.000 | — |
+| /wasm_design_utils | 1440x900 | article.chapter #4 | 1.000 | 0.998 | — |
+| /wasm_design_utils | 1440x900 | article.chapter #5 | 1.000 | 0.999 | — |
+| /wasm_design_utils | 1440x900 | article.chapter #6 | 1.000 | 1.000 | — |
+| /wasm_design_utils | 1440x900 | article.chapter #7 | 0.999 | 0.998 | — |
+| /wasm_design_utils | 1440x900 | article.chapter #8 | 1.000 | 1.000 | — |
+| /wasm_design_utils | 1440x900 | article.meta-footer | 1.000 | 0.999 | — |
+| /adrive | 1440x900 | article.header | 1.000 | 1.000 | — |
+| /adrive | 1440x900 | article.intro | 1.000 | 1.000 | — |
+| /adrive | 1440x900 | article.chapter #2 | 1.000 | 1.000 | — |
+| /adrive | 1440x900 | article.chapter #3 | 1.000 | 1.000 | — |
+| /adrive | 1440x900 | article.chapter #4 | 1.000 | 1.000 | — |
+| /adrive | 1440x900 | article.meta-footer | 1.000 | 1.000 | — |
+| /shore_icon | 1440x900 | article.header | 1.000 | 1.000 | — |
+| /shore_icon | 1440x900 | article.intro | 1.000 | 1.000 | — |
+| /shore_icon | 1440x900 | article.chapter #2 | 1.000 | 1.000 | — |
+| /shore_icon | 1440x900 | article.chapter #3 | 1.000 | 0.999 | — |
+| /shore_icon | 1440x900 | article.chapter #4 | 1.000 | 0.999 | — |
+| /shore_icon | 1440x900 | article.chapter #5 | 1.000 | 0.999 | — |
+| /shore_icon | 1440x900 | article.meta-footer | 0.999 | 0.997 | — |
+| /teambition | 1440x900 | article.header | 1.000 | 1.000 | — |
+| /teambition | 1440x900 | article.intro | 1.000 | 1.000 | — |
+| /teambition | 1440x900 | article.meta-footer | 1.000 | 1.000 | — |
+| /__not_found_probe__ | 1440x900 | error.not-found | 1.000 | 1.000 | — |
+| / | 390x844 | hero.banner | 0.944 | 0.944 | — |
+| / | 390x844 | intro.about | 0.999 | 0.999 | — |
+| / | 390x844 | work.selected-grid | 0.999 | 0.999 | — |
+| / | 390x844 | statement.stage-headline:primary | 1.000 | 0.999 | — |
+| / | 390x844 | statement.stage-headline:secondary | 1.000 | 1.000 | — |
+| / | 390x844 | statement.stage-sentences | 1.000 | 1.000 | — |
+| / | 390x844 | statement.stage-headline:closing | 1.000 | 1.000 | — |
+| / | 390x844 | contact.footer-cta | 0.951 | 0.951 | — |
+| /reunimos | 390x844 | article.header | 1.000 | 1.000 | — |
+| /reunimos | 390x844 | article.intro | 1.000 | 1.000 | — |
+| /reunimos | 390x844 | article.live-embed | 1.000 | 1.000 | — |
+| /reunimos | 390x844 | article.meta-footer | 1.000 | 1.000 | — |
+| /inspire_mono | 390x844 | article.header | 1.000 | 1.000 | — |
+| /inspire_mono | 390x844 | article.intro | 1.000 | 1.000 | — |
+| /inspire_mono | 390x844 | article.download-cta | 1.000 | 1.000 | — |
+| /inspire_mono | 390x844 | article.image-grid | 1.000 | 1.000 | — |
+| /inspire_mono | 390x844 | article.meta-footer | 1.000 | 1.000 | — |
+| /wasm_design_utils | 390x844 | article.header | 1.000 | 1.000 | — |
+| /wasm_design_utils | 390x844 | article.intro | 1.000 | 1.000 | — |
+| /wasm_design_utils | 390x844 | article.chapter #2 | 1.000 | 1.000 | — |
+| /wasm_design_utils | 390x844 | article.chapter #3 | 1.000 | 1.000 | — |
+| /wasm_design_utils | 390x844 | article.chapter #4 | 1.000 | 1.000 | — |
+| /wasm_design_utils | 390x844 | article.chapter #5 | 1.000 | 1.000 | — |
+| /wasm_design_utils | 390x844 | article.chapter #6 | 1.000 | 1.000 | — |
+| /wasm_design_utils | 390x844 | article.chapter #7 | 1.000 | 1.000 | — |
+| /wasm_design_utils | 390x844 | article.chapter #8 | 1.000 | 1.000 | — |
+| /wasm_design_utils | 390x844 | article.meta-footer | 1.000 | 1.000 | — |
+| /adrive | 390x844 | article.header | 1.000 | 1.000 | — |
+| /adrive | 390x844 | article.intro | 1.000 | 1.000 | — |
+| /adrive | 390x844 | article.chapter #2 | 1.000 | 1.000 | — |
+| /adrive | 390x844 | article.chapter #3 | 1.000 | 1.000 | — |
+| /adrive | 390x844 | article.chapter #4 | 1.000 | 1.000 | — |
+| /adrive | 390x844 | article.meta-footer | 1.000 | 1.000 | — |
+| /shore_icon | 390x844 | article.header | 1.000 | 1.000 | — |
+| /shore_icon | 390x844 | article.intro | 1.000 | 1.000 | — |
+| /shore_icon | 390x844 | article.chapter #2 | 1.000 | 1.000 | — |
+| /shore_icon | 390x844 | article.chapter #3 | 1.000 | 1.000 | — |
+| /shore_icon | 390x844 | article.chapter #4 | 1.000 | 1.000 | — |
+| /shore_icon | 390x844 | article.chapter #5 | 1.000 | 1.000 | — |
+| /shore_icon | 390x844 | article.meta-footer | 1.000 | 1.000 | — |
+| /teambition | 390x844 | article.header | 1.000 | 1.000 | — |
+| /teambition | 390x844 | article.intro | 1.000 | 1.000 | — |
+| /teambition | 390x844 | article.meta-footer | 1.000 | 1.000 | — |
+| /__not_found_probe__ | 390x844 | error.not-found | 1.000 | 1.000 | — |
+
+Exceptions (status `pending human approval`, `approvedBy: null` - an agent never approves its own exception):
+
+- /reunimos 1440x900 article.live-embed: 0.6154 - The section is a live third-party product (https://www.reunimos.cc) loaded in an iframe on both sides. At the same virtual frame the clone-side iframe had painted the product's sign-in screen while the live-side iframe was still blank (white); frame, size, radius and ring match. The embedded page is not part of the clone and loads on its own network timing. The same section scores 1.0 at 390x844 in this run, where both iframes had painted. Not masked, not copied.
