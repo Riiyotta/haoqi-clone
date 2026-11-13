@@ -3,6 +3,14 @@
 `repositoryVersion` is documentation-only (hand-maintained here); `allowlistVersion` and `pageSpecVersion` are
 machine-checked by `extraction/verify_all.py`.
 
+## 1.0.2 - 2026-11-13
+
+- Parity variance isolated further: comparing each side with ITSELF between run 1 and run 2 (same virtual frame)
+  gives live 0.944 / 0.938 / 0.949 and clone 0.991 / 0.975 / 0.979 on the home hero 1440 / hero 390 / contact 390
+  (DOM-stage control: 0.999 / 1.000). The WebGL opener/closer is nondeterministic per frame on both sides, more so on
+  the original; the live-vs-clone "NOT reproducible" outcome stands and is inherited from the source page.
+- Runs 3 + 4 not started (precondition - the frozen-load validation agreeing - not met).
+
 ## 1.0.1 - 2026-11-13
 
 Parity phase 2 (second run, harness unchanged except a page-kind guard that alters no capture state).

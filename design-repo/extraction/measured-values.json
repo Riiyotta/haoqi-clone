@@ -1093,7 +1093,29 @@
     "/ 390x844 contact.footer-cta: run1 0.9505, run2 0.9766 (delta 0.0261)"
    ],
    "diagnosis": "All three over-tolerance sections are the WebGL opener/closer of the home page (bokeh streaks, falling stickers, glass models); every DOM-only section, every article and every statement stage agrees within 0.001-0.0005. Both runs captured at identical virtual frame schedules. First hypothesis - asset load timing during the free-running load phase - was TESTED AND REFUTED: two extra home-only runs with frames frozen from the start until network idle (and the clone served by the harness itself) still differed by 0.031 (hero 1440), 0.024 (hero 390) and 0.018 (contact 1440). The remaining nondeterminism lies inside the WebGL frame itself (not controlled by frame count) and is not yet isolated; the gate outcome never changes between runs and no section moves by more than 0.03.",
-   "followUp": "isolate the WebGL source of run-to-run variance (candidates: SwiftShader multi-threaded rasterisation, the fluid/flare post passes, sticker spawn order); then capture run 3 + run 4 with the final harness"
+   "followUp": "run 3 + run 4 were NOT started: their precondition (the frozen-load validation runs agreeing) was not met. Remaining step, if wanted: instrument which WebGL subsystem consumes non-frame time or order-dependent randomness (stickers, fluid/flare post, bokeh passes) - on the original's bundle this needs reading its minified code.",
+   "selfConsistency": {
+    "method": "each side compared with ITSELF between run 1 and run 2 (same virtual frame, same scroll offset, same metric: share of pixels with max |RGB diff| <= 24, full viewport)",
+    "results": {
+     "home 1440 @0 (hero)": {
+      "live": 0.9437,
+      "clone": 0.9909
+     },
+     "home 390 @0 (hero)": {
+      "live": 0.9376,
+      "clone": 0.9748
+     },
+     "home 390 @10457 (contact)": {
+      "live": 0.949,
+      "clone": 0.9794
+     },
+     "home 1440 @4219 (DOM stage, control)": {
+      "live": 0.9991,
+      "clone": 0.9996
+     }
+    },
+    "conclusion": "The WebGL opener/closer is not deterministic per virtual frame on EITHER side, and the original site varies more than the clone. The three over-tolerance live-vs-clone deltas are therefore inherited from the source page's own rendering, not a clone gap and not a capture-state difference; the DOM layer is stable on both sides."
+   }
   }
  }
 }
